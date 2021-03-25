@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Ordenes_en_proceso" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Ordenes_en_proceso" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPeriodo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Periodo" nillable="true" type="tns:Periodo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPeriodo" nillable="true" type="tns:ArrayOfPeriodo" />
+  <xs:complexType name="Periodo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anio" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdPeriodo" type="xs:long" />
+      <xs:element minOccurs="0" name="Mes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Periodo" nillable="true" type="tns:Periodo" />
+  <xs:complexType name="ArrayOfOrdenesenProceso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrdenesenProceso" nillable="true" type="tns:OrdenesenProceso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrdenesenProceso" nillable="true" type="tns:ArrayOfOrdenesenProceso" />
+  <xs:complexType name="OrdenesenProceso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ANTIGUEDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="ASEGURADORA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ASESOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CMAMOBR" type="xs:decimal" />
+      <xs:element minOccurs="0" name="COLORAUTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COSTOREFAC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="COSTOTOT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="COSTOTOTT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoManoObra" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoRefaccion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoTOTP" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoTOTTT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DIASPROMESA" type="xs:int" />
+      <xs:element minOccurs="0" name="DIASSALIDA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FFSEFECACT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FFSEFECING" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FFSEFECPRO" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FFSEFECSOL" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FHSEHORING" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FHSEHRAPRO" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FISEFOLIO" type="xs:long" />
+      <xs:element minOccurs="0" name="FISEIDACPR" type="xs:int" />
+      <xs:element minOccurs="0" name="FISEIDASES" type="xs:int" />
+      <xs:element minOccurs="0" name="FISEIDCIAU" type="xs:int" />
+      <xs:element minOccurs="0" name="FISEIDGORD" type="xs:int" />
+      <xs:element minOccurs="0" name="FISEIDLFIS" type="xs:int" />
+      <xs:element minOccurs="0" name="FISEIDORD" type="xs:long" />
+      <xs:element minOccurs="0" name="FISEIDPERS" type="xs:long" />
+      <xs:element minOccurs="0" name="FISEIDPREO" type="xs:long" />
+      <xs:element minOccurs="0" name="FISEIDTIPP" type="xs:int" />
+      <xs:element minOccurs="0" name="FISEIDTPRO" type="xs:int" />
+      <xs:element minOccurs="0" name="FISEIDVEHI" type="xs:int" />
+      <xs:element minOccurs="0" name="FISENUMTOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FISEODOMET" type="xs:int" />
+      <xs:element minOccurs="0" name="FSGERAZSOC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSMODECLA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSSECOLORT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSSEDESCOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSSEDESEST" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSSEDESTIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSSEGORDEN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSSELUGARF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSSEMOTSAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSSEOBSERV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSVEHIPLA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSVEHISER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSVERSDES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDASEGURADORA" type="xs:long" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBENTRADA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLIZA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SINIESTRO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdenesenProceso" nillable="true" type="tns:OrdenesenProceso" />
+</xs:schema>

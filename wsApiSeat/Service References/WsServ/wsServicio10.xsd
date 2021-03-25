@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection" />
+  <xs:complexType name="DB2ObjectSERV">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q1:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectSERV" nillable="true" type="tns:DB2ObjectSERV" />
+  <xs:complexType name="DB2ObjectNOM">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q2:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectNOM" nillable="true" type="tns:DB2ObjectNOM" />
+  <xs:complexType name="DB2ObjectPERS">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q3:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectPERS" nillable="true" type="tns:DB2ObjectPERS" />
+  <xs:complexType name="DB2ObjectSEGU">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q4:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectSEGU" nillable="true" type="tns:DB2ObjectSEGU" />
+  <xs:complexType name="DB2ObjectAUTLegacy">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q5:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectAUTLegacy" nillable="true" type="tns:DB2ObjectAUTLegacy" />
+  <xs:complexType name="DB2ObjectAUT">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q6:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectAUT" nillable="true" type="tns:DB2ObjectAUT" />
+  <xs:complexType name="DB2ObjectCOMP">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q7:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectCOMP" nillable="true" type="tns:DB2ObjectCOMP" />
+  <xs:complexType name="DB2ObjectPSI">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q8:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectPSI" nillable="true" type="tns:DB2ObjectPSI" />
+  <xs:complexType name="AgenciaParametro">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q9:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strParametro" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AgenciaParametro" nillable="true" type="tns:AgenciaParametro" />
+  <xs:complexType name="DB2ObjectGRAL">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q10:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DB2ObjectGRAL" nillable="true" type="tns:DB2ObjectGRAL" />
+</xs:schema>

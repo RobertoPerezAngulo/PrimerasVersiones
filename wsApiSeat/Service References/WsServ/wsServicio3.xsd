@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wsServicio.Reportes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wsServicio.Reportes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ReporteSEAT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HyP" nillable="true" type="tns:ReporteSEATHyP" />
+      <xs:element minOccurs="0" name="Servicio" nillable="true" type="tns:ReporteSEATServicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEAT" nillable="true" type="tns:ReporteSEAT" />
+  <xs:complexType name="ReporteSEATHyP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Administracion" nillable="true" type="tns:ReporteSEATHyPAdministracion" />
+      <xs:element minOccurs="0" name="Instalaciones" nillable="true" type="tns:ReporteSEATHyPInstalaciones" />
+      <xs:element minOccurs="0" name="MovimientosAseguradora" nillable="true" type="tns:ReporteSEATHyPMovimientosDeTaller" />
+      <xs:element minOccurs="0" name="MovimientosParticular" nillable="true" type="tns:ReporteSEATHyPMovimientosDeTaller" />
+      <xs:element minOccurs="0" name="RecursosHumanos" nillable="true" type="tns:ReporteSEATHyPRecursosHumanos" />
+      <xs:element minOccurs="0" name="VentasAseguradora" nillable="true" type="tns:ReporteSEATHyPVentas" />
+      <xs:element minOccurs="0" name="VentasParticular" nillable="true" type="tns:ReporteSEATHyPVentas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATHyP" nillable="true" type="tns:ReporteSEATHyP" />
+  <xs:complexType name="ReporteSEATHyPAdministracion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dias" nillable="true" type="tns:ReporteSEATHyPAdministracionDias" />
+      <xs:element minOccurs="0" name="Horas" nillable="true" type="tns:ReporteSEATHyPAdministracionHoras" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATHyPAdministracion" nillable="true" type="tns:ReporteSEATHyPAdministracion" />
+  <xs:complexType name="ReporteSEATHyPAdministracionDias">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ausencias" type="xs:int" />
+      <xs:element minOccurs="0" name="Enfermedad" type="xs:int" />
+      <xs:element minOccurs="0" name="Entrenamiento" type="xs:int" />
+      <xs:element minOccurs="0" name="Trabajados" type="xs:int" />
+      <xs:element minOccurs="0" name="Vacaciones" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATHyPAdministracionDias" nillable="true" type="tns:ReporteSEATHyPAdministracionDias" />
+  <xs:complexType name="ReporteSEATHyPAdministracionHoras">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Improductivas" type="xs:int" />
+      <xs:element minOccurs="0" name="Internas" type="xs:int" />
+      <xs:element minOccurs="0" name="Pagadas" type="xs:int" />
+      <xs:element minOccurs="0" name="Productivas" type="xs:int" />
+      <xs:element minOccurs="0" name="Retrabajos" type="xs:int" />
+      <xs:element minOccurs="0" name="Vendidas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATHyPAdministracionHoras" nillable="true" type="tns:ReporteSEATHyPAdministracionHoras" />
+  <xs:complexType name="ReporteSEATHyPInstalaciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LugaresConBancoDeEnderezado" type="xs:int" />
+      <xs:element minOccurs="0" name="LugaresDeTrabajoDeHojalateria" type="xs:int" />
+      <xs:element minOccurs="0" name="LugaresDeTrabajoDePintura" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATHyPInstalaciones" nillable="true" type="tns:ReporteSEATHyPInstalaciones" />
+  <xs:complexType name="ReporteSEATHyPMovimientosDeTaller">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChasisIngresados1" type="xs:int" />
+      <xs:element minOccurs="0" name="ChasisIngresados2" type="xs:int" />
+      <xs:element minOccurs="0" name="ChasisIngresados3" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesInternasDeHyP" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesPorHyP" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesPorReclamaciones" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATHyPMovimientosDeTaller" nillable="true" type="tns:ReporteSEATHyPMovimientosDeTaller" />
+  <xs:complexType name="ReporteSEATHyPRecursosHumanos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aprendices" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonalAdministrativo" type="xs:int" />
+      <xs:element minOccurs="0" name="TecnicosHojalateros" type="xs:int" />
+      <xs:element minOccurs="0" name="TecnicosMecanicosDeColision" type="xs:int" />
+      <xs:element minOccurs="0" name="TecnicosPintores" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATHyPRecursosHumanos" nillable="true" type="tns:ReporteSEATHyPRecursosHumanos" />
+  <xs:complexType name="ReporteSEATHyPVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Garantias" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ManoDeObra" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MaterialesDiversos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RefaccionesNoOriginales" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RefaccionesOriginales" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalOtrosTalleres" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATHyPVentas" nillable="true" type="tns:ReporteSEATHyPVentas" />
+  <xs:complexType name="ReporteSEATServicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Administracion" nillable="true" type="tns:ReporteSEATServicioAdministracion" />
+      <xs:element minOccurs="0" name="Instalaciones" nillable="true" type="tns:ReporteSEATServicioInstalaciones" />
+      <xs:element minOccurs="0" name="Movimientos" nillable="true" type="tns:ReporteSEATServicioMovimientosDeTaller" />
+      <xs:element minOccurs="0" name="RecursosHumanos" nillable="true" type="tns:ReporteSEATServicioRecursosHumanos" />
+      <xs:element minOccurs="0" name="Ventas" nillable="true" type="tns:ReporteSEATServicioVentas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATServicio" nillable="true" type="tns:ReporteSEATServicio" />
+  <xs:complexType name="ReporteSEATServicioAdministracion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dias" nillable="true" type="tns:ReporteSEATServicioAdministracionDias" />
+      <xs:element minOccurs="0" name="Horas" nillable="true" type="tns:ReporteSEATServicioAdministracionHoras" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATServicioAdministracion" nillable="true" type="tns:ReporteSEATServicioAdministracion" />
+  <xs:complexType name="ReporteSEATServicioAdministracionDias">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ausencias" type="xs:int" />
+      <xs:element minOccurs="0" name="Enfermedad" type="xs:int" />
+      <xs:element minOccurs="0" name="Entrenamiento" type="xs:int" />
+      <xs:element minOccurs="0" name="Trabajados" type="xs:int" />
+      <xs:element minOccurs="0" name="Vacaciones" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATServicioAdministracionDias" nillable="true" type="tns:ReporteSEATServicioAdministracionDias" />
+  <xs:complexType name="ReporteSEATServicioAdministracionHoras">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Improductivas" type="xs:int" />
+      <xs:element minOccurs="0" name="Internas" type="xs:int" />
+      <xs:element minOccurs="0" name="Pagadas" type="xs:int" />
+      <xs:element minOccurs="0" name="Productivas" type="xs:int" />
+      <xs:element minOccurs="0" name="Retrabajos" type="xs:int" />
+      <xs:element minOccurs="0" name="Vendidas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATServicioAdministracionHoras" nillable="true" type="tns:ReporteSEATServicioAdministracionHoras" />
+  <xs:complexType name="ReporteSEATServicioInstalaciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LugaresDeTrabajo" type="xs:int" />
+      <xs:element minOccurs="0" name="Rampas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATServicioInstalaciones" nillable="true" type="tns:ReporteSEATServicioInstalaciones" />
+  <xs:complexType name="ReporteSEATServicioMovimientosDeTaller">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChasisIngresados1" type="xs:int" />
+      <xs:element minOccurs="0" name="ChasisIngresados2" type="xs:int" />
+      <xs:element minOccurs="0" name="ChasisIngresados3" type="xs:int" />
+      <xs:element minOccurs="0" name="ChasisIngresados4omas" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesDeMantenimiento1A" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesDeMantenimiento1B" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesDeMantenimiento2" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesDeMantenimiento3" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesInternasDeTaller" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesPorGarantias" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesPorReclamaciones" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdenesPorReparacionesGenerales" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATServicioMovimientosDeTaller" nillable="true" type="tns:ReporteSEATServicioMovimientosDeTaller" />
+  <xs:complexType name="ReporteSEATServicioRecursosHumanos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aprendices" type="xs:int" />
+      <xs:element minOccurs="0" name="AsesoresDeServicio" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonalAdministrativo" type="xs:int" />
+      <xs:element minOccurs="0" name="Tecnicos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATServicioRecursosHumanos" nillable="true" type="tns:ReporteSEATServicioRecursosHumanos" />
+  <xs:complexType name="ReporteSEATServicioVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accesorios" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AccesoriosNoOriginales" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Garantias" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ManoDeObraDeReparacionesGenerales" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ManoDeObraDeServiciosDeMantenimiento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ManoDeObraInterna" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MaterialesDiversosDeTaller" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Refacciones" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RefaccionesNoOriginales" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalOtrosTalleres" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteSEATServicioVentas" nillable="true" type="tns:ReporteSEATServicioVentas" />
+</xs:schema>

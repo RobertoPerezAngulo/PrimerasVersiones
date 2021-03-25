@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Afluencia" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Afluencia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfColumnasPlantilla">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ColumnasPlantilla" nillable="true" type="tns:ColumnasPlantilla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColumnasPlantilla" nillable="true" type="tns:ArrayOfColumnasPlantilla" />
+  <xs:complexType name="ColumnasPlantilla">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdColumna" type="xs:int" />
+      <xs:element minOccurs="0" name="IntOrden" type="xs:int" />
+      <xs:element minOccurs="0" name="StrNombreColumna" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrValorColumna" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ColumnasPlantilla" nillable="true" type="tns:ColumnasPlantilla" />
+</xs:schema>

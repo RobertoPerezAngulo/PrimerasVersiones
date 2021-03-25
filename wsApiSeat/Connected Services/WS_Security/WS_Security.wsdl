@@ -1,0 +1,1836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://192.192.192.233/WS_SalesForce/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://192.192.192.233/WS_SalesForce/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://192.192.192.233/WS_SalesForce/">
+      <s:element name="GetUserByLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="systemId" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByLoginResult" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="User">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Middlename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="tns:Company" />
+          <s:element minOccurs="0" maxOccurs="1" name="Menu" type="tns:UserMenu" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProfileId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileDetails" type="tns:ArrayOfProfile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Company">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserMenu">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Submenu" type="tns:ArrayOfUserMenu" />
+          <s:element minOccurs="0" maxOccurs="1" name="Program" type="tns:Program" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUserMenu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserMenu" nillable="true" type="tns:UserMenu" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Program">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Prog" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProfile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Profile" nillable="true" type="tns:Profile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Profile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
+      <s:complexType name="AuthenticationHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SystemId" type="s:unsignedByte" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetCompanyByUserId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompanyByUserIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompanyByUserIdResult" type="tns:Company" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompanyByUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompanyByUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompanyByUserNameResult" type="tns:Company" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllUserbySystem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="systemId" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="profileId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="middleName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllUserbySystemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllUserbySystemResult" type="tns:ArrayOfUserPortalVendedores" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserPortalVendedores">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserPortalVendedores" nillable="true" type="tns:UserPortalVendedores" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserPortalVendedores">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:User">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Module" type="tns:Module" />
+              <s:element minOccurs="1" maxOccurs="1" name="MeanSales" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="NumberSales" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="NewCategory" type="tns:Category" />
+              <s:element minOccurs="0" maxOccurs="1" name="Request" type="tns:Request" />
+              <s:element minOccurs="1" maxOccurs="1" name="ElectronicMoney" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="GrossProfit" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="Category" type="tns:Category" />
+              <s:element minOccurs="1" maxOccurs="1" name="AuthorizationOrder" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Module">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ModuleId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModuleName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Category">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="tns:Company" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Request">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:StatusRequest" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateRequest" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAuthorization" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizeUserId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateCancellation" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OverallMoney" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="QuantityMovement" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="tns:User" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastFirmUser" type="tns:User" />
+          <s:element minOccurs="0" maxOccurs="1" name="NextFirmUser" type="tns:User" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="tns:Company" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="tns:Category" />
+          <s:element minOccurs="0" maxOccurs="1" name="Commissions" type="tns:ArrayOfCommissions" />
+          <s:element minOccurs="0" maxOccurs="1" name="FolioAdditionalRequest" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AdditionalRequestId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatusRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCommissions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Commissions" nillable="true" type="tns:Commissions" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Commissions">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BaseCommission" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ElectronicMoney" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="tns:Company" />
+          <s:element minOccurs="1" maxOccurs="1" name="MoneyToPay" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CommissionType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMoneyAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoneyAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMoneyAgentResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMailAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMailAgentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMailAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="controlField" type="tns:ControlFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ControlFields">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Prog" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateMailAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateMailAgentResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Message">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="tns:Category" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="tns:Company" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:StatusMessage" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatusMessage">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategoryAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryAgentResult" type="tns:Category" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="systemId" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByIdResult" type="tns:ArrayOfUserPortalVendedores" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="systemId" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByNameResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserbyProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="profileId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserbyProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserbyProfileResult" type="tns:ArrayOfUserPortalVendedores" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserbyProfileNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="profileId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserbyProfileNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserbyProfileNamesResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="categoryId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAgentsResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllCategory">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCategoryResult" type="tns:ArrayOfCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllUserProfiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="profileId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="middlename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllUserProfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllUserProfilesResult" type="tns:ArrayOfUserPortalVendedores" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserProfiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="systemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="profileId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserProfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserProfilesResult" type="tns:ArrayOfProfile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertProfileUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="systemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="profileId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusRequest" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="controlField" type="tns:ControlFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertProfileUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertProfileUserResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAuthorizationOrderUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="controlField" type="tns:ControlFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAuthorizationOrderUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertAuthorizationOrderUserResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAuthorizationOrderUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="controlField" type="tns:ControlFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAuthorizationOrderUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteAuthorizationOrderUserResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAuthorizationOrderUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userNextId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderIdAnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderIdAct" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldControl" type="tns:ControlFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAuthorizationOrderUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateAuthorizationOrderUserResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeOrderAuthorizationUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userActualId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userNextId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderActualId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderSiguienteId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldControl" type="tns:ControlFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeOrderAuthorizationUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeOrderAuthorizationUserResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserUnprofiled">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="companyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserUnprofiledResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserUnprofiledResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateUserProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="profileId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldControl" type="tns:ControlFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUpdateUserProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertUpdateUserProfileResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgentsReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="categoryId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="agencyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgentsReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAgentsReportResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProgramHits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="programId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProgramHitsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conNewPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="controlFields" type="tns:ControlFields" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommissionsToPay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommissionsToPayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CommissionsToPayResult" type="tns:ArrayOfCommissions" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgentType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgentTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAgentTypeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModules">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modulId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModulesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModulesResult" type="tns:ArrayOfModule" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfModule">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Module" nillable="true" type="tns:Module" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TermsAndConditionsRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="terms" type="tns:TermsAndConditions" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TermsAndConditions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hour" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlFields" type="tns:ControlFields" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SistemId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="tns:Company" />
+          <s:element minOccurs="0" maxOccurs="1" name="Medium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Source" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Campaign" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TermsAndConditionsRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TermsAndConditionsRegisterResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="tns:Category" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDepartmentResult" type="tns:ArrayOfDepartment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDepartment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Department" nillable="true" type="tns:Department" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Department">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCompaniesByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompaniesByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompaniesByUserResult" type="tns:ArrayOfCompany" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCompany">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="tns:Company" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserByLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserByLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByLoginAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyByUserIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompanyByUserId" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyByUserIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompanyByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyByUserIdAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyByUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompanyByUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyByUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompanyByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyByUserNameAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUserbySystemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllUserbySystem" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUserbySystemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllUserbySystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUserbySystemAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMoneyAgent" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMoneyAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyAgentAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMailAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMailAgent" />
+  </wsdl:message>
+  <wsdl:message name="GetMailAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMailAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMailAgentAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMailAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMailAgent" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMailAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMailAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMailAgentAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryAgent" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryAgentAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserByName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByNameAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserbyProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserbyProfile" />
+  </wsdl:message>
+  <wsdl:message name="GetUserbyProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserbyProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserbyProfileAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserbyProfileNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserbyProfileNames" />
+  </wsdl:message>
+  <wsdl:message name="GetUserbyProfileNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserbyProfileNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserbyProfileNamesAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAgents" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAgentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCategoryAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUserProfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllUserProfiles" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUserProfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllUserProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUserProfilesAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserProfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserProfiles" />
+  </wsdl:message>
+  <wsdl:message name="GetUserProfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserProfilesAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="InsertProfileUserSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertProfileUser" />
+  </wsdl:message>
+  <wsdl:message name="InsertProfileUserSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertProfileUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertProfileUserAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="InsertAuthorizationOrderUserSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertAuthorizationOrderUser" />
+  </wsdl:message>
+  <wsdl:message name="InsertAuthorizationOrderUserSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertAuthorizationOrderUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertAuthorizationOrderUserAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAuthorizationOrderUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAuthorizationOrderUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAuthorizationOrderUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAuthorizationOrderUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAuthorizationOrderUserAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAuthorizationOrderUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAuthorizationOrderUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAuthorizationOrderUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAuthorizationOrderUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAuthorizationOrderUserAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="ChangeOrderAuthorizationUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeOrderAuthorizationUser" />
+  </wsdl:message>
+  <wsdl:message name="ChangeOrderAuthorizationUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeOrderAuthorizationUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeOrderAuthorizationUserAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserUnprofiledSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserUnprofiled" />
+  </wsdl:message>
+  <wsdl:message name="GetUserUnprofiledSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserUnprofiledResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserUnprofiledAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateUserProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUpdateUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateUserProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUpdateUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUpdateUserProfileAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentsReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAgentsReport" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentsReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAgentsReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentsReportAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProgramHitsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProgramHits" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProgramHitsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProgramHitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProgramHitsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="CommissionsToPaySoapIn">
+    <wsdl:part name="parameters" element="tns:CommissionsToPay" />
+  </wsdl:message>
+  <wsdl:message name="CommissionsToPaySoapOut">
+    <wsdl:part name="parameters" element="tns:CommissionsToPayResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommissionsToPayAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAgentType" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAgentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentTypeAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModules" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModulesAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="TermsAndConditionsRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:TermsAndConditionsRegister" />
+  </wsdl:message>
+  <wsdl:message name="TermsAndConditionsRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:TermsAndConditionsRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="TermsAndConditionsRegisterAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartment" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCompaniesByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompaniesByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCompaniesByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompaniesByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompaniesByUserAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:portType name="WS_SecuritySoap">
+    <wsdl:operation name="GetUserByLogin">
+      <wsdl:input message="tns:GetUserByLoginSoapIn" />
+      <wsdl:output message="tns:GetUserByLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByUserId">
+      <wsdl:input message="tns:GetCompanyByUserIdSoapIn" />
+      <wsdl:output message="tns:GetCompanyByUserIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByUserName">
+      <wsdl:input message="tns:GetCompanyByUserNameSoapIn" />
+      <wsdl:output message="tns:GetCompanyByUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserbySystem">
+      <wsdl:input message="tns:GetAllUserbySystemSoapIn" />
+      <wsdl:output message="tns:GetAllUserbySystemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyAgent">
+      <wsdl:input message="tns:GetMoneyAgentSoapIn" />
+      <wsdl:output message="tns:GetMoneyAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailAgent">
+      <wsdl:input message="tns:GetMailAgentSoapIn" />
+      <wsdl:output message="tns:GetMailAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailAgent">
+      <wsdl:input message="tns:UpdateMailAgentSoapIn" />
+      <wsdl:output message="tns:UpdateMailAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryAgent">
+      <wsdl:input message="tns:GetCategoryAgentSoapIn" />
+      <wsdl:output message="tns:GetCategoryAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input message="tns:GetUserByIdSoapIn" />
+      <wsdl:output message="tns:GetUserByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByName">
+      <wsdl:input message="tns:GetUserByNameSoapIn" />
+      <wsdl:output message="tns:GetUserByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserbyProfile">
+      <wsdl:input message="tns:GetUserbyProfileSoapIn" />
+      <wsdl:output message="tns:GetUserbyProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserbyProfileNames">
+      <wsdl:input message="tns:GetUserbyProfileNamesSoapIn" />
+      <wsdl:output message="tns:GetUserbyProfileNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgents">
+      <wsdl:input message="tns:GetAgentsSoapIn" />
+      <wsdl:output message="tns:GetAgentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCategory">
+      <wsdl:input message="tns:GetAllCategorySoapIn" />
+      <wsdl:output message="tns:GetAllCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserProfiles">
+      <wsdl:input message="tns:GetAllUserProfilesSoapIn" />
+      <wsdl:output message="tns:GetAllUserProfilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfiles">
+      <wsdl:input message="tns:GetUserProfilesSoapIn" />
+      <wsdl:output message="tns:GetUserProfilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertProfileUser">
+      <wsdl:input message="tns:InsertProfileUserSoapIn" />
+      <wsdl:output message="tns:InsertProfileUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAuthorizationOrderUser">
+      <wsdl:input message="tns:InsertAuthorizationOrderUserSoapIn" />
+      <wsdl:output message="tns:InsertAuthorizationOrderUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthorizationOrderUser">
+      <wsdl:input message="tns:DeleteAuthorizationOrderUserSoapIn" />
+      <wsdl:output message="tns:DeleteAuthorizationOrderUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuthorizationOrderUser">
+      <wsdl:input message="tns:UpdateAuthorizationOrderUserSoapIn" />
+      <wsdl:output message="tns:UpdateAuthorizationOrderUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeOrderAuthorizationUser">
+      <wsdl:input message="tns:ChangeOrderAuthorizationUserSoapIn" />
+      <wsdl:output message="tns:ChangeOrderAuthorizationUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserUnprofiled">
+      <wsdl:input message="tns:GetUserUnprofiledSoapIn" />
+      <wsdl:output message="tns:GetUserUnprofiledSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateUserProfile">
+      <wsdl:input message="tns:InsertUpdateUserProfileSoapIn" />
+      <wsdl:output message="tns:InsertUpdateUserProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentsReport">
+      <wsdl:input message="tns:GetAgentsReportSoapIn" />
+      <wsdl:output message="tns:GetAgentsReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProgramHits">
+      <wsdl:input message="tns:UpdateProgramHitsSoapIn" />
+      <wsdl:output message="tns:UpdateProgramHitsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommissionsToPay">
+      <wsdl:input message="tns:CommissionsToPaySoapIn" />
+      <wsdl:output message="tns:CommissionsToPaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentType">
+      <wsdl:input message="tns:GetAgentTypeSoapIn" />
+      <wsdl:output message="tns:GetAgentTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <wsdl:input message="tns:GetModulesSoapIn" />
+      <wsdl:output message="tns:GetModulesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TermsAndConditionsRegister">
+      <wsdl:input message="tns:TermsAndConditionsRegisterSoapIn" />
+      <wsdl:output message="tns:TermsAndConditionsRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <wsdl:input message="tns:GetDepartmentSoapIn" />
+      <wsdl:output message="tns:GetDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompaniesByUser">
+      <wsdl:input message="tns:GetCompaniesByUserSoapIn" />
+      <wsdl:output message="tns:GetCompaniesByUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_SecuritySoap" type="tns:WS_SecuritySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserByLogin">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserByLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserByLoginAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByUserId">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetCompanyByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCompanyByUserIdAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByUserName">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetCompanyByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCompanyByUserNameAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserbySystem">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAllUserbySystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAllUserbySystemAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyAgent">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetMoneyAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMoneyAgentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailAgent">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetMailAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMailAgentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailAgent">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/UpdateMailAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateMailAgentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryAgent">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetCategoryAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCategoryAgentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserByIdAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByName">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserByNameAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserbyProfile">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserbyProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserbyProfileAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserbyProfileNames">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserbyProfileNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserbyProfileNamesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgents">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAgents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAgentsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCategory">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAllCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAllCategoryAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserProfiles">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAllUserProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAllUserProfilesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfiles">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserProfilesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertProfileUser">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/InsertProfileUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertProfileUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAuthorizationOrderUser">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/InsertAuthorizationOrderUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertAuthorizationOrderUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthorizationOrderUser">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/DeleteAuthorizationOrderUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteAuthorizationOrderUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuthorizationOrderUser">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/UpdateAuthorizationOrderUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateAuthorizationOrderUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeOrderAuthorizationUser">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/ChangeOrderAuthorizationUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChangeOrderAuthorizationUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserUnprofiled">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserUnprofiled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserUnprofiledAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateUserProfile">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/InsertUpdateUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsertUpdateUserProfileAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentsReport">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAgentsReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAgentsReportAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProgramHits">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/UpdateProgramHits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateProgramHitsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChangePasswordAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommissionsToPay">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/CommissionsToPay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CommissionsToPayAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentType">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAgentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAgentTypeAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetModules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetModulesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TermsAndConditionsRegister">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/TermsAndConditionsRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TermsAndConditionsRegisterAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:TestAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDepartmentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompaniesByUser">
+      <soap:operation soapAction="http://192.192.192.233/WS_SalesForce/GetCompaniesByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCompaniesByUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_SecuritySoap12" type="tns:WS_SecuritySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserByLogin">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserByLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserByLoginAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByUserId">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetCompanyByUserId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCompanyByUserIdAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByUserName">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetCompanyByUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCompanyByUserNameAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserbySystem">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAllUserbySystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAllUserbySystemAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyAgent">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetMoneyAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetMoneyAgentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailAgent">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetMailAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetMailAgentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailAgent">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/UpdateMailAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateMailAgentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryAgent">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetCategoryAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCategoryAgentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserByIdAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByName">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserByNameAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserbyProfile">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserbyProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserbyProfileAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserbyProfileNames">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserbyProfileNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserbyProfileNamesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgents">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAgents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAgentsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCategory">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAllCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAllCategoryAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserProfiles">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAllUserProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAllUserProfilesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfiles">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserProfilesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertProfileUser">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/InsertProfileUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertProfileUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAuthorizationOrderUser">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/InsertAuthorizationOrderUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertAuthorizationOrderUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthorizationOrderUser">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/DeleteAuthorizationOrderUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteAuthorizationOrderUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuthorizationOrderUser">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/UpdateAuthorizationOrderUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateAuthorizationOrderUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeOrderAuthorizationUser">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/ChangeOrderAuthorizationUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChangeOrderAuthorizationUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserUnprofiled">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetUserUnprofiled" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserUnprofiledAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateUserProfile">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/InsertUpdateUserProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsertUpdateUserProfileAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentsReport">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAgentsReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAgentsReportAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProgramHits">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/UpdateProgramHits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateProgramHitsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChangePasswordAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommissionsToPay">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/CommissionsToPay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CommissionsToPayAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentType">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetAgentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAgentTypeAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetModules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetModulesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TermsAndConditionsRegister">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/TermsAndConditionsRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TermsAndConditionsRegisterAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:TestAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDepartmentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompaniesByUser">
+      <soap12:operation soapAction="http://192.192.192.233/WS_SalesForce/GetCompaniesByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCompaniesByUserAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_Security">
+    <wsdl:port name="WS_SecuritySoap" binding="tns:WS_SecuritySoap">
+      <soap:address location="http://192.192.192.95/WS_SalesForceProd/WS_Security.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_SecuritySoap12" binding="tns:WS_SecuritySoap12">
+      <soap12:address location="http://192.192.192.95/WS_SalesForceProd/WS_Security.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

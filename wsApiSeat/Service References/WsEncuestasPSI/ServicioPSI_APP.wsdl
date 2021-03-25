@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioPSI_APP" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IServicioPSI_APP_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/wsPSI_APP" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioPSI_APP_ObtenerPlantillaEncuesta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPlantillaEncuesta" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPSI_APP_ObtenerPlantillaEncuesta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPlantillaEncuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPSI_APP_GuardarEncuesta_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarEncuesta" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPSI_APP_GuardarEncuesta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarEncuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPSI_APP_GuardaDeseaSerContactado_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardaDeseaSerContactado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPSI_APP_GuardaDeseaSerContactado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardaDeseaSerContactadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioPSI_APP">
+    <wsdl:operation name="ObtenerPlantillaEncuesta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPSI_APP/ObtenerPlantillaEncuesta" message="tns:IServicioPSI_APP_ObtenerPlantillaEncuesta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPSI_APP/ObtenerPlantillaEncuestaResponse" message="tns:IServicioPSI_APP_ObtenerPlantillaEncuesta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarEncuesta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPSI_APP/GuardarEncuesta" message="tns:IServicioPSI_APP_GuardarEncuesta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPSI_APP/GuardarEncuestaResponse" message="tns:IServicioPSI_APP_GuardarEncuesta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaDeseaSerContactado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPSI_APP/GuardaDeseaSerContactado" message="tns:IServicioPSI_APP_GuardaDeseaSerContactado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPSI_APP/GuardaDeseaSerContactadoResponse" message="tns:IServicioPSI_APP_GuardaDeseaSerContactado_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioPSI_APP" type="tns:IServicioPSI_APP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerPlantillaEncuesta">
+      <soap:operation soapAction="http://tempuri.org/IServicioPSI_APP/ObtenerPlantillaEncuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarEncuesta">
+      <soap:operation soapAction="http://tempuri.org/IServicioPSI_APP/GuardarEncuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardaDeseaSerContactado">
+      <soap:operation soapAction="http://tempuri.org/IServicioPSI_APP/GuardaDeseaSerContactado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_IServicioPSI_APP" type="tns:IServicioPSI_APP">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IServicioPSI_APP_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerPlantillaEncuesta">
+      <soap:operation soapAction="http://tempuri.org/IServicioPSI_APP/ObtenerPlantillaEncuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarEncuesta">
+      <soap:operation soapAction="http://tempuri.org/IServicioPSI_APP/GuardarEncuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardaDeseaSerContactado">
+      <soap:operation soapAction="http://tempuri.org/IServicioPSI_APP/GuardaDeseaSerContactado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioPSI_APP">
+    <wsdl:port name="BasicHttpBinding_IServicioPSI_APP" binding="tns:BasicHttpBinding_IServicioPSI_APP">
+      <soap:address location="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_IServicioPSI_APP" binding="tns:BasicHttpsBinding_IServicioPSI_APP">
+      <soap:address location="https://v-ws1.dva.com/WS_PSI_APP_Test/ServicioPSI_APP.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

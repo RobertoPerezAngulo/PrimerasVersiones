@@ -1,0 +1,313 @@
+[
+   {
+      "IdModelo":"1236",
+      "NombreModelo":"CUPRA Ateca",
+      "IdVersion":"36034",
+      "NombreCorto":"",
+      "Nombre":"2.0 TSI CUPRA 5P 300HP DSG 7 VEL 4WD",
+      "NumeroPuertas":"",
+      "RuedasMotriz":"",
+      "Transmision":"7 VELOCIDADES DSG",
+      "Motorizacion":"2.0 TSI",
+      "Potencia":"300 HP",
+      "VelocidadMax":"247 KM/H",
+      "Torque":"295 / 2000-5200 LB-FT/RPM",
+      "Emisiones":"",
+      "Precio":"707212",
+      "RutaFoto":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/ateca36034.jpg",
+      "RutaFotoLocal":"fotoateca36034",
+      "Estilo":"",
+      "Descripcion":"",
+      "ConsumoGasolinaCiudad":"",
+      "ConsumoGasolinaMixto":"12.8 KM/L COMBINADO",
+      "ConsumoGasolinaCarretera":"",
+      "CodigoManufactura":"",
+      "Ruta360":"https://my.matterport.com/show/?m=33GkwyT4dtU&lang=es&play=1&help=1",
+      "RutaFichaTecnica":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/fichatecnica36034.jpg",
+      "RutaFichaTecnicaLocal":"fichatecnica36034",
+      "RutaVideo":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/ateca36034.mp4",
+      "RutaVideoLocal":"videoateca36034",
+      "Colores":[
+        {
+            "Nombre":"ROJO VELVET",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rojovelvet36034.jpg",
+            "RutaMini":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rojovelvet36034.jpg",
+            "RutaLocalMini":"rojovelvetmini36034",
+            "RutaLocal":"rojovelvet36034"
+        },
+        {
+            "Nombre":"NEGRO CRISTAL",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/negrocristal36034.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"negrocristalmini36034",
+            "RutaLocal":"negrocristal36034"
+        },
+        {
+            "Nombre":"BLANCO NEVADA",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/blanconevada36034.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"blanconevadamini36034",
+            "RutaLocal":"blanconevada36034"
+        },
+        {
+            "Nombre":"GRIS RODIO",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/grisrodio36034.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"grisrodiomini36034",
+            "RutaLocal":"grisrodio36034"
+        },
+        {
+            "Nombre":"AZUL ENERGÍA",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/azulenergia36034.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"azulenergiamini36034",
+            "RutaLocal":"azulenergia36034"
+        }
+      ],
+      "Accesorios":[
+        {
+            "Concepto":"Rin 19' Aluminio en Copper",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rin36034.jpg",
+            "RutaLocal":"rin36034",
+            "SubTotal":"8275.86",
+            "Iva":"1324.14",
+            "Total":"9600.00"
+        }
+      ]
+   },
+   {
+      "IdModelo":"1236",
+      "NombreModelo":"CUPRA Ateca",
+      "IdVersion":"1",
+      "NombreCorto":"LIMITED EDITION",
+      "Nombre":"2.0 TSI CUPRA 5P 300HP DSG 7 VEL 4WD LIMITED EDITION",
+      "NumeroPuertas":"",
+      "RuedasMotriz":"",
+      "Transmision":"7 VELOCIDADES DSG",
+      "Motorizacion":"2.0 TSI",
+      "Potencia":"300 HP",
+      "VelocidadMax":"247 KM/H",
+      "Torque":"295 / 2000-5200 LB-FT/RPM",
+      "Emisiones":"",
+      "Precio":"707212",
+      "RutaFoto":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/ateca1.jpg",
+      "RutaFotoLocal":"fotoateca1",
+      "Estilo":"",
+      "Descripcion":"",
+      "ConsumoGasolinaCiudad":"",
+      "ConsumoGasolinaMixto":"12.8KM/L COMBINADO",
+      "ConsumoGasolinaCarretera":"",
+      "CodigoManufactura":"",
+      "Ruta360":"https://my.matterport.com/show/?m=33GkwyT4dtU&lang=es&play=1&help=1",
+      "RutaFichaTecnica":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/fichatecnica1.jpg",
+      "RutaFichaTecnicaLocal":"fichatecnica1",
+      "RutaVideo":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/ateca1.mp4",
+      "RutaVideoLocal":"videoateca1",
+      "Colores":[
+        {
+            "Nombre":"ROJO VELVET",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rojovelvet1.jpg",
+            "RutaMini":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rojovelvet1.jpg",
+            "RutaLocalMini":"rojovelvetmini1",
+            "RutaLocal":"rojovelvet1"
+        },
+        {
+            "Nombre":"NEGRO CRISTAL",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/negrocristal1.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"negrocristalmini1",
+            "RutaLocal":"negrocristal1"
+        },
+        {
+            "Nombre":"BLANCO NEVADA",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/blanconevada1.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"blanconevadamini1",
+            "RutaLocal":"blanconevada1"
+        },
+        {
+            "Nombre":"GRIS RODIO",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/grisrodio1.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"grisrodiomini1",
+            "RutaLocal":"grisrodio1"
+        },
+        {
+            "Nombre":"AZUL ENERGÍA",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/azulenergia1.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"azulenergiamini1",
+            "RutaLocal":"azulenergia1"
+        }
+      ],
+      "Accesorios":[
+        {
+            "Concepto":"Rin 19' Aluminio en Copper",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rin36034.jpg",
+            "RutaLocal":"rin36034",
+            "SubTotal":"8275.86",
+            "Iva":"1324.14",
+            "Total":"9600.00"
+        }
+      ]
+   },
+   {
+      "IdModelo":"141",
+      "NombreModelo":"León CUPRA",
+      "IdVersion":"35731",
+      "NombreCorto":"",
+      "Nombre":"2.0 TSI CUPRA 5P 290HP DSG 6 VEL",
+      "NumeroPuertas":"",
+      "RuedasMotriz":"",
+      "Transmision":"6 VELOCIDADES DSG",
+      "Motorizacion":"2.0 TSI",
+      "Potencia":"290 HP",
+      "VelocidadMax":"250 KM/H",
+      "Torque":"258 / 1700-5800 LB-FT/RPM",
+      "Emisiones":"",
+      "Precio":"538000",
+      "RutaFoto":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/leon35731.jpg",
+      "RutaFotoLocal":"fotoleon35731",
+      "Estilo":"",
+      "Descripcion":"",
+      "ConsumoGasolinaCiudad":"",
+      "ConsumoGasolinaMixto":"15.6 KM/L",
+      "ConsumoGasolinaCarretera":"",
+      "CodigoManufactura":"",
+      "Ruta360":"https://my.matterport.com/show/?m=3Kc7y7ebGRr&lang=es&play=1&help=1",
+      "RutaFichaTecnica":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/fichatecnica35731.jpg",
+      "RutaFichaTecnicaLocal":"fichatecnica35731",
+      "RutaVideo":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/leon35731.mp4",
+      "RutaVideoLocal":"videoleon35731",
+      "Colores":[
+        {
+            "Nombre":"NEGRO MEDIANOCHE",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/negromedianoche35731.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"negromedianochemini35731",
+            "RutaLocal":"negromedianoche35731"
+        },
+        {
+            "Nombre":"BLANCO NEVADA",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/blanconevada35731.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"blanconevadamini35731",
+            "RutaLocal":"blanconevada35731"
+        },
+        {
+            "Nombre":"PLATA URBANO",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/plataurbano35731.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"plataurbanomini35731",
+            "RutaLocal":"plataurbano35731"
+        },
+        {
+            "Nombre":"GRIS MAGNÉTICO",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/grismagnetico35731.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"grismagneticomini35731",
+            "RutaLocal":"grismagnetico35731"
+        },
+        {
+            "Nombre":"ROJO EMOCIÓN",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rojoemocion35731.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"rojoemocionmini35731",
+            "RutaLocal":"rojoemocion35731"
+        },
+        {
+            "Nombre":"AZUL MISTERIO",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/azulmisterio35731.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"azulmisteriomini35731",
+            "RutaLocal":"azulmisterio35731"
+        },
+        {
+            "Nombre":"ROJO DESEO",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rojodeseo35731.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"rojodeseomini35731",
+            "RutaLocal":"rojodeseo35731"
+        }
+      ],
+      "Accesorios":[
+        {
+            "Concepto":"Rin 19' Aluminio en Copper",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rin36034.jpg",
+            "RutaLocal":"rin36034",
+            "SubTotal":"8275.86",
+            "Iva":"1324.14",
+            "Total":"9600.00"
+        }
+      ]
+   },
+   {
+      "IdModelo":"141",
+      "NombreModelo":"León CUPRA",
+      "IdVersion":"36389",
+      "NombreCorto":"SPECIAL EDITION",
+      "Nombre":"2.0 TSI CUPRA 5P 290HP DSG 6 VEL SPECIAL EDITION",
+      "NumeroPuertas":"",
+      "RuedasMotriz":"",
+      "Transmision":"6 VELOCIDADES DSG",
+      "Motorizacion":"2.0 TSI",
+      "Potencia":"290 HP",
+      "VelocidadMax":"250 KM/H",
+      "Torque":"258 / 1700-5800 LB-FT/RPM",
+      "Emisiones":"151g C02/KM",
+      "Precio":"617900",
+      "RutaFoto":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/leon36389.jpg",
+      "RutaFotoLocal":"fotoleon36389",
+      "Estilo":"",
+      "Descripcion":"",
+      "ConsumoGasolinaCiudad":"",
+      "ConsumoGasolinaMixto":"15.6 KM/L",
+      "ConsumoGasolinaCarretera":"",
+      "CodigoManufactura":"",
+      "Ruta360":"https://my.matterport.com/show/?m=qvBWxF5WAPq&lang=es&play=1&help=1",
+      "RutaFichaTecnica":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/fichatecnica36389.jpg",
+      "RutaFichaTecnicaLocal":"fichatecnica36389",
+      "RutaVideo":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/leon36389.mp4",
+      "RutaVideoLocal":"videoleon36389",
+      "Colores":[
+        {
+            "Nombre":"NEGRO MEDIANOCHE",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/negromedianoche36389.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"negromedianochemini36389",
+            "RutaLocal":"negromedianoche36389"
+        },
+        {
+            "Nombre":"BLANCO NEVADA",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/blanconevada36389.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"blanconevadamini36389",
+            "RutaLocal":"blanconevada36389"
+        },
+        {
+            "Nombre":"PLATA URBANO",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/plataurbano36389.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"plataurbanomini36389",
+            "RutaLocal":"plataurbano36389"
+        },
+        {
+            "Nombre":"GRIS MAGNÉTICO",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/grismagnetico36389.jpg",
+            "RutaMini":"",
+            "RutaLocalMini":"grismagneticomini36389",
+            "RutaLocal":"grismagnetico36389"
+        }
+      ],
+      "Accesorios":[
+        {
+            "Concepto":"Rin 19' Aluminio en Copper",
+            "Ruta":"http://ws-smartit.divisionautomotriz.com/wsApiMiAuto/Resources/Cupra/rin36034.jpg",
+            "RutaLocal":"rin36034",
+            "SubTotal":"8275.86",
+            "Iva":"1324.14",
+            "Total":"9600.00"
+        }
+      ]
+   }
+]

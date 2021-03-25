@@ -1,0 +1,36 @@
+﻿{
+   "RazonSocial":"FURIA MOTORS MONTERREY, S.A. DE C.V.",
+   "Ubicacion":"AV. LAZARO CARDENAS NO. 2270, COL. VALLE ORIENTE, C.P. 66269",
+   "CuentasBancarias":[
+      {
+        "Banco": "BBVA",
+        "NombreLogo": "bbva.png",
+        "NumeroCuenta": "0454245873",
+        "ClabeInterbancaria": "01218000452458736"
+      },
+      {
+        "Banco": "CitiBanamex",
+        "NombreLogo": "citibanamex.png",
+        "NumeroCuenta": "0002231",
+        "ClabeInterbancaria": "002580486400022319"
+      },      
+      {
+        "Banco": "Scotiabank",
+        "NombreLogo": "scotiabank.png",
+        "NumeroCuenta": "103637255",
+        "ClabeInterbancaria": "044180001036372551"
+      },
+      {
+        "Banco": "Banorte",
+        "NombreLogo": "banorte.png",
+        "NumeroCuenta": "0676595633",
+        "ClabeInterbancaria": "072180006765956338"
+      },
+      {
+        "Banco": "Banco del bajío",
+        "NombreLogo": "bancodelbajio.png",
+        "NumeroCuenta": "0148046600201",
+        "ClabeInterbancaria": "030180900006558795"
+      }
+    ]
+	}

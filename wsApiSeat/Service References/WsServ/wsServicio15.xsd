@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PSI" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection" />
+  <xs:complexType name="ArrayOfPrivilegio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Privilegio" nillable="true" type="tns:Privilegio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrivilegio" nillable="true" type="tns:ArrayOfPrivilegio" />
+  <xs:complexType name="Privilegio">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q1:DB2ObjectSEGU">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EsGeneral" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EsPredeterminado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EsquemaTabla" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdMarca" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPerfil" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+          <xs:element minOccurs="0" name="Llave" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Privilegio" nillable="true" type="tns:Privilegio" />
+  <xs:complexType name="Usuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q2:DB2ObjectSEGU">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Agencias" nillable="true" type="tns:ArrayOfUsuarioAgenciaEx" />
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PSI" minOccurs="0" name="Areas" nillable="true" type="q3:ArrayOfUsuarioArea" />
+          <xs:element minOccurs="0" name="Bloqueado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExtensionOficina" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FCSGURLREP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FDSGADMINA" type="xs:int" />
+          <xs:element minOccurs="0" name="FDSGSMSENV" type="xs:int" />
+          <xs:element minOccurs="0" name="IPValida" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEmpleado" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdProgramaActivo" type="xs:int" />
+          <xs:element minOccurs="0" name="IntentosPassword" type="xs:int" />
+          <xs:element minOccurs="0" name="MailPrimario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailSecundario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreReal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Perfiles" nillable="true" type="tns:ArrayOfUsuarioPerfilEx" />
+          <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TelefonoMovil" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TelefonoOficina" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalAccesos" type="xs:int" />
+          <xs:element minOccurs="0" name="UltimoAcceso" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UltimoCambio" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="ArrayOfUsuarioAgenciaEx">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioAgenciaEx" nillable="true" type="tns:UsuarioAgenciaEx" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioAgenciaEx" nillable="true" type="tns:ArrayOfUsuarioAgenciaEx" />
+  <xs:complexType name="UsuarioAgenciaEx">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UsuarioAgencia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdMarca" type="xs:int" />
+          <xs:element minOccurs="0" name="NombreAgencia" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioAgenciaEx" nillable="true" type="tns:UsuarioAgenciaEx" />
+  <xs:complexType name="UsuarioAgencia">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q4:DB2ObjectSEGU">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioAgencia" nillable="true" type="tns:UsuarioAgencia" />
+  <xs:complexType name="ArrayOfUsuarioPerfilEx">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioPerfilEx" nillable="true" type="tns:UsuarioPerfilEx" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioPerfilEx" nillable="true" type="tns:ArrayOfUsuarioPerfilEx" />
+  <xs:complexType name="UsuarioPerfilEx">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UsuarioPerfil">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CorreoPrimario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreReal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Perfil" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioPerfilEx" nillable="true" type="tns:UsuarioPerfilEx" />
+  <xs:complexType name="UsuarioPerfil">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q5:DB2ObjectSEGU">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdPerfil" type="xs:int" />
+          <xs:element minOccurs="0" name="IdSistema" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioPerfil" nillable="true" type="tns:UsuarioPerfil" />
+  <xs:complexType name="ArrayOfUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Usuario" nillable="true" type="tns:Usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuario" nillable="true" type="tns:ArrayOfUsuario" />
+  <xs:complexType name="Error">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q6:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Fuente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hora" type="ser:duration" />
+          <xs:element minOccurs="0" name="IPCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IPServidor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPrograma" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuario" type="xs:int" />
+          <xs:element minOccurs="0" name="InformacionAdicional" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SitioDestino" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" type="tns:Error.ETipos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Error" nillable="true" type="tns:Error" />
+  <xs:simpleType name="Error.ETipos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Critical" />
+      <xs:enumeration value="BusinnessRule" />
+      <xs:enumeration value="DataBaseIntegrity" />
+      <xs:enumeration value="Warning" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Error.ETipos" nillable="true" type="tns:Error.ETipos" />
+</xs:schema>

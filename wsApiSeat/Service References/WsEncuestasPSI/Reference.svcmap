@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9344d962-e844-4d19-803f-76c54e76bf1b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioPSI_APP.xsd" MetadataType="Schema" ID="2b793b58-0f0f-4ad7-bdee-fd0f1cce0656" SourceId="1" SourceUrl="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioPSI_APP.wsdl" MetadataType="Wsdl" ID="7597a1f3-181e-416d-ab3b-f2e6c62bb560" SourceId="1" SourceUrl="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?wsdl" />
+    <MetadataFile FileName="ServicioPSI_APP1.xsd" MetadataType="Schema" ID="3675e10a-77cb-4c46-b823-c6e64586fa3a" SourceId="1" SourceUrl="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioPSI_APP2.xsd" MetadataType="Schema" ID="333c4315-57ff-4ba9-bd01-f9d0bc6472c7" SourceId="1" SourceUrl="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioPSI_APP.disco" MetadataType="Disco" ID="d3621b51-45d8-4d8f-a3fd-50d5bd69ce36" SourceId="1" SourceUrl="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

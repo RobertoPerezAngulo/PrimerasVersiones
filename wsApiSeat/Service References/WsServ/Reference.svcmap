@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8acf60d0-129d-4baa-a422-786b311f1b3e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.5.2.21/ws_AdminServicio/wsServicio.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsServicio.disco" MetadataType="Disco" ID="25bfaeba-8156-4229-a81f-f80ae844745c" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?disco" />
+    <MetadataFile FileName="wsServicio.xsd" MetadataType="Schema" ID="fbdc0c35-adef-4b02-8f80-5be010669040" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd11" />
+    <MetadataFile FileName="wsServicio1.xsd" MetadataType="Schema" ID="4788c194-2af9-4cee-97d1-96daad1bbb33" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd21" />
+    <MetadataFile FileName="wsServicio2.xsd" MetadataType="Schema" ID="e330d5b0-7f76-475d-a01d-f92576986b03" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd12" />
+    <MetadataFile FileName="wsServicio3.xsd" MetadataType="Schema" ID="643e38ae-a0b8-4fda-8992-38ceca05fab3" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd19" />
+    <MetadataFile FileName="wsServicio4.xsd" MetadataType="Schema" ID="7da83fa2-8a70-4c4c-bcd6-b39b63c83d34" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd5" />
+    <MetadataFile FileName="wsServicio5.xsd" MetadataType="Schema" ID="05b37207-41ed-462d-b3b0-b12b70054368" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd4" />
+    <MetadataFile FileName="wsServicio6.xsd" MetadataType="Schema" ID="11ecfbdc-e42e-4dbe-8f8c-8cc207c8d52d" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd7" />
+    <MetadataFile FileName="wsServicio7.xsd" MetadataType="Schema" ID="cf663206-8880-48c3-bb2d-972aac69bd3e" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd6" />
+    <MetadataFile FileName="wsServicio8.xsd" MetadataType="Schema" ID="05501201-fb59-423c-be49-043bf9f2d8c9" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd22" />
+    <MetadataFile FileName="wsServicio9.xsd" MetadataType="Schema" ID="86a07d65-4b8c-4cfa-a43f-42d9d16fd8b1" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsServicio10.xsd" MetadataType="Schema" ID="628921c0-de12-42a9-8d7d-b2f15fca793f" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd3" />
+    <MetadataFile FileName="wsServicio11.xsd" MetadataType="Schema" ID="4c6514a9-fdf8-4659-82da-bea8503a864e" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsServicio12.xsd" MetadataType="Schema" ID="48a8e6fa-88bd-44a7-9e60-98a27f31b807" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd17" />
+    <MetadataFile FileName="wsServicio.wsdl" MetadataType="Wsdl" ID="96f839c8-1753-4f1e-a29b-5387d4bd7e54" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="wsServicio13.xsd" MetadataType="Schema" ID="0ef3bddd-7c9b-4ddc-811c-e06dc4afbf80" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd8" />
+    <MetadataFile FileName="wsServicio14.xsd" MetadataType="Schema" ID="03b6a6b4-b3b2-4b3d-86bb-0f83f9484df1" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd9" />
+    <MetadataFile FileName="wsServicio15.xsd" MetadataType="Schema" ID="df3fe608-78dd-4d2f-ab54-8d7ba5d0a664" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd10" />
+    <MetadataFile FileName="wsServicio1.wsdl" MetadataType="Wsdl" ID="76287a03-7d1e-4367-8039-2656a90b613e" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?wsdl" />
+    <MetadataFile FileName="wsServicio16.xsd" MetadataType="Schema" ID="67f4ae13-113b-415e-b67d-f3472d4cc706" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd20" />
+    <MetadataFile FileName="wsServicio17.xsd" MetadataType="Schema" ID="22f3930a-89f5-464d-b526-a8c1cfc7e2a3" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd15" />
+    <MetadataFile FileName="wsServicio18.xsd" MetadataType="Schema" ID="162cca7b-49f1-4b63-a6af-339731d2d377" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsServicio19.xsd" MetadataType="Schema" ID="babf3858-e65a-499b-a0e2-cb77b80b23a7" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd18" />
+    <MetadataFile FileName="wsServicio20.xsd" MetadataType="Schema" ID="74ad55d6-4a38-44e3-8c38-754c3e93f350" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd16" />
+    <MetadataFile FileName="wsServicio21.xsd" MetadataType="Schema" ID="2757aae0-a234-4684-b8e5-63aa131c4b3d" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd13" />
+    <MetadataFile FileName="wsServicio22.xsd" MetadataType="Schema" ID="52416e48-0466-44b7-a0f5-8efafb8b02a3" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd23" />
+    <MetadataFile FileName="wsServicio23.xsd" MetadataType="Schema" ID="816e88cd-2b5f-4fa5-a1bf-b62364cbfe56" SourceId="1" SourceUrl="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd14" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

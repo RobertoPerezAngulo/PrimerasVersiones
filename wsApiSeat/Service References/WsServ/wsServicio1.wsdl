@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wsServicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_wsServicio_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="" location="http://10.5.2.21/ws_adminServicio/wsServicio.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="CustomBinding_wsServicio" type="wsServicio">
+    <wsp:PolicyReference URI="#CustomBinding_wsServicio_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AsesorAdministrador_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/AsesorAdministrador_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorarioDeAsesorDeCitaDisponible_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/HorarioDeAsesorDeCitaDisponible_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarPendientesPorPlanificar">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_ListarPendientesPorPlanificar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreordenDeServicio_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/PreordenDeServicio_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreordenDeServicioSiniestro_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/PreordenDeServicioSiniestro_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarTraslapes">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_ListarTraslapes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisponibilidadTareaPlaneadaPorTaller_Listar">
+      <soap12:operation soapAction="urn:wsServicio/DisponibilidadTareaPlaneadaPorTaller_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicio_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicio_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicio_BuscarPorFolio">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicio_BuscarPorFolio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoDeCitaDeServicio_Listar">
+      <soap12:operation soapAction="urn:wsServicio/TipoDeCitaDeServicio_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Operacion_MinutusoPromedioDeEjecucion">
+      <soap12:operation soapAction="urn:wsServicio/Operacion_MinutusoPromedioDeEjecucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Paquete_MinutusoPromedioDeEjecucion">
+      <soap12:operation soapAction="urn:wsServicio/Paquete_MinutusoPromedioDeEjecucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MagnetoplanAutomatico_PlanearOperaciones">
+      <soap12:operation soapAction="urn:wsServicio/MagnetoplanAutomatico_PlanearOperaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Empleado_Listar">
+      <soap12:operation soapAction="urn:wsServicio/Empleado_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmpleadoAgencia_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/EmpleadoAgencia_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChoferConHorario_Listar">
+      <soap12:operation soapAction="urn:wsServicio/ChoferConHorario_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Chofer_BuscarPorEmpleado">
+      <soap12:operation soapAction="urn:wsServicio/Chofer_BuscarPorEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChoferConHorario_Set">
+      <soap12:operation soapAction="urn:wsServicio/ChoferConHorario_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChoferConHorario_Delete">
+      <soap12:operation soapAction="urn:wsServicio/ChoferConHorario_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Estado_Listar">
+      <soap12:operation soapAction="urn:wsServicio/Estado_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CodigoPostal_ListarPorEstadoYMunicipio">
+      <soap12:operation soapAction="urn:wsServicio/CodigoPostal_ListarPorEstadoYMunicipio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CodigoPostal_ListarPorCP">
+      <soap12:operation soapAction="urn:wsServicio/CodigoPostal_ListarPorCP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonaDomicilio_Listar">
+      <soap12:operation soapAction="urn:wsServicio/PersonaDomicilio_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="csArea_Listar">
+      <soap12:operation soapAction="urn:wsServicio/csArea_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="csArea_Set">
+      <soap12:operation soapAction="urn:wsServicio/csArea_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="csPlano_BuscarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/csPlano_BuscarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="csPlano_Set">
+      <soap12:operation soapAction="urn:wsServicio/csPlano_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImagenDePlano">
+      <soap12:operation soapAction="urn:wsServicio/GetImagenDePlano" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="csPlanoArea_Alineacion_Listar">
+      <soap12:operation soapAction="urn:wsServicio/csPlanoArea_Alineacion_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="csAparienciaDeMagnetoplan_BuscarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/csAparienciaDeMagnetoplan_BuscarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="csAparienciaDeMagnetoplan_Set">
+      <soap12:operation soapAction="urn:wsServicio/csAparienciaDeMagnetoplan_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RazonDeInhabil_Listar">
+      <soap12:operation soapAction="urn:wsServicio/RazonDeInhabil_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RazonDeInhabil_Set">
+      <soap12:operation soapAction="urn:wsServicio/RazonDeInhabil_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RazonDeInhabil_Delete">
+      <soap12:operation soapAction="urn:wsServicio/RazonDeInhabil_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Privilegio_Listar">
+      <soap12:operation soapAction="urn:wsServicio/Privilegio_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Privilegio_Set">
+      <soap12:operation soapAction="urn:wsServicio/Privilegio_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Privilegio_Delete">
+      <soap12:operation soapAction="urn:wsServicio/Privilegio_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtieneColumnas">
+      <soap12:operation soapAction="urn:wsServicio/obtieneColumnas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPlantilla">
+      <soap12:operation soapAction="urn:wsServicio/GuardarPlantilla" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPlantilla">
+      <soap12:operation soapAction="urn:wsServicio/EliminarPlantilla" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePlantillas">
+      <soap12:operation soapAction="urn:wsServicio/ObtienePlantillas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneDetalleColumnas">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneDetalleColumnas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneReportePorColumnas">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneReportePorColumnas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AUTVersion_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/AUTVersion_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Marca_Listar">
+      <soap12:operation soapAction="urn:wsServicio/Marca_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modelo_ListarPorMarca">
+      <soap12:operation soapAction="urn:wsServicio/Modelo_ListarPorMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AUTVersion_ListarPorModelo">
+      <soap12:operation soapAction="urn:wsServicio/AUTVersion_ListarPorModelo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transmision_Listar">
+      <soap12:operation soapAction="urn:wsServicio/Transmision_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Traccion_Listar">
+      <soap12:operation soapAction="urn:wsServicio/Traccion_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AUTDireccion_Listar">
+      <soap12:operation soapAction="urn:wsServicio/AUTDireccion_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vestidura_Listar">
+      <soap12:operation soapAction="urn:wsServicio/Vestidura_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AUTColor_ListarPorMarca">
+      <soap12:operation soapAction="urn:wsServicio/AUTColor_ListarPorMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoDeCombustible_Listar">
+      <soap12:operation soapAction="urn:wsServicio/TipoDeCombustible_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transmision_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/Transmision_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Traccion_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/Traccion_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarProveedor">
+      <soap12:operation soapAction="urn:wsServicio/ValidarProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarProveedores">
+      <soap12:operation soapAction="urn:wsServicio/ValidarProveedores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="REFA_ListarParametrosPorAgencias">
+      <soap12:operation soapAction="urn:wsServicio/REFA_ListarParametrosPorAgencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GRAL_ListarParametrosPorAgencias">
+      <soap12:operation soapAction="urn:wsServicio/GRAL_ListarParametrosPorAgencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SERV_ListarParametrosPorAgencias">
+      <soap12:operation soapAction="urn:wsServicio/SERV_ListarParametrosPorAgencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AUTConfiguracion_BuscarValor">
+      <soap12:operation soapAction="urn:wsServicio/AUTConfiguracion_BuscarValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="REFAConfiguracion_BuscarValor">
+      <soap12:operation soapAction="urn:wsServicio/REFAConfiguracion_BuscarValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GRALConfiguracion_BuscarValor">
+      <soap12:operation soapAction="urn:wsServicio/GRALConfiguracion_BuscarValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SERVConfiguracion_BuscarValor">
+      <soap12:operation soapAction="urn:wsServicio/SERVConfiguracion_BuscarValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Marca_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/Marca_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/Usuario_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_BuscarPorEmpleado">
+      <soap12:operation soapAction="urn:wsServicio/Usuario_BuscarPorEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agencia_ListarPorMarca">
+      <soap12:operation soapAction="urn:wsServicio/Agencia_ListarPorMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agencia_Listar">
+      <soap12:operation soapAction="urn:wsServicio/Agencia_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SERVUbicacion_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/SERVUbicacion_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoDeHerramientaEspecializada_Listar">
+      <soap12:operation soapAction="urn:wsServicio/TipoDeHerramientaEspecializada_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DescripcionDeHerramientaEspecializada_ListarPorMarca">
+      <soap12:operation soapAction="urn:wsServicio/DescripcionDeHerramientaEspecializada_ListarPorMarca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DescripcionDeHerramientaEspecializada_InsertOrUpdate">
+      <soap12:operation soapAction="urn:wsServicio/DescripcionDeHerramientaEspecializada_InsertOrUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RampaEx_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/RampaEx_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Operario_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/Operario_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ListarPorPerfilesYAgencia">
+      <soap12:operation soapAction="urn:wsServicio/Usuario_ListarPorPerfilesYAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoDeReceptor_Listar">
+      <soap12:operation soapAction="urn:wsServicio/TipoDeReceptor_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RFCUtilerias_Validar">
+      <soap12:operation soapAction="urn:wsServicio/RFCUtilerias_Validar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CURPUtilerias_Validar">
+      <soap12:operation soapAction="urn:wsServicio/CURPUtilerias_Validar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonaBasica_ListarPorNombre">
+      <soap12:operation soapAction="urn:wsServicio/PersonaBasica_ListarPorNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonaEx_ListarPorNombre">
+      <soap12:operation soapAction="urn:wsServicio/PersonaEx_ListarPorNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VehiculoBase_ListarPorIdsClientes">
+      <soap12:operation soapAction="urn:wsServicio/VehiculoBase_ListarPorIdsClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HerramientaEspecializada_InsertOrUpdate">
+      <soap12:operation soapAction="urn:wsServicio/HerramientaEspecializada_InsertOrUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HerramientaEspecializada_Delete">
+      <soap12:operation soapAction="urn:wsServicio/HerramientaEspecializada_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HerramientaEspecializada_Listar">
+      <soap12:operation soapAction="urn:wsServicio/HerramientaEspecializada_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_InsertOrUpdate">
+      <soap12:operation soapAction="urn:wsServicio/PrestamoDeHerramientaEspecializada_InsertOrUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_Delete">
+      <soap12:operation soapAction="urn:wsServicio/PrestamoDeHerramientaEspecializada_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate">
+      <soap12:operation soapAction="urn:wsServicio/PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_ListarActivos">
+      <soap12:operation soapAction="urn:wsServicio/PrestamoDeHerramientaEspecializada_ListarActivos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_Listar">
+      <soap12:operation soapAction="urn:wsServicio/PrestamoDeHerramientaEspecializada_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_Autorizar">
+      <soap12:operation soapAction="urn:wsServicio/PrestamoDeHerramientaEspecializada_Autorizar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HerramientaEspecializadaHelper_Importar">
+      <soap12:operation soapAction="urn:wsServicio/HerramientaEspecializadaHelper_Importar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrdenDeServicio_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/OrdenDeServicio_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrdenDeServicio_BuscarPorFolio">
+      <soap12:operation soapAction="urn:wsServicio/OrdenDeServicio_BuscarPorFolio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReporteSEAT">
+      <soap12:operation soapAction="urn:wsServicio/GetReporteSEAT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCatalogoPeriodo">
+      <soap12:operation soapAction="urn:wsServicio/ConsultaCatalogoPeriodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaOrdenesenProceso">
+      <soap12:operation soapAction="urn:wsServicio/ConsultaOrdenesenProceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRetornoaTaller">
+      <soap12:operation soapAction="urn:wsServicio/GetRetornoaTaller" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdenesCanceladas">
+      <soap12:operation soapAction="urn:wsServicio/GetOrdenesCanceladas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdenesTiempos">
+      <soap12:operation soapAction="urn:wsServicio/GetOrdenesTiempos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResumenTiempos">
+      <soap12:operation soapAction="urn:wsServicio/GetResumenTiempos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTiposOrden">
+      <soap12:operation soapAction="urn:wsServicio/GetTiposOrden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExistencia">
+      <soap12:operation soapAction="urn:wsServicio/GetExistencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCancelaAcondicionamientoUnidadesNuevas">
+      <soap12:operation soapAction="urn:wsServicio/setCancelaAcondicionamientoUnidadesNuevas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardaCitaSimple">
+      <soap12:operation soapAction="urn:wsServicio/GuardaCitaSimple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardaCitaConPreorden">
+      <soap12:operation soapAction="urn:wsServicio/GuardaCitaConPreorden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCita">
+      <soap12:operation soapAction="urn:wsServicio/ActualizaCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPreordenCotizacion">
+      <soap12:operation soapAction="urn:wsServicio/ActualizaPreordenCotizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneCita">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstadisticosDeCitas">
+      <soap12:operation soapAction="urn:wsServicio/GetEstadisticosDeCitas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneOpcionesCita">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneOpcionesCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_ListarOpciones">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicioApartada_ListarOpciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_Set">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicioApartada_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_Delete">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicioApartada_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_ExistenTraslapes">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicioApartada_ExistenTraslapes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_ListarPorAsesoresOChoferes">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicioApartada_ListarPorAsesoresOChoferes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioEx_ListarExPorAsesoresOChoferes">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicioEx_ListarExPorAsesoresOChoferes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicio_ListarPorAgenciasYEstatus">
+      <soap12:operation soapAction="urn:wsServicio/CitaDeServicio_ListarPorAgenciasYEstatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCliente">
+      <soap12:operation soapAction="urn:wsServicio/ConsultaCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneVehiculoCliente">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneVehiculoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaHorariosAgencia">
+      <soap12:operation soapAction="urn:wsServicio/CargaHorariosAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneAsesores">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneAsesores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneDisponiblesAgenda">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneDisponiblesAgenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCliente">
+      <soap12:operation soapAction="urn:wsServicio/ActualizaCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoCita">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneTipoCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoPreorden">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneTipoPreorden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoPrecio">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneTipoPrecio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaTieneCita">
+      <soap12:operation soapAction="urn:wsServicio/BuscaTieneCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaVehiculoCita">
+      <soap12:operation soapAction="urn:wsServicio/BuscaVehiculoCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObtenerVehiculosNoRegresoServicio">
+      <soap12:operation soapAction="urn:wsServicio/getObtenerVehiculosNoRegresoServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObtenerVehiculosServicioMasDosDias">
+      <soap12:operation soapAction="urn:wsServicio/getObtenerVehiculosServicioMasDosDias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObtenerVehiculosServicioUnDiaFechaVenta">
+      <soap12:operation soapAction="urn:wsServicio/getObtenerVehiculosServicioUnDiaFechaVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObtenerVehiculosServicioUnDiaSinFechaVenta">
+      <soap12:operation soapAction="urn:wsServicio/getObtenerVehiculosServicioUnDiaSinFechaVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaContacto">
+      <soap12:operation soapAction="urn:wsServicio/ActualizaContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaqueteEspecifico">
+      <soap12:operation soapAction="urn:wsServicio/ObtienePaqueteEspecifico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaquetes">
+      <soap12:operation soapAction="urn:wsServicio/ObtienePaquetes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaquetesMantenimiento">
+      <soap12:operation soapAction="urn:wsServicio/ObtienePaquetesMantenimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaquetesAdicion">
+      <soap12:operation soapAction="urn:wsServicio/ObtienePaquetesAdicion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaquetesPromocion">
+      <soap12:operation soapAction="urn:wsServicio/ObtienePaquetesPromocion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Operaciones">
+      <soap12:operation soapAction="urn:wsServicio/Operaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRefaccionesPaquete">
+      <soap12:operation soapAction="urn:wsServicio/ObtieneRefaccionesPaquete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Campanias">
+      <soap12:operation soapAction="urn:wsServicio/Campanias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarRefaccion">
+      <soap12:operation soapAction="urn:wsServicio/BuscarRefaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardaPaquete">
+      <soap12:operation soapAction="urn:wsServicio/GuardaPaquete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardaOperaciones">
+      <soap12:operation soapAction="urn:wsServicio/GuardaOperaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardaRefacciones">
+      <soap12:operation soapAction="urn:wsServicio/GuardaRefacciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTipoOrdenEmpresa">
+      <soap12:operation soapAction="urn:wsServicio/getTipoOrdenEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmpleadosEmpresa">
+      <soap12:operation soapAction="urn:wsServicio/getEmpleadosEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperariosEmpresa">
+      <soap12:operation soapAction="urn:wsServicio/getOperariosEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConifgTipoOrdenesOperarios">
+      <soap12:operation soapAction="urn:wsServicio/getConifgTipoOrdenesOperarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setupConfiguracionTOrdenTOperacion">
+      <soap12:operation soapAction="urn:wsServicio/setupConfiguracionTOrdenTOperacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delConfiguracionTOrdenTOperacion">
+      <soap12:operation soapAction="urn:wsServicio/delConfiguracionTOrdenTOperacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTiposOperacionesEmpresa">
+      <soap12:operation soapAction="urn:wsServicio/getTiposOperacionesEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConifgTipoOperacionesOperarios">
+      <soap12:operation soapAction="urn:wsServicio/getConifgTipoOperacionesOperarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaInicialPreorden_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/CargaInicialPreorden_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeRespondioControlDeCalidad">
+      <soap12:operation soapAction="urn:wsServicio/SeRespondioControlDeCalidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SePuedePrefacturarSinControlDeCalidad">
+      <soap12:operation soapAction="urn:wsServicio/SePuedePrefacturarSinControlDeCalidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SePuedeFacturarSinControlDeCalidad">
+      <soap12:operation soapAction="urn:wsServicio/SePuedeFacturarSinControlDeCalidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaInicialCitas_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/CargaInicialCitas_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaInicialMagnetoplan_Buscar">
+      <soap12:operation soapAction="urn:wsServicio/CargaInicialMagnetoplan_Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TallerCompartido_BuscarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/TallerCompartido_BuscarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfiguracionDeMagnetoplan_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/ConfiguracionDeMagnetoplan_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ExistenTraslapes">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_ExistenTraslapes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_Listar">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarPorPreorden">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_ListarPorPreorden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_BuscarPorPreorden">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_BuscarPorPreorden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarPorCita">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_ListarPorCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarBasicaPorPreorden">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_ListarBasicaPorPreorden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_Set">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_Set" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_Set_ActualizarOperaciones">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_Set_ActualizarOperaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_Delete">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_DeleteByPreorden">
+      <soap12:operation soapAction="urn:wsServicio/TareaPlaneadaPorTaller_DeleteByPreorden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorarioDeOperario_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/HorarioDeOperario_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Asesor_ListarPorAgenciaParaCitas">
+      <soap12:operation soapAction="urn:wsServicio/Asesor_ListarPorAgenciaParaCitas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Asesor_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/Asesor_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsesorConHorario_ListarPorAgencia">
+      <soap12:operation soapAction="urn:wsServicio/AsesorConHorario_ListarPorAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsServicio">
+    <wsdl:port name="CustomBinding_wsServicio" binding="tns:CustomBinding_wsServicio">
+      <soap12:address location="http://10.5.2.21/ws_adminServicio/wsServicio.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://10.5.2.21/ws_adminServicio/wsServicio.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

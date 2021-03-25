@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.TESO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.TESO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="ETiposDeNomina">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="ADMINISTRATIVA" />
+      <xs:enumeration value="DESTAJISTAS" />
+      <xs:enumeration value="HONORARIOS" />
+      <xs:enumeration value="COMISIONISTAS" />
+      <xs:enumeration value="EXTERNOS_LEGACY" />
+      <xs:enumeration value="EXTERNOS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ETiposDeNomina" nillable="true" type="tns:ETiposDeNomina" />
+</xs:schema>

@@ -1,0 +1,3226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.NOM" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Afluencia" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.REFA" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Reportes" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Ordenes_en_proceso" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.RetornoTaller" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases" />
+  <xs:element name="AsesorAdministrador_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsesorAdministrador_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="AsesorAdministrador_ListarPorAgenciaResult" nillable="true" type="q1:ArrayOfAsesorAdministrador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HorarioDeAsesorDeCitaDisponible_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HorarioDeAsesorDeCitaDisponible_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="HorarioDeAsesorDeCitaDisponible_ListarPorAgenciaResult" nillable="true" type="q2:ArrayOfHorarioDeAsesorDeCitaDisponible" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarPendientesPorPlanificar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUsuario" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsAgencias" nillable="true" type="q3:ArrayOfint" />
+        <xs:element minOccurs="0" name="aSoloConOperaciones" type="xs:boolean" />
+        <xs:element minOccurs="0" name="aMinutosParaConsiderarCitaNoShow" type="xs:int" />
+        <xs:element minOccurs="0" name="aPlanearLavados" type="xs:boolean" />
+        <xs:element minOccurs="0" name="aPlanearControlDeCalidad" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarPendientesPorPlanificarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TareaPlaneadaPorTaller_ListarPendientesPorPlanificarResult" nillable="true" type="q4:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreordenDeServicio_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreordenDeServicio_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="PreordenDeServicio_BuscarResult" nillable="true" type="q5:PreordenDeServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreordenDeServicioSiniestro_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreorden" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreordenDeServicioSiniestro_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="PreordenDeServicioSiniestro_BuscarResult" nillable="true" type="q6:PreordenDeServicioSiniestro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarTraslapes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdTaller" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdExcluir" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsEmpleados" nillable="true" type="q7:ArrayOfint" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsOperarios" nillable="true" type="q8:ArrayOfint" />
+        <xs:element minOccurs="0" name="aIdRampa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aFechaInicialCompleta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinalCompleta" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarTraslapesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TareaPlaneadaPorTaller_ListarTraslapesResult" nillable="true" type="q9:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisponibilidadTareaPlaneadaPorTaller_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdTaller" type="xs:int" />
+        <xs:element minOccurs="0" name="aId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsEmpleados" nillable="true" type="q10:ArrayOfint" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsOperarios" nillable="true" type="q11:ArrayOfint" />
+        <xs:element minOccurs="0" name="aIdRampa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aFechaInicialCompleta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinalCompleta" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisponibilidadTareaPlaneadaPorTaller_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="DisponibilidadTareaPlaneadaPorTaller_ListarResult" nillable="true" type="q12:ArrayOfDisponibilidadTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicio_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicio_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="CitaDeServicio_BuscarResult" nillable="true" type="q13:CitaDeServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicio_BuscarPorFolio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aFolio" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicio_BuscarPorFolioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="CitaDeServicio_BuscarPorFolioResult" nillable="true" type="q14:CitaDeServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoDeCitaDeServicio_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoDeCitaDeServicio_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TipoDeCitaDeServicio_ListarResult" nillable="true" type="q15:ArrayOfTipoDeCitaDeServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Operacion_MinutusoPromedioDeEjecucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdOperacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Operacion_MinutusoPromedioDeEjecucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Operacion_MinutusoPromedioDeEjecucionResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Paquete_MinutusoPromedioDeEjecucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPaquete" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Paquete_MinutusoPromedioDeEjecucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Paquete_MinutusoPromedioDeEjecucionResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MagnetoplanAutomatico_PlanearOperaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreorden" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MagnetoplanAutomatico_PlanearOperacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="MagnetoplanAutomatico_PlanearOperacionesResult" nillable="true" type="q16:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Empleado_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aId" type="xs:int" />
+        <xs:element minOccurs="0" name="aNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aNombreDeUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Empleado_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.NOM" minOccurs="0" name="Empleado_ListarResult" nillable="true" type="q17:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmpleadoAgencia_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdEmpleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmpleadoAgencia_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.NOM" minOccurs="0" name="EmpleadoAgencia_BuscarResult" nillable="true" type="q18:EmpleadoAgencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChoferConHorario_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aId" type="xs:int" />
+        <xs:element minOccurs="0" name="aNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoMaterno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChoferConHorario_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="ChoferConHorario_ListarResult" nillable="true" type="q19:ArrayOfChoferConHorario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Chofer_BuscarPorEmpleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdEmpleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Chofer_BuscarPorEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Chofer_BuscarPorEmpleadoResult" nillable="true" type="q20:Chofer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChoferConHorario_Set">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aChofer" nillable="true" type="q21:ChoferConHorario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChoferConHorario_SetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChoferConHorario_SetResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChoferConHorario_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aChofer" nillable="true" type="q22:ChoferConHorario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChoferConHorario_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChoferConHorario_DeleteResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Estado_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIncluirDummie" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Estado_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" minOccurs="0" name="Estado_ListarResult" nillable="true" type="q23:ArrayOfEstado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CodigoPostal_ListarPorEstadoYMunicipio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdEstado" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdDelegacionOMunicipio" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CodigoPostal_ListarPorEstadoYMunicipioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" minOccurs="0" name="CodigoPostal_ListarPorEstadoYMunicipioResult" nillable="true" type="q24:ArrayOfCodigoPostal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CodigoPostal_ListarPorCP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aCP" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CodigoPostal_ListarPorCPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" minOccurs="0" name="CodigoPostal_ListarPorCPResult" nillable="true" type="q25:ArrayOfCodigoPostal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonaDomicilio_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdPersona" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonaDomicilio_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" minOccurs="0" name="PersonaDomicilio_ListarResult" nillable="true" type="q26:ArrayOfPersonaDomicilio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csArea_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csArea_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" minOccurs="0" name="csArea_ListarResult" nillable="true" type="q27:ArrayOfcsArea" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csArea_Set">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" minOccurs="0" name="aArea" nillable="true" type="q28:csArea" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csArea_SetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="csArea_SetResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csPlano_BuscarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csPlano_BuscarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" minOccurs="0" name="csPlano_BuscarPorAgenciaResult" nillable="true" type="q29:csPlano" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csPlano_Set">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" minOccurs="0" name="aPlano" nillable="true" type="q30:csPlano" />
+        <xs:element minOccurs="0" name="aImagen" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csPlano_SetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="csPlano_SetResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImagenDePlano">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aNombreDeArchivo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImagenDePlanoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImagenDePlanoResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csPlanoArea_Alineacion_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csPlanoArea_Alineacion_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" minOccurs="0" name="csPlanoArea_Alineacion_ListarResult" nillable="true" type="q31:ArrayOfcsPlanoArea_Alineacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csAparienciaDeMagnetoplan_BuscarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aGenerarPredeterminado" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csAparienciaDeMagnetoplan_BuscarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" minOccurs="0" name="csAparienciaDeMagnetoplan_BuscarPorAgenciaResult" nillable="true" type="q32:csAparienciaDeMagnetoplan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csAparienciaDeMagnetoplan_Set">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" minOccurs="0" name="aAparienciaDeMagnetoplan" nillable="true" type="q33:csAparienciaDeMagnetoplan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="csAparienciaDeMagnetoplan_SetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="csAparienciaDeMagnetoplan_SetResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RazonDeInhabil_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RazonDeInhabil_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="RazonDeInhabil_ListarResult" nillable="true" type="q34:ArrayOfRazonDeInhabil" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RazonDeInhabil_Set">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aRazonDeInhabil" nillable="true" type="q35:RazonDeInhabil" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RazonDeInhabil_SetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RazonDeInhabil_SetResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RazonDeInhabil_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aRazonDeInhabil" nillable="true" type="q36:RazonDeInhabil" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RazonDeInhabil_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RazonDeInhabil_DeleteResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Privilegio_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aEsquemaTabla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Privilegio_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="Privilegio_ListarResult" nillable="true" type="q37:ArrayOfPrivilegio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Privilegio_Set">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="aPrivilegio" nillable="true" type="q38:Privilegio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Privilegio_SetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Privilegio_SetResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Privilegio_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="aPrivilegio" nillable="true" type="q39:Privilegio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Privilegio_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Privilegio_DeleteResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtieneColumnas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtieneColumnasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Afluencia" minOccurs="0" name="obtieneColumnasResult" nillable="true" type="q40:ArrayOfColumnasPlantilla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPlantilla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPlantilla" type="xs:int" />
+        <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="strNombrePlantilla" nillable="true" type="xs:string" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Afluencia" minOccurs="0" name="lstColumnas" nillable="true" type="q41:ArrayOfColumnasPlantilla" />
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrograma" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPlantillaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarPlantillaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarPlantilla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPlantilla" type="xs:int" />
+        <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrograma" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarPlantillaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminarPlantillaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePlantillas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePlantillasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtienePlantillasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDetalleColumnas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPlantilla" type="xs:int" />
+        <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDetalleColumnasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Afluencia" minOccurs="0" name="ObtieneDetalleColumnasResult" nillable="true" type="q42:ArrayOfColumnasPlantilla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneReportePorColumnas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Afluencia" minOccurs="0" name="lstColumnas" nillable="true" type="q43:ArrayOfColumnasPlantilla" />
+        <xs:element minOccurs="0" name="strFechaInicio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFechaFinal" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneReportePorColumnasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtieneReportePorColumnasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTVersion_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdVersion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTVersion_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="AUTVersion_BuscarResult" nillable="true" type="q44:AUTVersion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Marca_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Marca_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="Marca_ListarResult" nillable="true" type="q45:ArrayOfMarca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Modelo_ListarPorMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdMarca" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Modelo_ListarPorMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="Modelo_ListarPorMarcaResult" nillable="true" type="q46:ArrayOfModelo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTVersion_ListarPorModelo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdModelo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTVersion_ListarPorModeloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="AUTVersion_ListarPorModeloResult" nillable="true" type="q47:ArrayOfAUTVersion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transmision_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transmision_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="Transmision_ListarResult" nillable="true" type="q48:ArrayOfTransmision" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Traccion_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Traccion_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="Traccion_ListarResult" nillable="true" type="q49:ArrayOfTraccion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTDireccion_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTDireccion_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="AUTDireccion_ListarResult" nillable="true" type="q50:ArrayOfAUTDireccion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Vestidura_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Vestidura_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="Vestidura_ListarResult" nillable="true" type="q51:ArrayOfVestidura" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTColor_ListarPorMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdMarca" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTColor_ListarPorMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="AUTColor_ListarPorMarcaResult" nillable="true" type="q52:ArrayOfAUTColor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoDeCombustible_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoDeCombustible_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="TipoDeCombustible_ListarResult" nillable="true" type="q53:ArrayOfTipoDeCombustible" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transmision_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdTransmision" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transmision_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="Transmision_BuscarResult" nillable="true" type="q54:Transmision" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Traccion_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdTraccion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Traccion_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="Traccion_BuscarResult" nillable="true" type="q55:Traccion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdPersona" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarProveedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidarProveedorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarProveedores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdPersonas" nillable="true" type="q56:ArrayOfint" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarProveedoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" minOccurs="0" name="ValidarProveedoresResult" nillable="true" type="q57:ArrayOfPersonaProveedor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="REFA_ListarParametrosPorAgencias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="idsAgencias" nillable="true" type="q58:ArrayOfint" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.REFA" minOccurs="0" name="aParametro" type="q59:REFA_EParametros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="REFA_ListarParametrosPorAgenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.REFA" minOccurs="0" name="REFA_ListarParametrosPorAgenciasResult" nillable="true" type="q60:ArrayOfREFA_AgenciaParametro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GRAL_ListarParametrosPorAgencias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="idsAgencias" nillable="true" type="q61:ArrayOfint" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" minOccurs="0" name="aParametro" type="q62:GRAL_EParametros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GRAL_ListarParametrosPorAgenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" minOccurs="0" name="GRAL_ListarParametrosPorAgenciasResult" nillable="true" type="q63:ArrayOfGRAL_AgenciaParametro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SERV_ListarParametrosPorAgencias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="idsAgencias" nillable="true" type="q64:ArrayOfint" />
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aParametro" type="q65:SERV_EParametros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SERV_ListarParametrosPorAgenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="SERV_ListarParametrosPorAgenciasResult" nillable="true" type="q66:ArrayOfSERV_AgenciaParametro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTConfiguracion_BuscarValor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="aParametro" type="q67:AUT_EParametros" />
+        <xs:element minOccurs="0" name="aDefault" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AUTConfiguracion_BuscarValorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AUTConfiguracion_BuscarValorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="REFAConfiguracion_BuscarValor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.REFA" minOccurs="0" name="aParametro" type="q68:REFA_EParametros" />
+        <xs:element minOccurs="0" name="aDefault" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="REFAConfiguracion_BuscarValorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="REFAConfiguracion_BuscarValorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GRALConfiguracion_BuscarValor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" minOccurs="0" name="aParametro" type="q69:GRAL_EParametros" />
+        <xs:element minOccurs="0" name="aDefault" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GRALConfiguracion_BuscarValorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GRALConfiguracion_BuscarValorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SERVConfiguracion_BuscarValor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aParametro" type="q70:SERV_EParametros" />
+        <xs:element minOccurs="0" name="aDefault" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SERVConfiguracion_BuscarValorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SERVConfiguracion_BuscarValorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Marca_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Marca_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="Marca_BuscarResult" nillable="true" type="q71:Marca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="Usuario_BuscarResult" nillable="true" type="q72:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_BuscarPorEmpleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdEmpleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_BuscarPorEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="Usuario_BuscarPorEmpleadoResult" nillable="true" type="q73:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Agencia_ListarPorMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="aIncluirDummie" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Agencia_ListarPorMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" minOccurs="0" name="Agencia_ListarPorMarcaResult" nillable="true" type="q74:ArrayOfAgencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Agencia_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIncluirDummie" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Agencia_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" minOccurs="0" name="Agencia_ListarResult" nillable="true" type="q75:ArrayOfAgencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SERVUbicacion_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIncluirDummie" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SERVUbicacion_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="SERVUbicacion_ListarPorAgenciaResult" nillable="true" type="q76:ArrayOfSERVUbicacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoDeHerramientaEspecializada_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIncluirDummie" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoDeHerramientaEspecializada_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TipoDeHerramientaEspecializada_ListarResult" nillable="true" type="q77:ArrayOfTipoDeHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescripcionDeHerramientaEspecializada_ListarPorMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdMarca" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescripcionDeHerramientaEspecializada_ListarPorMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="DescripcionDeHerramientaEspecializada_ListarPorMarcaResult" nillable="true" type="q78:ArrayOfDescripcionDeHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescripcionDeHerramientaEspecializada_InsertOrUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aDescripcion" nillable="true" type="q79:DescripcionDeHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescripcionDeHerramientaEspecializada_InsertOrUpdateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RampaEx_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdTallerCompartido" type="xs:int" />
+        <xs:element minOccurs="0" name="aFecha" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aPlanearPorRampas" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RampaEx_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="RampaEx_ListarPorAgenciaResult" nillable="true" type="q80:ArrayOfRampaEx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Operario_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIncluirDummie" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Operario_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Operario_ListarPorAgenciaResult" nillable="true" type="q81:ArrayOfOperario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_ListarPorPerfilesYAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPerfil" type="xs:int" />
+        <xs:element minOccurs="0" name="aIncluirDummie" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_ListarPorPerfilesYAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="Usuario_ListarPorPerfilesYAgenciaResult" nillable="true" type="q82:ArrayOfUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoDeReceptor_Listar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoDeReceptor_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TipoDeReceptor_ListarResult" nillable="true" type="q83:ArrayOfTipoDeReceptor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RFCUtilerias_Validar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aRazonSocial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aFechaDeNacimiento" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aRFC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RFCUtilerias_ValidarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RFCUtilerias_ValidarResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CURPUtilerias_Validar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aFechaDeNacimiento" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aCURP" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CURPUtilerias_ValidarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CURPUtilerias_ValidarResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonaBasica_ListarPorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoMaterno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonaBasica_ListarPorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" minOccurs="0" name="PersonaBasica_ListarPorNombreResult" nillable="true" type="q84:ArrayOfPersonaBasica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonaEx_ListarPorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aApellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aLimite" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonaEx_ListarPorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" minOccurs="0" name="PersonaEx_ListarPorNombreResult" nillable="true" type="q85:ArrayOfPersonaEx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehiculoBase_ListarPorIdsClientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsClientes" nillable="true" type="q86:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehiculoBase_ListarPorIdsClientesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" minOccurs="0" name="VehiculoBase_ListarPorIdsClientesResult" nillable="true" type="q87:ArrayOfVehiculoBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerramientaEspecializada_InsertOrUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aHerramientas" nillable="true" type="q88:ArrayOfHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerramientaEspecializada_InsertOrUpdateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerramientaEspecializada_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aHerramientas" nillable="true" type="q89:ArrayOfHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerramientaEspecializada_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerramientaEspecializada_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aDisponible" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="aNumeroFisico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aDescripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerramientaEspecializada_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="HerramientaEspecializada_ListarResult" nillable="true" type="q90:ArrayOfHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_InsertOrUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aPrestamo" nillable="true" type="q91:PrestamoDeHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_InsertOrUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PrestamoDeHerramientaEspecializada_InsertOrUpdateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aPrestamo" nillable="true" type="q92:PrestamoDeHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aDetallePrestamo" nillable="true" type="q93:PrestamoDeHerramientaEspecializadaDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_ListarActivos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_ListarActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="PrestamoDeHerramientaEspecializada_ListarActivosResult" nillable="true" type="q94:ArrayOfPrestamoDeHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aFolio" type="xs:int" />
+        <xs:element minOccurs="0" name="aFechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="PrestamoDeHerramientaEspecializada_ListarResult" nillable="true" type="q95:ArrayOfPrestamoDeHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_Autorizar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element minOccurs="0" name="aId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrestamoDeHerramientaEspecializada_AutorizarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PrestamoDeHerramientaEspecializada_AutorizarResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerramientaEspecializadaHelper_Importar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aDescripciones" nillable="true" type="q96:ArrayOfDescripcionDeHerramientaEspecializada" />
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aHerramientas" nillable="true" type="q97:ArrayOfHerramientaEspecializada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HerramientaEspecializadaHelper_ImportarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="HerramientaEspecializadaHelper_ImportarResult" nillable="true" type="q98:ArrayOfKeyValueOfHerramientaEspecializadaError6GhW75yb" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrdenDeServicio_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrdenDeServicio_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="OrdenDeServicio_BuscarResult" nillable="true" type="q99:OrdenDeServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrdenDeServicio_BuscarPorFolio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aFolio" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrdenDeServicio_BuscarPorFolioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="OrdenDeServicio_BuscarPorFolioResult" nillable="true" type="q100:OrdenDeServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReporteSEAT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="aFechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReporteSEATResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/wsServicio.Reportes" minOccurs="0" name="GetReporteSEATResult" nillable="true" type="q101:ReporteSEAT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCatalogoPeriodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCatalogoPeriodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Ordenes_en_proceso" minOccurs="0" name="ConsultaCatalogoPeriodoResult" nillable="true" type="q102:ArrayOfPeriodo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaOrdenesenProceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="periodo" type="xs:long" />
+        <xs:element minOccurs="0" name="Orden_en_taller_o_proceso" type="xs:int" />
+        <xs:element minOccurs="0" name="Orden_terminada" type="xs:int" />
+        <xs:element minOccurs="0" name="Orden_prefacturada" type="xs:int" />
+        <xs:element minOccurs="0" name="SFechadeDias" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaOrdenesenProcesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Ordenes_en_proceso" minOccurs="0" name="ConsultaOrdenesenProcesoResult" nillable="true" type="q103:ArrayOfOrdenesenProceso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRetornoaTaller">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRetornoaTallerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/wsServicio.Clases.RetornoTaller" minOccurs="0" name="GetRetornoaTallerResult" nillable="true" type="q104:ArrayOfRetornoTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdenesCanceladas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdenesCanceladasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrdenesCanceladasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdenesTiempos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idEstados" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idGrupos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAsesor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFecIni" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFecFin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bFactura" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdenesTiemposResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrdenesTiemposResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResumenTiempos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEstados" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idGrupos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFecIni" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFecFin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bFactura" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResumenTiemposResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetResumenTiemposResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTiposOrden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="strDepto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTiposOrdenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTiposOrdenResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExistencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPreorden" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExistenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExistenciaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setCancelaAcondicionamientoUnidadesNuevas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idOrden" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idVehiculo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idInventario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPrograma" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setCancelaAcondicionamientoUnidadesNuevasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setCancelaAcondicionamientoUnidadesNuevasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaCitaSimple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+        <xs:element minOccurs="0" name="idAsesor" type="xs:int" />
+        <xs:element minOccurs="0" name="idVehiculo" type="xs:int" />
+        <xs:element minOccurs="0" name="idMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrograma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAsunto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFechaI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHoraI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFechaF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHoraF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strObserv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idModu" type="xs:int" />
+        <xs:element minOccurs="0" name="idMovi" type="xs:int" />
+        <xs:element minOccurs="0" name="idTico" type="xs:int" />
+        <xs:element minOccurs="0" name="idEsta" type="xs:int" />
+        <xs:element minOccurs="0" name="iAnio" type="xs:int" />
+        <xs:element minOccurs="0" name="idModelo" type="xs:int" />
+        <xs:element minOccurs="0" name="strModelo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idColor" type="xs:int" />
+        <xs:element minOccurs="0" name="strColor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPlaca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPermiso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNumSerie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTipoCita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaCitaSimpleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardaCitaSimpleResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaCitaConPreorden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+        <xs:element minOccurs="0" name="idAsesor" type="xs:int" />
+        <xs:element minOccurs="0" name="idVehiculo" type="xs:int" />
+        <xs:element minOccurs="0" name="idMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrograma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAsunto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFechaI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHoraI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFechaF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHoraF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strObserv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idModu" type="xs:int" />
+        <xs:element minOccurs="0" name="idMovi" type="xs:int" />
+        <xs:element minOccurs="0" name="idTico" type="xs:int" />
+        <xs:element minOccurs="0" name="idEsta" type="xs:int" />
+        <xs:element minOccurs="0" name="iAnio" type="xs:int" />
+        <xs:element minOccurs="0" name="idModelo" type="xs:int" />
+        <xs:element minOccurs="0" name="strModelo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idColor" type="xs:int" />
+        <xs:element minOccurs="0" name="strColor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPlaca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPermiso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTipoCita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="km" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoPreo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idTipoPrecio" type="xs:int" />
+        <xs:element minOccurs="0" name="strTipoPrecio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="total" type="xs:decimal" />
+        <xs:element minOccurs="0" name="iva" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idContacto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaCitaConPreordenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardaCitaConPreordenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaCita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="folioCita" type="xs:int" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+        <xs:element minOccurs="0" name="idAsesor" type="xs:int" />
+        <xs:element minOccurs="0" name="idVehiculo" type="xs:int" />
+        <xs:element minOccurs="0" name="idMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrograma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAsunto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFechaI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHoraI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFechaF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHoraF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strObserv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idModu" type="xs:int" />
+        <xs:element minOccurs="0" name="idMovi" type="xs:int" />
+        <xs:element minOccurs="0" name="idTico" type="xs:int" />
+        <xs:element minOccurs="0" name="idEsta" type="xs:int" />
+        <xs:element minOccurs="0" name="iAnio" type="xs:int" />
+        <xs:element minOccurs="0" name="idModelo" type="xs:int" />
+        <xs:element minOccurs="0" name="strModelo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idColor" type="xs:int" />
+        <xs:element minOccurs="0" name="strColor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPlaca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPermiso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTipoCita" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaCitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizaCitaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaPreordenCotizacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idPreorden" type="xs:int" />
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Operaciones" nillable="true" type="q105:ArrayOfPreordenDeServicioOperacionNoAutorizada" />
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrograma" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaPreordenCotizacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizaPreordenCotizacionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+        <xs:element minOccurs="0" name="strCriterio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApePaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApeMaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strRazonSoc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folioCita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPlacas" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtieneCitaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstadisticosDeCitas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aFechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstadisticosDeCitasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="GetEstadisticosDeCitasResult" nillable="true" type="q106:ArrayOfEstadisticoDeCita" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneOpcionesCita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="strAsesores" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fechaActual" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strHorarios" nillable="true" type="xs:string" />
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="listAsesores" nillable="true" type="q107:ArrayOfAsesores" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneOpcionesCitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtieneOpcionesCitaResult" nillable="true" type="q108:ArrayOfOpciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_ListarOpciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q109="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsAsesores" nillable="true" type="q109:ArrayOfint" />
+        <xs:element xmlns:q110="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsChoferes" nillable="true" type="q110:ArrayOfint" />
+        <xs:element minOccurs="0" name="aFechaInicialCompleta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aParamNumeroDeOpcionesPorDia" type="xs:int" />
+        <xs:element minOccurs="0" name="aParamNumeroDiasParaBusquedaOpcionesCitas" type="xs:int" />
+        <xs:element xmlns:q111="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="aHoraInicial" type="q111:duration" />
+        <xs:element xmlns:q112="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="aHoraFinal" type="q112:duration" />
+        <xs:element minOccurs="0" name="aMinutosDeIntervalo" type="xs:int" />
+        <xs:element minOccurs="0" name="aMinutosDeCitaOTraslado" type="xs:int" />
+        <xs:element minOccurs="0" name="aApartar" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_ListarOpcionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="CitaDeServicioApartada_ListarOpcionesResult" nillable="true" type="q113:ArrayOfCitaDeServicioApartada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_Set">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aApartada" nillable="true" type="q114:CitaDeServicioApartada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_SetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CitaDeServicioApartada_SetResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aApartadas" nillable="true" type="q115:ArrayOfCitaDeServicioApartada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CitaDeServicioApartada_DeleteResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_ExistenTraslapes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q116="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsExcluir" nillable="true" type="q116:ArrayOfint" />
+        <xs:element minOccurs="0" name="aIdAsesor" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdChofer" type="xs:int" />
+        <xs:element minOccurs="0" name="aFechaInicialCompleta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinalCompleta" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_ExistenTraslapesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CitaDeServicioApartada_ExistenTraslapesResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_ListarPorAsesoresOChoferes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q117="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsAsesores" nillable="true" type="q117:ArrayOfint" />
+        <xs:element xmlns:q118="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsChoferes" nillable="true" type="q118:ArrayOfint" />
+        <xs:element minOccurs="0" name="aFechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioApartada_ListarPorAsesoresOChoferesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="CitaDeServicioApartada_ListarPorAsesoresOChoferesResult" nillable="true" type="q119:ArrayOfCitaDeServicioApartada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioEx_ListarExPorAsesoresOChoferes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q120="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsAsesores" nillable="true" type="q120:ArrayOfint" />
+        <xs:element xmlns:q121="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsChoferes" nillable="true" type="q121:ArrayOfint" />
+        <xs:element minOccurs="0" name="aFechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicioEx_ListarExPorAsesoresOChoferesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="CitaDeServicioEx_ListarExPorAsesoresOChoferesResult" nillable="true" type="q122:ArrayOfCitaDeServicioEx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicio_ListarPorAgenciasYEstatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsAgencias" nillable="true" type="q123:ArrayOfint" />
+        <xs:element minOccurs="0" name="aIdAsesor" type="xs:int" />
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aEstatus" nillable="true" type="q124:ArrayOfCitaDeServicio.EEstatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CitaDeServicio_ListarPorAgenciasYEstatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="CitaDeServicio_ListarPorAgenciasYEstatusResult" nillable="true" type="q125:ArrayOfCitaDeServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="strCriterio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="paterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="materno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="razonSocial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:long" />
+        <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConsultaClienteResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneVehiculoCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="criterio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:long" />
+        <xs:element minOccurs="0" name="idVehiculo" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneVehiculoClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtieneVehiculoClienteResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargaHorariosAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargaHorariosAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CargaHorariosAgenciaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneAsesores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneAsesoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtieneAsesoresResult" nillable="true" type="q126:ArrayOfAsesores" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDisponiblesAgenda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="año" type="xs:int" />
+        <xs:element minOccurs="0" name="mes" type="xs:int" />
+        <xs:element minOccurs="0" name="asesores" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDisponiblesAgendaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtieneDisponiblesAgendaResult" nillable="true" type="q127:ArrayOfAgenda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idSistema" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="idUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPrograma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPersona" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="telefonos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emails" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaClienteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoCita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoCitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtieneTipoCitaResult" nillable="true" type="q128:ArrayOfTipoCita" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoPreorden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idTipoPreorden" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoPreordenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtieneTipoPreordenResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoPrecio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idTipoPreorden" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoPrecioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtieneTipoPrecioResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscaTieneCita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVehiculo" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscaTieneCitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BuscaTieneCitaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscaVehiculoCita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVehiculo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscaVehiculoCitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BuscaVehiculoCitaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObtenerVehiculosNoRegresoServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObtenerVehiculosNoRegresoServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="getObtenerVehiculosNoRegresoServicioResult" nillable="true" type="q129:ArrayOfPersona" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObtenerVehiculosServicioMasDosDias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObtenerVehiculosServicioMasDosDiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="getObtenerVehiculosServicioMasDosDiasResult" nillable="true" type="q130:ArrayOfPersona" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObtenerVehiculosServicioUnDiaFechaVenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObtenerVehiculosServicioUnDiaFechaVentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="getObtenerVehiculosServicioUnDiaFechaVentaResult" nillable="true" type="q131:ArrayOfPersona" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObtenerVehiculosServicioUnDiaSinFechaVenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getObtenerVehiculosServicioUnDiaSinFechaVentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="getObtenerVehiculosServicioUnDiaSinFechaVentaResult" nillable="true" type="q132:ArrayOfPersona" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaContacto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idContacto" type="xs:int" />
+        <xs:element minOccurs="0" name="idVehiculo" type="xs:int" />
+        <xs:element minOccurs="0" name="idClasificacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idSubClasif" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idClasiExc" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaProxContacto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaContactoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizaContactoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaqueteEspecifico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idPaquete" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaqueteEspecificoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtienePaqueteEspecificoResult" nillable="true" type="q133:ArrayOfEstructura" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaquetes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVersion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaquetesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtienePaquetesResult" nillable="true" type="q134:ArrayOfEstructura" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaquetesMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVersion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaquetesMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtienePaquetesMantenimientoResult" nillable="true" type="q135:ArrayOfEstructura" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaquetesAdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVersion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaquetesAdicionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtienePaquetesAdicionResult" nillable="true" type="q136:ArrayOfEstructura" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaquetesPromocion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVersion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaquetesPromocionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" minOccurs="0" name="ObtienePaquetesPromocionResult" nillable="true" type="q137:ArrayOfEstructura" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Operaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVersion" type="xs:int" />
+        <xs:element minOccurs="0" name="idTipoPrecio" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OperacionesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneRefaccionesPaquete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVersion" type="xs:int" />
+        <xs:element minOccurs="0" name="idPaquete" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneRefaccionesPaqueteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtieneRefaccionesPaqueteResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Campanias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idVersion" type="xs:int" />
+        <xs:element minOccurs="0" name="numeroSerie" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CampaniasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CampaniasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarRefaccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCriterio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="numeroParte" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idTipoPreo" type="xs:int" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarRefaccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BuscarRefaccionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaPaquete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idPreorden" type="xs:int" />
+        <xs:element minOccurs="0" name="idPaquete" type="xs:int" />
+        <xs:element minOccurs="0" name="clavePaq" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descPaq" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numUnidades" type="xs:decimal" />
+        <xs:element minOccurs="0" name="precVta" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idTipoPaq" type="xs:int" />
+        <xs:element minOccurs="0" name="descTipoPaq" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desgloceOrden" type="xs:int" />
+        <xs:element minOccurs="0" name="desgloceFact" type="xs:int" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaPaqueteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardaPaqueteResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaOperaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idPreorden" type="xs:int" />
+        <xs:element minOccurs="0" name="idTipoPrecio" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoPrecio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numOperaciones" type="xs:int" />
+        <xs:element minOccurs="0" name="idOperacion" type="xs:int" />
+        <xs:element minOccurs="0" name="claveOpe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descOperacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numeroUnidades" type="xs:int" />
+        <xs:element minOccurs="0" name="precioVta" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idOrigen" type="xs:int" />
+        <xs:element minOccurs="0" name="descOrigen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idTipoOpe" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoOperacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idGrupo" type="xs:int" />
+        <xs:element minOccurs="0" name="claveGrupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descGrupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idSubGrupo" type="xs:int" />
+        <xs:element minOccurs="0" name="claveSubGrupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descSuGrupo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPaquete" type="xs:int" />
+        <xs:element minOccurs="0" name="idTipoCobro" type="xs:int" />
+        <xs:element minOccurs="0" name="descTipoCobro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="observaciones" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaOperacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardaOperacionesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaRefacciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="idPreorden" type="xs:int" />
+        <xs:element minOccurs="0" name="idOperacion" type="xs:int" />
+        <xs:element minOccurs="0" name="dtRefacciones" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaRefaccionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardaRefaccionesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTipoOrdenEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iEmpresa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTipoOrdenEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getTipoOrdenEmpresaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmpleadosEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iEmpresa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmpleadosEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getEmpleadosEmpresaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOperariosEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOperariosEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getOperariosEmpresaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConifgTipoOrdenesOperarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperario" type="xs:int" />
+        <xs:element minOccurs="0" name="iTipoOrden" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConifgTipoOrdenesOperariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getConifgTipoOrdenesOperariosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setupConfiguracionTOrdenTOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperario" type="xs:int" />
+        <xs:element minOccurs="0" name="iTOrden" type="xs:int" />
+        <xs:element minOccurs="0" name="iTOperacion" type="xs:int" />
+        <xs:element minOccurs="0" name="dPorcentaje" type="xs:decimal" />
+        <xs:element minOccurs="0" name="dImporte" type="xs:decimal" />
+        <xs:element minOccurs="0" name="sUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sPrograma" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setupConfiguracionTOrdenTOperacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setupConfiguracionTOrdenTOperacionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delConfiguracionTOrdenTOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperario" type="xs:int" />
+        <xs:element minOccurs="0" name="iTOrden" type="xs:int" />
+        <xs:element minOccurs="0" name="iTOperacion" type="xs:int" />
+        <xs:element minOccurs="0" name="sUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sPrograma" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="delConfiguracionTOrdenTOperacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="delConfiguracionTOrdenTOperacionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTiposOperacionesEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iEmpresa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTiposOperacionesEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getTiposOperacionesEmpresaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConifgTipoOperacionesOperarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="iOperario" type="xs:int" />
+        <xs:element minOccurs="0" name="iTipoOperacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConifgTipoOperacionesOperariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getConifgTipoOperacionesOperariosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargaInicialPreorden_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargaInicialPreorden_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/wsServicio.Clases" minOccurs="0" name="CargaInicialPreorden_BuscarResult" nillable="true" type="q138:CargaInicialPreorden" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeRespondioControlDeCalidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreorden" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeRespondioControlDeCalidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SeRespondioControlDeCalidadResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SePuedePrefacturarSinControlDeCalidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SePuedePrefacturarSinControlDeCalidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SePuedePrefacturarSinControlDeCalidadResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SePuedeFacturarSinControlDeCalidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SePuedeFacturarSinControlDeCalidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SePuedeFacturarSinControlDeCalidadResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargaInicialCitas_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargaInicialCitas_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/wsServicio.Clases" minOccurs="0" name="CargaInicialCitas_BuscarResult" nillable="true" type="q139:CargaInicialCitas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargaInicialMagnetoplan_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargaInicialMagnetoplan_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/wsServicio.Clases" minOccurs="0" name="CargaInicialMagnetoplan_BuscarResult" nillable="true" type="q140:CargaInicialMagnetoplan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TallerCompartido_BuscarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TallerCompartido_BuscarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TallerCompartido_BuscarPorAgenciaResult" nillable="true" type="q141:TallerCompartido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfiguracionDeMagnetoplan_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfiguracionDeMagnetoplan_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="ConfiguracionDeMagnetoplan_ListarPorAgenciaResult" nillable="true" type="q142:ArrayOfConfiguracionDeMagnetoplan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ExistenTraslapes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdTaller" type="xs:int" />
+        <xs:element minOccurs="0" name="aId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element xmlns:q143="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsEmpleados" nillable="true" type="q143:ArrayOfint" />
+        <xs:element xmlns:q144="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aIdsOperarios" nillable="true" type="q144:ArrayOfint" />
+        <xs:element minOccurs="0" name="aIdRampa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdVehiculo" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aFechaInicialCompleta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinalCompleta" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ExistenTraslapesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TareaPlaneadaPorTaller_ExistenTraslapesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdTaller" type="xs:int" />
+        <xs:element minOccurs="0" name="aFechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="aFechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TareaPlaneadaPorTaller_ListarResult" nillable="true" type="q145:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarPorPreorden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreorden" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarPorPreordenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TareaPlaneadaPorTaller_ListarPorPreordenResult" nillable="true" type="q146:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_BuscarPorPreorden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreorden" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreordenOperacion" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdOperacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_BuscarPorPreordenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TareaPlaneadaPorTaller_BuscarPorPreordenResult" nillable="true" type="q147:TareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarPorCita">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdCita" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarPorCitaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TareaPlaneadaPorTaller_ListarPorCitaResult" nillable="true" type="q148:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarBasicaPorPreorden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreorden" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_ListarBasicaPorPreordenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TareaPlaneadaPorTaller_ListarBasicaPorPreordenResult" nillable="true" type="q149:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreorden" type="xs:int" />
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aTareas" nillable="true" type="q150:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_LimpiarPorPreorden_InsertarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TareaPlaneadaPorTaller_LimpiarPorPreorden_InsertarResult" nillable="true" type="q151:ArrayOfTareaPlaneadaPorTaller" />
+        <xs:element minOccurs="0" name="aException" nillable="true" type="xs:string" />
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aTareasBackup" nillable="true" type="q152:ArrayOfTareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_Set">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aTarea" nillable="true" type="q153:TareaPlaneadaPorTaller" />
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aJustificacion" nillable="true" type="q154:TareaPlaneadaPorTallerJustificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_SetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TareaPlaneadaPorTaller_SetResult" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aException" nillable="true" type="xs:string" />
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aTareaBackup" nillable="true" type="q155:TareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_Set_ActualizarOperaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aTarea" nillable="true" type="q156:TareaPlaneadaPorTaller" />
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aJustificacion" nillable="true" type="q157:TareaPlaneadaPorTallerJustificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_Set_ActualizarOperacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TareaPlaneadaPorTaller_Set_ActualizarOperacionesResult" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="aException" nillable="true" type="xs:string" />
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aTareaBackup" nillable="true" type="q158:TareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="aTarea" nillable="true" type="q159:TareaPlaneadaPorTaller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TareaPlaneadaPorTaller_DeleteResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_DeleteByPreorden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdUser" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdProgram" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdTaller" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreorden" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdPreordenDeServicioOperacion" type="xs:int" />
+        <xs:element minOccurs="0" name="aIdOperacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TareaPlaneadaPorTaller_DeleteByPreordenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TareaPlaneadaPorTaller_DeleteByPreordenResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HorarioDeOperario_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HorarioDeOperario_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="HorarioDeOperario_ListarPorAgenciaResult" nillable="true" type="q160:ArrayOfHorarioDeOperario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Asesor_ListarPorAgenciaParaCitas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Asesor_ListarPorAgenciaParaCitasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Asesor_ListarPorAgenciaParaCitasResult" nillable="true" type="q161:ArrayOfAsesor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Asesor_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Asesor_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Asesor_ListarPorAgenciaResult" nillable="true" type="q162:ArrayOfAsesor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsesorConHorario_ListarPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aIdAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsesorConHorario_ListarPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="AsesorConHorario_ListarPorAgenciaResult" nillable="true" type="q163:ArrayOfAsesorConHorario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

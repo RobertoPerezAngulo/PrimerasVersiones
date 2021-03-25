@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/WS_PSI_APP_Test/ServicioPSI_APP.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/wsPSI_APP" />
+  <xs:element name="ObtenerPlantillaEncuesta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEncuesta" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPlantillaEncuestaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/wsPSI_APP" minOccurs="0" name="ObtenerPlantillaEncuestaResult" nillable="true" type="q1:Encuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEncuesta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/wsPSI_APP" minOccurs="0" name="encuesta" nillable="true" type="q2:Encuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEncuestaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/wsPSI_APP" minOccurs="0" name="GuardarEncuestaResult" nillable="true" type="q3:MensajeAgradecimiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaDeseaSerContactado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEncuesta" type="xs:int" />
+        <xs:element minOccurs="0" name="contactar" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaDeseaSerContactadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/wsPSI_APP" minOccurs="0" name="GuardaDeseaSerContactadoResult" nillable="true" type="q4:Mensaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

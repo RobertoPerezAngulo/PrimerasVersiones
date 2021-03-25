@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.NOM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.NOM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.TESO" />
+  <xs:complexType name="ArrayOfEmpleado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Empleado" nillable="true" type="tns:Empleado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmpleado" nillable="true" type="tns:ArrayOfEmpleado" />
+  <xs:complexType name="Empleado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q1:DB2ObjectNOM">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Agencias" nillable="true" type="tns:ArrayOfEmpleadoAgencia" />
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CURP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaDeNacimiento" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdEstatusM4" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MailPrimario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailSecundario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreDeUsuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Puesto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RFCFecha" type="xs:int" />
+          <xs:element minOccurs="0" name="RFCHomoclave" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RFCNombre" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Empleado" nillable="true" type="tns:Empleado" />
+  <xs:complexType name="ArrayOfEmpleadoAgencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmpleadoAgencia" nillable="true" type="tns:EmpleadoAgencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmpleadoAgencia" nillable="true" type="tns:ArrayOfEmpleadoAgencia" />
+  <xs:complexType name="EmpleadoAgencia">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q2:DB2ObjectNOM">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FechaDeBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaIngreso" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEmpleado" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEstatusM4" type="xs:int" />
+          <xs:element minOccurs="0" name="TipCom" type="xs:int" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.TESO" minOccurs="0" name="TipoDeNomina" type="q3:ETiposDeNomina" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmpleadoAgencia" nillable="true" type="tns:EmpleadoAgencia" />
+</xs:schema>

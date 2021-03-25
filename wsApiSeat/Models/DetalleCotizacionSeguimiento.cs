@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace wsApiSeat.Models
+{
+    public class DetalleCotizacionSeguimiento
+    {
+        public string IdDetalle { get; set; }
+        public string Fecha { get; set; }
+        public List<ConceptosCotizacionSeguimiento> Conceptos { get; set; }
+        public string TotalCotizacion { get; set; }
+        public string Autorizado { get; set; }
+    }
+}

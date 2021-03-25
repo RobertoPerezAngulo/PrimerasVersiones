@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.COMP" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.CXC" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" />
+  <xs:simpleType name="Persona.ETipo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="Fisica" />
+      <xs:enumeration value="Moral" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Persona.ETipo" nillable="true" type="tns:Persona.ETipo" />
+  <xs:simpleType name="PersonaDomicilio.ETipos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="CASA" />
+      <xs:enumeration value="OFICINA" />
+      <xs:enumeration value="FISCAL" />
+      <xs:enumeration value="OTRO" />
+      <xs:enumeration value="ENTREGA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaDomicilio.ETipos" nillable="true" type="tns:PersonaDomicilio.ETipos" />
+  <xs:complexType name="ArrayOfEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Estado" nillable="true" type="tns:Estado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEstado" nillable="true" type="tns:ArrayOfEstado" />
+  <xs:complexType name="Estado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q1:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abreviatura" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ciudades" nillable="true" type="tns:ArrayOfCiudad" />
+          <xs:element minOccurs="0" name="DelegacionesOMunicipios" nillable="true" type="tns:ArrayOfDelegacionOMunicipio" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rango1" type="xs:int" />
+          <xs:element minOccurs="0" name="Rango2" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Estado" nillable="true" type="tns:Estado" />
+  <xs:complexType name="ArrayOfCiudad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ciudad" nillable="true" type="tns:Ciudad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCiudad" nillable="true" type="tns:ArrayOfCiudad" />
+  <xs:complexType name="Ciudad">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q2:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdEstado" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rango1" type="xs:int" />
+          <xs:element minOccurs="0" name="Rango2" type="xs:int" />
+          <xs:element minOccurs="0" name="Rango3" type="xs:int" />
+          <xs:element minOccurs="0" name="Rango4" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Ciudad" nillable="true" type="tns:Ciudad" />
+  <xs:complexType name="ArrayOfDelegacionOMunicipio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DelegacionOMunicipio" nillable="true" type="tns:DelegacionOMunicipio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDelegacionOMunicipio" nillable="true" type="tns:ArrayOfDelegacionOMunicipio" />
+  <xs:complexType name="DelegacionOMunicipio">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/DVAModelsReflection" base="q3:DB2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveExterna" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdEstado" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rango1" type="xs:int" />
+          <xs:element minOccurs="0" name="Rango2" type="xs:int" />
+          <xs:element minOccurs="0" name="Rango3" type="xs:int" />
+          <xs:element minOccurs="0" name="Rango4" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DelegacionOMunicipio" nillable="true" type="tns:DelegacionOMunicipio" />
+  <xs:complexType name="ArrayOfCodigoPostal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CodigoPostal" nillable="true" type="tns:CodigoPostal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCodigoPostal" nillable="true" type="tns:ArrayOfCodigoPostal" />
+  <xs:complexType name="CodigoPostal">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q4:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaseEntidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoPostalOficina" type="xs:int" />
+          <xs:element minOccurs="0" name="Colonia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaDeRegistro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdCiudad" type="xs:int" />
+          <xs:element minOccurs="0" name="IdColonia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdDelegacionOMunicipio" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEstado" type="xs:int" />
+          <xs:element minOccurs="0" name="IdZona" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Serv" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CodigoPostal" nillable="true" type="tns:CodigoPostal" />
+  <xs:complexType name="ArrayOfPersonaDomicilio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaDomicilio" nillable="true" type="tns:PersonaDomicilio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaDomicilio" nillable="true" type="tns:ArrayOfPersonaDomicilio" />
+  <xs:complexType name="PersonaDomicilio">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q5:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Calle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveExternaDelegacionOMunicipio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveExternaEstado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoPostal" type="xs:int" />
+          <xs:element minOccurs="0" name="Colonia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DelegacionOMunicipio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsDefault" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdCiudad" type="xs:int" />
+          <xs:element minOccurs="0" name="IdColonia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdDelegacionOMunicipio" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEstado" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="NumeroExterior" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroInterior" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" type="tns:PersonaDomicilio.ETipos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaDomicilio" nillable="true" type="tns:PersonaDomicilio" />
+  <xs:complexType name="ArrayOfPersonaProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaProveedor" nillable="true" type="tns:PersonaProveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaProveedor" nillable="true" type="tns:ArrayOfPersonaProveedor" />
+  <xs:complexType name="PersonaProveedor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PersonaClasificacion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Categorias" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Compañias" nillable="true" type="tns:ArrayOfPersonaProveedorEnCompañia" />
+          <xs:element minOccurs="0" name="Contacto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescripcionServicio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaCreacion" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaEdicion" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdEstadoProveedor" type="tns:PersonaProveedor.EEstadoProveedor" />
+          <xs:element minOccurs="0" name="IdUsuarioCreador" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuarioEditor" type="xs:int" />
+          <xs:element minOccurs="0" name="InformacionAdicional" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.COMP" minOccurs="0" name="ListaCategorias" nillable="true" type="q6:ArrayOfPersonaCategoria" />
+          <xs:element minOccurs="0" name="Motivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreCompletoProveedor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Person" nillable="true" type="tns:Persona" />
+          <xs:element minOccurs="0" name="PersonaBasicaExtendida" nillable="true" type="tns:PersonaBasicaEx" />
+          <xs:element minOccurs="0" name="PersonaExtendida" nillable="true" type="tns:PersonaEx" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="UsuarioCreador" nillable="true" type="q7:Usuario" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="UsuarioEditor" nillable="true" type="q8:Usuario" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaProveedor" nillable="true" type="tns:PersonaProveedor" />
+  <xs:complexType name="PersonaClasificacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q9:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClasePersona" type="tns:Persona.EClases" />
+          <xs:element minOccurs="0" name="CuentasBancarias" nillable="true" type="tns:ArrayOfPersonaCuentaBancaria" />
+          <xs:element minOccurs="0" name="IdEstadoEmisionPago" type="tns:PersonaCuentaBancaria.EEstadoEmisionPago" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaClasificacion" nillable="true" type="tns:PersonaClasificacion" />
+  <xs:simpleType name="Persona.EClases">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="CLIENTE" />
+      <xs:enumeration value="CONTACTO" />
+      <xs:enumeration value="CLIENTE_FACTURACION" />
+      <xs:enumeration value="PROVEEDOR" />
+      <xs:enumeration value="ASEGURADORA" />
+      <xs:enumeration value="INTERCOMPANIA" />
+      <xs:enumeration value="PROSPECTO" />
+      <xs:enumeration value="DISTRIBUIDOR" />
+      <xs:enumeration value="CENTRO_DE_SERVICIO_AUTORIZADO" />
+      <xs:enumeration value="PLANTA" />
+      <xs:enumeration value="FINANCIERA" />
+      <xs:enumeration value="EMPLEADO" />
+      <xs:enumeration value="PROVEEDOR_GPC" />
+      <xs:enumeration value="OBLIGADO_SOLIDARIO" />
+      <xs:enumeration value="FIADORA" />
+      <xs:enumeration value="BANCO" />
+      <xs:enumeration value="PERSONA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Persona.EClases" nillable="true" type="tns:Persona.EClases" />
+  <xs:complexType name="ArrayOfPersonaCuentaBancaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaCuentaBancaria" nillable="true" type="tns:PersonaCuentaBancaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaCuentaBancaria" nillable="true" type="tns:ArrayOfPersonaCuentaBancaria" />
+  <xs:complexType name="PersonaCuentaBancaria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q10:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CLABE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClasePersona" type="tns:Persona.EClases" />
+          <xs:element minOccurs="0" name="CuentaBancariaAutorizacion" nillable="true" type="tns:PersonaCuentaBancariaAutorizacion" />
+          <xs:element minOccurs="0" name="CuentaBancariaPreferente" nillable="true" type="tns:PersonaCuentaBancariaPreferente" />
+          <xs:element minOccurs="0" name="DigitoVerificador" type="xs:int" />
+          <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.CXC" minOccurs="0" name="IdBanco" type="q11:EBancos" />
+          <xs:element minOccurs="0" name="IdCuentaBancariaSGPC" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEstadoEmisionPago" type="tns:PersonaCuentaBancaria.EEstadoEmisionPago" />
+          <xs:element minOccurs="0" name="IdPais" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTipoDeCuentaBancaria" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTipoMoneda" type="xs:int" />
+          <xs:element minOccurs="0" name="ListaArchivosPersonaCuenta" nillable="true" type="tns:ArrayOfArchivosPorPersonaYCuentaBancaria" />
+          <xs:element minOccurs="0" name="NombreBanco" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDeConvenio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDeCuenta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDePlaza" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDeSucursal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDeTarjeta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PorValidarEnvioTesoreria" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Preferente" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TipoDeCuentaBancaria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoDeMonedaPorPais" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="personaCuentaBancariaRefenciaCIE" nillable="true" type="tns:PersonaCuentaBancariaReferenciaCIE" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaCuentaBancaria" nillable="true" type="tns:PersonaCuentaBancaria" />
+  <xs:complexType name="PersonaCuentaBancariaAutorizacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q12:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FechaAutoGerenciaAdmin" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaAutoGerenciaGral" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaAutoTesoreria" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaReporte" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaTesoreriaRechazo" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HoraAutoGerenciaAdmin" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="HoraAutoGerenciaGral" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="HoraAutoTesoreria" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="HoraTesoreriaRechazo" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="IdAgencia" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEdoCtaBancaria" type="tns:PersonaCuentaBancariaAutorizacion.EEstadoCuentaBancaria" />
+          <xs:element minOccurs="0" name="IdEdoCtaBancariaSGPC" type="tns:PersonaCuentaBancariaAutorizacion.EEstadoCuentaBancaria" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="IdSGPC" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuarioGerenciaAdmin" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuarioGerenciaGral" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuarioTesoreriaAuto" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdUsuarioTesoreriaRechaza" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MotivoTesoreriaRechazo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reportado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReporteBAM" type="xs:int" />
+          <xs:element minOccurs="0" name="RutaCreacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidaArchivos" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaCuentaBancariaAutorizacion" nillable="true" type="tns:PersonaCuentaBancariaAutorizacion" />
+  <xs:simpleType name="PersonaCuentaBancariaAutorizacion.EEstadoCuentaBancaria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="POR_AUTORIZAR_CUENTA_GERENTE_ADMINISTRATIVO" />
+      <xs:enumeration value="POR_AUTORIZAR_CUENTA_DIRECTOR_ADMINISTRATIVO" />
+      <xs:enumeration value="CUENTA_AUTORIZADA" />
+      <xs:enumeration value="POR_AUTORIZAR_CUENTA_ANALISTA_TESORERO" />
+      <xs:enumeration value="RECHAZADO_ANALISTA_TESORERO" />
+      <xs:enumeration value="CUENTA_CANCELDA" />
+      <xs:enumeration value="POR_AUTORIZAR_GERENTE_TESORERIA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaCuentaBancariaAutorizacion.EEstadoCuentaBancaria" nillable="true" type="tns:PersonaCuentaBancariaAutorizacion.EEstadoCuentaBancaria" />
+  <xs:complexType name="PersonaCuentaBancariaPreferente">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q13:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdConcepto" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="Preferente" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaCuentaBancariaPreferente" nillable="true" type="tns:PersonaCuentaBancariaPreferente" />
+  <xs:simpleType name="PersonaCuentaBancaria.EEstadoEmisionPago">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="BLOQUEADO" />
+      <xs:enumeration value="PUEDE_GENERAR_UNA_SOLICITUD_DE_PAGO" />
+      <xs:enumeration value="PUEDE_GENERAR_N_SOLICITUDES_DE_PAGO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaCuentaBancaria.EEstadoEmisionPago" nillable="true" type="tns:PersonaCuentaBancaria.EEstadoEmisionPago" />
+  <xs:complexType name="ArrayOfArchivosPorPersonaYCuentaBancaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArchivosPorPersonaYCuentaBancaria" nillable="true" type="tns:ArchivosPorPersonaYCuentaBancaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArchivosPorPersonaYCuentaBancaria" nillable="true" type="tns:ArrayOfArchivosPorPersonaYCuentaBancaria" />
+  <xs:complexType name="ArchivosPorPersonaYCuentaBancaria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q14:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContenidoArchivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdCuentaBancaria" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTipoArchivo" type="tns:ArchivosPorPersonaYCuentaBancaria.ETipoArchivoCB" />
+          <xs:element minOccurs="0" name="NombreArchivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RutaArchivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoArchivo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArchivosPorPersonaYCuentaBancaria" nillable="true" type="tns:ArchivosPorPersonaYCuentaBancaria" />
+  <xs:simpleType name="ArchivosPorPersonaYCuentaBancaria.ETipoArchivoCB">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="Carta_Con_Cuenta_Bancaria" />
+      <xs:enumeration value="Comprobante_De_Deposito" />
+      <xs:enumeration value="Estado_De_Cuenta" />
+      <xs:enumeration value="Ratificacion" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ArchivosPorPersonaYCuentaBancaria.ETipoArchivoCB" nillable="true" type="tns:ArchivosPorPersonaYCuentaBancaria.ETipoArchivoCB" />
+  <xs:complexType name="PersonaCuentaBancariaReferenciaCIE">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q15:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdConcepto" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdNuevo" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersonaCuentaBancaria" type="xs:int" />
+          <xs:element minOccurs="0" name="ReferenciaCIE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaCuentaBancariaReferenciaCIE" nillable="true" type="tns:PersonaCuentaBancariaReferenciaCIE" />
+  <xs:complexType name="ArrayOfPersonaProveedorEnCompañia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaProveedorEnCompañia" nillable="true" type="tns:PersonaProveedorEnCompañia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaProveedorEnCompañia" nillable="true" type="tns:ArrayOfPersonaProveedorEnCompañia" />
+  <xs:complexType name="PersonaProveedorEnCompañia">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q16:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdMarca" type="xs:int" />
+          <xs:element minOccurs="0" name="IdProveedor" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaProveedorEnCompañia" nillable="true" type="tns:PersonaProveedorEnCompañia" />
+  <xs:simpleType name="PersonaProveedor.EEstadoProveedor">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="AUTORIZADO" />
+      <xs:enumeration value="ACREDITADO" />
+      <xs:enumeration value="INACTIVO" />
+      <xs:enumeration value="POR_EXCEPCION" />
+      <xs:enumeration value="VETADO" />
+      <xs:enumeration value="UNICO" />
+      <xs:enumeration value="MENOR" />
+      <xs:enumeration value="ALTA" />
+      <xs:enumeration value="ASIGNADO" />
+      <xs:enumeration value="PROVEEDOR_CC" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaProveedor.EEstadoProveedor" nillable="true" type="tns:PersonaProveedor.EEstadoProveedor" />
+  <xs:complexType name="Persona">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q17:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClasePersona" type="tns:Persona.EClases" />
+          <xs:element minOccurs="0" name="ClavePaisNacionalidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATECREAT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEUPDAT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaDeAlta" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaStatus" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HoraDeAlta" type="ser:duration" />
+          <xs:element minOccurs="0" name="HoraStatus" type="ser:duration" />
+          <xs:element minOccurs="0" name="IdAgencia" type="xs:int" />
+          <xs:element minOccurs="0" name="IdLegacy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdPropietario" type="xs:int" />
+          <xs:element minOccurs="0" name="Nacionalidad" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NombrePaisNacionalidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PersonaExtranjera" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RFC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" type="tns:Persona.ETipo" />
+          <xs:element minOccurs="0" name="TipoCliente" type="tns:Persona.ETipoDeCliente" />
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" minOccurs="0" name="TipoNacionalidad" nillable="true" type="q18:EGRALTipoDeNacionalidad" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Persona" nillable="true" type="tns:Persona" />
+  <xs:simpleType name="Persona.ETipoDeCliente">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="CLIENTE" />
+      <xs:enumeration value="CONTACTO" />
+      <xs:enumeration value="CLIENTE_FACTURACION" />
+      <xs:enumeration value="PROVEEDOR" />
+      <xs:enumeration value="ASEGURADORA" />
+      <xs:enumeration value="INTERCOMPANIA" />
+      <xs:enumeration value="PROSPECTO" />
+      <xs:enumeration value="DISTRIBUIDOR" />
+      <xs:enumeration value="DISTRIBUIDOR_CENTRO_DE_SERVICIO_AUTORIZADO" />
+      <xs:enumeration value="PLANTA" />
+      <xs:enumeration value="FINANCIERA" />
+      <xs:enumeration value="EMPLEADO" />
+      <xs:enumeration value="PROVEEDOR_GPC" />
+      <xs:enumeration value="OBLIGADO_SOLIDARIO" />
+      <xs:enumeration value="FIADORA" />
+      <xs:enumeration value="BANCO" />
+      <xs:enumeration value="PERSONA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Persona.ETipoDeCliente" nillable="true" type="tns:Persona.ETipoDeCliente" />
+  <xs:complexType name="PersonaBasicaEx">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Calle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoPostal" type="xs:int" />
+          <xs:element minOccurs="0" name="Colonia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DelegacionOMunicipio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdCiudad" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEstado" type="xs:int" />
+          <xs:element minOccurs="0" name="Lada" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroExterior" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroInterior" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sexo" type="xs:int" />
+          <xs:element minOccurs="0" name="StrnombreCompleto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaBasicaEx" nillable="true" type="tns:PersonaBasicaEx" />
+  <xs:complexType name="PersonaEx">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContactoPersona" nillable="true" type="tns:PersonaBasica" />
+          <xs:element minOccurs="0" name="DomicilioSeleccionado" type="xs:int" />
+          <xs:element minOccurs="0" name="Domicilios" nillable="true" type="tns:ArrayOfPersonaDomicilio" />
+          <xs:element minOccurs="0" name="EmailSeleccionado" type="xs:int" />
+          <xs:element minOccurs="0" name="Emails" nillable="true" type="tns:ArrayOfPersonaEmail" />
+          <xs:element minOccurs="0" name="IdPersonaPadre" type="xs:int" />
+          <xs:element minOccurs="0" name="PersonaExtranjera" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PersonaFisica" nillable="true" type="tns:PersonaFisica" />
+          <xs:element minOccurs="0" name="PersonaMoral" nillable="true" type="tns:PersonaMoral" />
+          <xs:element minOccurs="0" name="PersonasRelacionadas" nillable="true" type="tns:ArrayOfPersonaRelacionada" />
+          <xs:element minOccurs="0" name="TelefonoSeleccionado" type="xs:int" />
+          <xs:element minOccurs="0" name="Telefonos" nillable="true" type="tns:ArrayOfPersonaTelefono" />
+          <xs:element minOccurs="0" name="strCorreoDefault" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTelefonoDefault" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strTipoCliente" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaEx" nillable="true" type="tns:PersonaEx" />
+  <xs:complexType name="PersonaBasica">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNombreCompleto" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaBasica" nillable="true" type="tns:PersonaBasica" />
+  <xs:complexType name="ArrayOfPersonaEmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaEmail" nillable="true" type="tns:PersonaEmail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaEmail" nillable="true" type="tns:ArrayOfPersonaEmail" />
+  <xs:complexType name="PersonaEmail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q19:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsDefault" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="Tipo" type="tns:PersonaEmail.ETipos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaEmail" nillable="true" type="tns:PersonaEmail" />
+  <xs:simpleType name="PersonaEmail.ETipos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="TRABAJO" />
+      <xs:enumeration value="PERSONAL" />
+      <xs:enumeration value="FISCAL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaEmail.ETipos" nillable="true" type="tns:PersonaEmail.ETipos" />
+  <xs:complexType name="PersonaFisica">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q20:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CURP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveOcupacionPersona" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClavePaisNacimiento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstadoCivil" type="tns:PersonaFisica.EEstadosCivil" />
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdAutoridadDeGobierno" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdOcupacion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPais" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTipoDeIdentificacion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTituloNobiliario" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Nacimiento" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombrePaisNacimiento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDeIdentificacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtraIdentificacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sexo" nillable="true" type="tns:PersonaFisica.ESexo" />
+          <xs:element minOccurs="0" name="TipoDeEstanciaExtrajero" nillable="true" type="tns:PersonaFisica.ETiposDeEstanciaExtrajero" />
+          <xs:element minOccurs="0" name="TituloNobiliario" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaFisica" nillable="true" type="tns:PersonaFisica" />
+  <xs:simpleType name="PersonaFisica.EEstadosCivil">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="CASADO" />
+      <xs:enumeration value="SOLTERO" />
+      <xs:enumeration value="DIVORCIADO" />
+      <xs:enumeration value="UNION_LIBRE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaFisica.EEstadosCivil" nillable="true" type="tns:PersonaFisica.EEstadosCivil" />
+  <xs:simpleType name="PersonaFisica.ESexo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="MASCULINO" />
+      <xs:enumeration value="FEMENINO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaFisica.ESexo" nillable="true" type="tns:PersonaFisica.ESexo" />
+  <xs:simpleType name="PersonaFisica.ETiposDeEstanciaExtrajero">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="RESIDENCIA_TEMPORAL" />
+      <xs:enumeration value="RESIDENCIA_PERMANENTE" />
+      <xs:enumeration value="ESTANCIA_VISITANTE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaFisica.ETiposDeEstanciaExtrajero" nillable="true" type="tns:PersonaFisica.ETiposDeEstanciaExtrajero" />
+  <xs:complexType name="PersonaMoral">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q21:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveGiroComercial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaConstitucion" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdGiroComercial" type="xs:int" />
+          <xs:element minOccurs="0" name="IdRepresentanteLegal" type="xs:int" />
+          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" minOccurs="0" name="IdSociedad" type="q22:EGRALTipoDeSociedad" />
+          <xs:element minOccurs="0" name="IdTipoDeSociedad" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="LugarDeContitucion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NuevaRazonSocial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDeEscritura" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDeNotaria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroFideicomiso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RepresentanteLegal" nillable="true" type="tns:PersonaFisica" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaMoral" nillable="true" type="tns:PersonaMoral" />
+  <xs:complexType name="ArrayOfPersonaRelacionada">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaRelacionada" nillable="true" type="tns:PersonaRelacionada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaRelacionada" nillable="true" type="tns:ArrayOfPersonaRelacionada" />
+  <xs:complexType name="PersonaRelacionada">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q23:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsDefault" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FechaConstitucion" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdAcreditacion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersonaRelativa" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPropietario" type="xs:int" />
+          <xs:element minOccurs="0" name="Nacimiento" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroFideicomiso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Persona" nillable="true" type="tns:PersonaEx" />
+          <xs:element minOccurs="0" name="RFC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Relacion" type="tns:PersonaRelacionada.ERelaciones" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaRelacionada" nillable="true" type="tns:PersonaRelacionada" />
+  <xs:simpleType name="PersonaRelacionada.ERelaciones">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="CONTACTO" />
+      <xs:enumeration value="CONYUGE" />
+      <xs:enumeration value="AVAL" />
+      <xs:enumeration value="CONYUGE_DE_AVAL" />
+      <xs:enumeration value="BENEFICIARIO_DE_SEGURO_DE_VIDA" />
+      <xs:enumeration value="BENEFICIARIO_DE_SEGURO_AUTOMOTRIZ" />
+      <xs:enumeration value="REFERENCIAS_PERSONALES" />
+      <xs:enumeration value="DUENIO_BENEFICIARIO" />
+      <xs:enumeration value="REPRESENTANTE_LEGAL" />
+      <xs:enumeration value="REFERENCIAS_BANCARIAS_O_COMERCIALES" />
+      <xs:enumeration value="REPRESENTANTE_LEGAL_MANCOMUNADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaRelacionada.ERelaciones" nillable="true" type="tns:PersonaRelacionada.ERelaciones" />
+  <xs:complexType name="ArrayOfPersonaTelefono">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaTelefono" nillable="true" type="tns:PersonaTelefono" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaTelefono" nillable="true" type="tns:ArrayOfPersonaTelefono" />
+  <xs:complexType name="PersonaTelefono">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q24:DB2ObjectPERS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AplicoEncuesta" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EsDefault" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdEstatusTelefono" type="xs:int" />
+          <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTelefonoValidado" type="xs:int" />
+          <xs:element minOccurs="0" name="Lada" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StrTipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefono" type="xs:long" />
+          <xs:element minOccurs="0" name="TelefonoExclusion" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TelefonoString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" type="tns:PersonaTelefono.ETipos" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonaTelefono" nillable="true" type="tns:PersonaTelefono" />
+  <xs:simpleType name="PersonaTelefono.ETipos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="PARTICULAR" />
+      <xs:enumeration value="CELULAR" />
+      <xs:enumeration value="NEXTEL" />
+      <xs:enumeration value="OFICINA" />
+      <xs:enumeration value="RECADOS" />
+      <xs:enumeration value="FAX" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonaTelefono.ETipos" nillable="true" type="tns:PersonaTelefono.ETipos" />
+  <xs:complexType name="ArrayOfPersonaBasica">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaBasica" nillable="true" type="tns:PersonaBasica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaBasica" nillable="true" type="tns:ArrayOfPersonaBasica" />
+  <xs:complexType name="ArrayOfPersonaEx">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaEx" nillable="true" type="tns:PersonaEx" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonaEx" nillable="true" type="tns:ArrayOfPersonaEx" />
+</xs:schema>

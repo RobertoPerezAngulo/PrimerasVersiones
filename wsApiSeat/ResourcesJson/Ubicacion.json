@@ -1,0 +1,33 @@
+[
+  {
+    "IdUbicacion": "1",
+    "Ubicacion": "CUPRA Garage",
+    "Direccion": "Calle de Durango 169, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX",
+    "Lat": "19.4203875",
+    "Lng": "-99.1647512"
+  },
+  {
+    "IdUbicacion": "2",
+    "IdAgencia" :  "36",
+    "Ubicacion": "SEAT Furia Motors México",
+    "Direccion": "Av. División del Nte. 1917, Emperadores, Benito Juárez, 03320 Ciudad de México, CDMX",
+    "Lat": "19.3666188",
+    "Lng": "-99.1560423"
+  },
+  {
+    "IdUbicacion": "3",
+    "IdAgencia" :  "12",
+    "Ubicacion": "SEAT Furia Motors Monterrey",
+    "Direccion": "Av Lázaro Cárdenas 2270, Zona Valle Oriente, 66269 Monterrey, N.L.",
+    "Lat": "25.64417636882502",
+    "Lng": "-100.32219352698985"
+  },
+  {
+    "IdUbicacion": "4",
+    "IdAgencia" :  "35",
+    "Ubicacion": "SEAT Furia Motors Acapulco",
+    "Direccion": "Ruben Figueroa, Av Farallón del Obispo 714, Farallon, 39690 Acapulco de Juárez, Gro.",
+    "Lat": "16.86886582572222",
+    "Lng": "-99.8694597963096"
+  }
+]

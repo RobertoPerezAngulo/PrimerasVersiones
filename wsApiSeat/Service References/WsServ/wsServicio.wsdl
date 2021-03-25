@@ -1,0 +1,1803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PERS" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.NOM" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.TESO" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Afluencia" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.AUT" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.GRAL" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.CXC" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.COMP" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.PSI" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.REFA" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Reportes" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Ordenes_en_proceso" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.RetornoTaller" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases.Citas" />
+      <xsd:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="wsServicio_AsesorAdministrador_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="AsesorAdministrador_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AsesorAdministrador_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="AsesorAdministrador_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HorarioDeAsesorDeCitaDisponible_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="HorarioDeAsesorDeCitaDisponible_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HorarioDeAsesorDeCitaDisponible_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="HorarioDeAsesorDeCitaDisponible_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarPendientesPorPlanificar_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarPendientesPorPlanificar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarPendientesPorPlanificar_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarPendientesPorPlanificarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PreordenDeServicio_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="PreordenDeServicio_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PreordenDeServicio_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="PreordenDeServicio_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PreordenDeServicioSiniestro_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="PreordenDeServicioSiniestro_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PreordenDeServicioSiniestro_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="PreordenDeServicioSiniestro_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarTraslapes_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarTraslapes" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarTraslapes_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarTraslapesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_DisponibilidadTareaPlaneadaPorTaller_Listar_InputMessage">
+    <wsdl:part name="parameters" element="DisponibilidadTareaPlaneadaPorTaller_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_DisponibilidadTareaPlaneadaPorTaller_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="DisponibilidadTareaPlaneadaPorTaller_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicio_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicio_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicio_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicio_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicio_BuscarPorFolio_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicio_BuscarPorFolio" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicio_BuscarPorFolio_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicio_BuscarPorFolioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TipoDeCitaDeServicio_Listar_InputMessage">
+    <wsdl:part name="parameters" element="TipoDeCitaDeServicio_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TipoDeCitaDeServicio_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="TipoDeCitaDeServicio_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Operacion_MinutusoPromedioDeEjecucion_InputMessage">
+    <wsdl:part name="parameters" element="Operacion_MinutusoPromedioDeEjecucion" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Operacion_MinutusoPromedioDeEjecucion_OutputMessage">
+    <wsdl:part name="parameters" element="Operacion_MinutusoPromedioDeEjecucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Paquete_MinutusoPromedioDeEjecucion_InputMessage">
+    <wsdl:part name="parameters" element="Paquete_MinutusoPromedioDeEjecucion" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Paquete_MinutusoPromedioDeEjecucion_OutputMessage">
+    <wsdl:part name="parameters" element="Paquete_MinutusoPromedioDeEjecucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_MagnetoplanAutomatico_PlanearOperaciones_InputMessage">
+    <wsdl:part name="parameters" element="MagnetoplanAutomatico_PlanearOperaciones" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_MagnetoplanAutomatico_PlanearOperaciones_OutputMessage">
+    <wsdl:part name="parameters" element="MagnetoplanAutomatico_PlanearOperacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Empleado_Listar_InputMessage">
+    <wsdl:part name="parameters" element="Empleado_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Empleado_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="Empleado_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_EmpleadoAgencia_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="EmpleadoAgencia_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_EmpleadoAgencia_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="EmpleadoAgencia_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ChoferConHorario_Listar_InputMessage">
+    <wsdl:part name="parameters" element="ChoferConHorario_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ChoferConHorario_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="ChoferConHorario_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Chofer_BuscarPorEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="Chofer_BuscarPorEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Chofer_BuscarPorEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="Chofer_BuscarPorEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ChoferConHorario_Set_InputMessage">
+    <wsdl:part name="parameters" element="ChoferConHorario_Set" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ChoferConHorario_Set_OutputMessage">
+    <wsdl:part name="parameters" element="ChoferConHorario_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ChoferConHorario_Delete_InputMessage">
+    <wsdl:part name="parameters" element="ChoferConHorario_Delete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ChoferConHorario_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="ChoferConHorario_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Estado_Listar_InputMessage">
+    <wsdl:part name="parameters" element="Estado_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Estado_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="Estado_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CodigoPostal_ListarPorEstadoYMunicipio_InputMessage">
+    <wsdl:part name="parameters" element="CodigoPostal_ListarPorEstadoYMunicipio" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CodigoPostal_ListarPorEstadoYMunicipio_OutputMessage">
+    <wsdl:part name="parameters" element="CodigoPostal_ListarPorEstadoYMunicipioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CodigoPostal_ListarPorCP_InputMessage">
+    <wsdl:part name="parameters" element="CodigoPostal_ListarPorCP" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CodigoPostal_ListarPorCP_OutputMessage">
+    <wsdl:part name="parameters" element="CodigoPostal_ListarPorCPResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PersonaDomicilio_Listar_InputMessage">
+    <wsdl:part name="parameters" element="PersonaDomicilio_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PersonaDomicilio_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="PersonaDomicilio_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csArea_Listar_InputMessage">
+    <wsdl:part name="parameters" element="csArea_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csArea_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="csArea_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csArea_Set_InputMessage">
+    <wsdl:part name="parameters" element="csArea_Set" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csArea_Set_OutputMessage">
+    <wsdl:part name="parameters" element="csArea_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csPlano_BuscarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="csPlano_BuscarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csPlano_BuscarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="csPlano_BuscarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csPlano_Set_InputMessage">
+    <wsdl:part name="parameters" element="csPlano_Set" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csPlano_Set_OutputMessage">
+    <wsdl:part name="parameters" element="csPlano_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetImagenDePlano_InputMessage">
+    <wsdl:part name="parameters" element="GetImagenDePlano" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetImagenDePlano_OutputMessage">
+    <wsdl:part name="parameters" element="GetImagenDePlanoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csPlanoArea_Alineacion_Listar_InputMessage">
+    <wsdl:part name="parameters" element="csPlanoArea_Alineacion_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csPlanoArea_Alineacion_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="csPlanoArea_Alineacion_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csAparienciaDeMagnetoplan_BuscarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="csAparienciaDeMagnetoplan_BuscarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csAparienciaDeMagnetoplan_BuscarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="csAparienciaDeMagnetoplan_BuscarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csAparienciaDeMagnetoplan_Set_InputMessage">
+    <wsdl:part name="parameters" element="csAparienciaDeMagnetoplan_Set" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_csAparienciaDeMagnetoplan_Set_OutputMessage">
+    <wsdl:part name="parameters" element="csAparienciaDeMagnetoplan_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RazonDeInhabil_Listar_InputMessage">
+    <wsdl:part name="parameters" element="RazonDeInhabil_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RazonDeInhabil_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="RazonDeInhabil_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RazonDeInhabil_Set_InputMessage">
+    <wsdl:part name="parameters" element="RazonDeInhabil_Set" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RazonDeInhabil_Set_OutputMessage">
+    <wsdl:part name="parameters" element="RazonDeInhabil_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RazonDeInhabil_Delete_InputMessage">
+    <wsdl:part name="parameters" element="RazonDeInhabil_Delete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RazonDeInhabil_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="RazonDeInhabil_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Privilegio_Listar_InputMessage">
+    <wsdl:part name="parameters" element="Privilegio_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Privilegio_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="Privilegio_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Privilegio_Set_InputMessage">
+    <wsdl:part name="parameters" element="Privilegio_Set" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Privilegio_Set_OutputMessage">
+    <wsdl:part name="parameters" element="Privilegio_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Privilegio_Delete_InputMessage">
+    <wsdl:part name="parameters" element="Privilegio_Delete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Privilegio_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="Privilegio_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_obtieneColumnas_InputMessage">
+    <wsdl:part name="parameters" element="obtieneColumnas" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_obtieneColumnas_OutputMessage">
+    <wsdl:part name="parameters" element="obtieneColumnasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardarPlantilla_InputMessage">
+    <wsdl:part name="parameters" element="GuardarPlantilla" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardarPlantilla_OutputMessage">
+    <wsdl:part name="parameters" element="GuardarPlantillaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_EliminarPlantilla_InputMessage">
+    <wsdl:part name="parameters" element="EliminarPlantilla" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_EliminarPlantilla_OutputMessage">
+    <wsdl:part name="parameters" element="EliminarPlantillaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePlantillas_InputMessage">
+    <wsdl:part name="parameters" element="ObtienePlantillas" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePlantillas_OutputMessage">
+    <wsdl:part name="parameters" element="ObtienePlantillasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneDetalleColumnas_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneDetalleColumnas" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneDetalleColumnas_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneDetalleColumnasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneReportePorColumnas_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneReportePorColumnas" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneReportePorColumnas_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneReportePorColumnasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTVersion_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="AUTVersion_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTVersion_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="AUTVersion_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Marca_Listar_InputMessage">
+    <wsdl:part name="parameters" element="Marca_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Marca_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="Marca_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Modelo_ListarPorMarca_InputMessage">
+    <wsdl:part name="parameters" element="Modelo_ListarPorMarca" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Modelo_ListarPorMarca_OutputMessage">
+    <wsdl:part name="parameters" element="Modelo_ListarPorMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTVersion_ListarPorModelo_InputMessage">
+    <wsdl:part name="parameters" element="AUTVersion_ListarPorModelo" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTVersion_ListarPorModelo_OutputMessage">
+    <wsdl:part name="parameters" element="AUTVersion_ListarPorModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Transmision_Listar_InputMessage">
+    <wsdl:part name="parameters" element="Transmision_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Transmision_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="Transmision_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Traccion_Listar_InputMessage">
+    <wsdl:part name="parameters" element="Traccion_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Traccion_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="Traccion_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTDireccion_Listar_InputMessage">
+    <wsdl:part name="parameters" element="AUTDireccion_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTDireccion_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="AUTDireccion_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Vestidura_Listar_InputMessage">
+    <wsdl:part name="parameters" element="Vestidura_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Vestidura_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="Vestidura_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTColor_ListarPorMarca_InputMessage">
+    <wsdl:part name="parameters" element="AUTColor_ListarPorMarca" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTColor_ListarPorMarca_OutputMessage">
+    <wsdl:part name="parameters" element="AUTColor_ListarPorMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TipoDeCombustible_Listar_InputMessage">
+    <wsdl:part name="parameters" element="TipoDeCombustible_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TipoDeCombustible_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="TipoDeCombustible_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Transmision_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="Transmision_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Transmision_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="Transmision_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Traccion_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="Traccion_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Traccion_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="Traccion_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ValidarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="ValidarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ValidarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="ValidarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ValidarProveedores_InputMessage">
+    <wsdl:part name="parameters" element="ValidarProveedores" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ValidarProveedores_OutputMessage">
+    <wsdl:part name="parameters" element="ValidarProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_REFA_ListarParametrosPorAgencias_InputMessage">
+    <wsdl:part name="parameters" element="REFA_ListarParametrosPorAgencias" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_REFA_ListarParametrosPorAgencias_OutputMessage">
+    <wsdl:part name="parameters" element="REFA_ListarParametrosPorAgenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GRAL_ListarParametrosPorAgencias_InputMessage">
+    <wsdl:part name="parameters" element="GRAL_ListarParametrosPorAgencias" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GRAL_ListarParametrosPorAgencias_OutputMessage">
+    <wsdl:part name="parameters" element="GRAL_ListarParametrosPorAgenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SERV_ListarParametrosPorAgencias_InputMessage">
+    <wsdl:part name="parameters" element="SERV_ListarParametrosPorAgencias" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SERV_ListarParametrosPorAgencias_OutputMessage">
+    <wsdl:part name="parameters" element="SERV_ListarParametrosPorAgenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTConfiguracion_BuscarValor_InputMessage">
+    <wsdl:part name="parameters" element="AUTConfiguracion_BuscarValor" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AUTConfiguracion_BuscarValor_OutputMessage">
+    <wsdl:part name="parameters" element="AUTConfiguracion_BuscarValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_REFAConfiguracion_BuscarValor_InputMessage">
+    <wsdl:part name="parameters" element="REFAConfiguracion_BuscarValor" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_REFAConfiguracion_BuscarValor_OutputMessage">
+    <wsdl:part name="parameters" element="REFAConfiguracion_BuscarValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GRALConfiguracion_BuscarValor_InputMessage">
+    <wsdl:part name="parameters" element="GRALConfiguracion_BuscarValor" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GRALConfiguracion_BuscarValor_OutputMessage">
+    <wsdl:part name="parameters" element="GRALConfiguracion_BuscarValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SERVConfiguracion_BuscarValor_InputMessage">
+    <wsdl:part name="parameters" element="SERVConfiguracion_BuscarValor" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SERVConfiguracion_BuscarValor_OutputMessage">
+    <wsdl:part name="parameters" element="SERVConfiguracion_BuscarValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Marca_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="Marca_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Marca_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="Marca_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Usuario_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="Usuario_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Usuario_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="Usuario_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Usuario_BuscarPorEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="Usuario_BuscarPorEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Usuario_BuscarPorEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="Usuario_BuscarPorEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Agencia_ListarPorMarca_InputMessage">
+    <wsdl:part name="parameters" element="Agencia_ListarPorMarca" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Agencia_ListarPorMarca_OutputMessage">
+    <wsdl:part name="parameters" element="Agencia_ListarPorMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Agencia_Listar_InputMessage">
+    <wsdl:part name="parameters" element="Agencia_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Agencia_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="Agencia_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SERVUbicacion_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="SERVUbicacion_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SERVUbicacion_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="SERVUbicacion_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TipoDeHerramientaEspecializada_Listar_InputMessage">
+    <wsdl:part name="parameters" element="TipoDeHerramientaEspecializada_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TipoDeHerramientaEspecializada_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="TipoDeHerramientaEspecializada_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_DescripcionDeHerramientaEspecializada_ListarPorMarca_InputMessage">
+    <wsdl:part name="parameters" element="DescripcionDeHerramientaEspecializada_ListarPorMarca" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_DescripcionDeHerramientaEspecializada_ListarPorMarca_OutputMessage">
+    <wsdl:part name="parameters" element="DescripcionDeHerramientaEspecializada_ListarPorMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_DescripcionDeHerramientaEspecializada_InsertOrUpdate_InputMessage">
+    <wsdl:part name="parameters" element="DescripcionDeHerramientaEspecializada_InsertOrUpdate" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_DescripcionDeHerramientaEspecializada_InsertOrUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="DescripcionDeHerramientaEspecializada_InsertOrUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RampaEx_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="RampaEx_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RampaEx_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="RampaEx_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Operario_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="Operario_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Operario_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="Operario_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Usuario_ListarPorPerfilesYAgencia_InputMessage">
+    <wsdl:part name="parameters" element="Usuario_ListarPorPerfilesYAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Usuario_ListarPorPerfilesYAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="Usuario_ListarPorPerfilesYAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TipoDeReceptor_Listar_InputMessage">
+    <wsdl:part name="parameters" element="TipoDeReceptor_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TipoDeReceptor_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="TipoDeReceptor_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RFCUtilerias_Validar_InputMessage">
+    <wsdl:part name="parameters" element="RFCUtilerias_Validar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_RFCUtilerias_Validar_OutputMessage">
+    <wsdl:part name="parameters" element="RFCUtilerias_ValidarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CURPUtilerias_Validar_InputMessage">
+    <wsdl:part name="parameters" element="CURPUtilerias_Validar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CURPUtilerias_Validar_OutputMessage">
+    <wsdl:part name="parameters" element="CURPUtilerias_ValidarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PersonaBasica_ListarPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="PersonaBasica_ListarPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PersonaBasica_ListarPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="PersonaBasica_ListarPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PersonaEx_ListarPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="PersonaEx_ListarPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PersonaEx_ListarPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="PersonaEx_ListarPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_VehiculoBase_ListarPorIdsClientes_InputMessage">
+    <wsdl:part name="parameters" element="VehiculoBase_ListarPorIdsClientes" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_VehiculoBase_ListarPorIdsClientes_OutputMessage">
+    <wsdl:part name="parameters" element="VehiculoBase_ListarPorIdsClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HerramientaEspecializada_InsertOrUpdate_InputMessage">
+    <wsdl:part name="parameters" element="HerramientaEspecializada_InsertOrUpdate" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HerramientaEspecializada_InsertOrUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="HerramientaEspecializada_InsertOrUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HerramientaEspecializada_Delete_InputMessage">
+    <wsdl:part name="parameters" element="HerramientaEspecializada_Delete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HerramientaEspecializada_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="HerramientaEspecializada_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HerramientaEspecializada_Listar_InputMessage">
+    <wsdl:part name="parameters" element="HerramientaEspecializada_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HerramientaEspecializada_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="HerramientaEspecializada_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_InsertOrUpdate_InputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_InsertOrUpdate" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_InsertOrUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_InsertOrUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_Delete_InputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_Delete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate_InputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_ListarActivos_InputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_ListarActivos" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_ListarActivos_OutputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_ListarActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_Listar_InputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_Autorizar_InputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_Autorizar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_PrestamoDeHerramientaEspecializada_Autorizar_OutputMessage">
+    <wsdl:part name="parameters" element="PrestamoDeHerramientaEspecializada_AutorizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HerramientaEspecializadaHelper_Importar_InputMessage">
+    <wsdl:part name="parameters" element="HerramientaEspecializadaHelper_Importar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HerramientaEspecializadaHelper_Importar_OutputMessage">
+    <wsdl:part name="parameters" element="HerramientaEspecializadaHelper_ImportarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_OrdenDeServicio_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="OrdenDeServicio_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_OrdenDeServicio_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="OrdenDeServicio_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_OrdenDeServicio_BuscarPorFolio_InputMessage">
+    <wsdl:part name="parameters" element="OrdenDeServicio_BuscarPorFolio" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_OrdenDeServicio_BuscarPorFolio_OutputMessage">
+    <wsdl:part name="parameters" element="OrdenDeServicio_BuscarPorFolioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetReporteSEAT_InputMessage">
+    <wsdl:part name="parameters" element="GetReporteSEAT" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetReporteSEAT_OutputMessage">
+    <wsdl:part name="parameters" element="GetReporteSEATResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ConsultaCatalogoPeriodo_InputMessage">
+    <wsdl:part name="parameters" element="ConsultaCatalogoPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ConsultaCatalogoPeriodo_OutputMessage">
+    <wsdl:part name="parameters" element="ConsultaCatalogoPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ConsultaOrdenesenProceso_InputMessage">
+    <wsdl:part name="parameters" element="ConsultaOrdenesenProceso" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ConsultaOrdenesenProceso_OutputMessage">
+    <wsdl:part name="parameters" element="ConsultaOrdenesenProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetRetornoaTaller_InputMessage">
+    <wsdl:part name="parameters" element="GetRetornoaTaller" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetRetornoaTaller_OutputMessage">
+    <wsdl:part name="parameters" element="GetRetornoaTallerResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetOrdenesCanceladas_InputMessage">
+    <wsdl:part name="parameters" element="GetOrdenesCanceladas" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetOrdenesCanceladas_OutputMessage">
+    <wsdl:part name="parameters" element="GetOrdenesCanceladasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetOrdenesTiempos_InputMessage">
+    <wsdl:part name="parameters" element="GetOrdenesTiempos" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetOrdenesTiempos_OutputMessage">
+    <wsdl:part name="parameters" element="GetOrdenesTiemposResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetResumenTiempos_InputMessage">
+    <wsdl:part name="parameters" element="GetResumenTiempos" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetResumenTiempos_OutputMessage">
+    <wsdl:part name="parameters" element="GetResumenTiemposResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetTiposOrden_InputMessage">
+    <wsdl:part name="parameters" element="GetTiposOrden" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetTiposOrden_OutputMessage">
+    <wsdl:part name="parameters" element="GetTiposOrdenResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetExistencia_InputMessage">
+    <wsdl:part name="parameters" element="GetExistencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetExistencia_OutputMessage">
+    <wsdl:part name="parameters" element="GetExistenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_setCancelaAcondicionamientoUnidadesNuevas_InputMessage">
+    <wsdl:part name="parameters" element="setCancelaAcondicionamientoUnidadesNuevas" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_setCancelaAcondicionamientoUnidadesNuevas_OutputMessage">
+    <wsdl:part name="parameters" element="setCancelaAcondicionamientoUnidadesNuevasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaCitaSimple_InputMessage">
+    <wsdl:part name="parameters" element="GuardaCitaSimple" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaCitaSimple_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaCitaSimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaCitaConPreorden_InputMessage">
+    <wsdl:part name="parameters" element="GuardaCitaConPreorden" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaCitaConPreorden_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaCitaConPreordenResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ActualizaCita_InputMessage">
+    <wsdl:part name="parameters" element="ActualizaCita" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ActualizaCita_OutputMessage">
+    <wsdl:part name="parameters" element="ActualizaCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ActualizaPreordenCotizacion_InputMessage">
+    <wsdl:part name="parameters" element="ActualizaPreordenCotizacion" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ActualizaPreordenCotizacion_OutputMessage">
+    <wsdl:part name="parameters" element="ActualizaPreordenCotizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneCita_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneCita" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneCita_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetEstadisticosDeCitas_InputMessage">
+    <wsdl:part name="parameters" element="GetEstadisticosDeCitas" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GetEstadisticosDeCitas_OutputMessage">
+    <wsdl:part name="parameters" element="GetEstadisticosDeCitasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneOpcionesCita_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneOpcionesCita" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneOpcionesCita_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneOpcionesCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_ListarOpciones_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_ListarOpciones" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_ListarOpciones_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_ListarOpcionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_Set_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_Set" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_Set_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_Delete_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_Delete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_ExistenTraslapes_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_ExistenTraslapes" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_ExistenTraslapes_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_ExistenTraslapesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_ListarPorAsesoresOChoferes_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_ListarPorAsesoresOChoferes" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioApartada_ListarPorAsesoresOChoferes_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioApartada_ListarPorAsesoresOChoferesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioEx_ListarExPorAsesoresOChoferes_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioEx_ListarExPorAsesoresOChoferes" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicioEx_ListarExPorAsesoresOChoferes_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicioEx_ListarExPorAsesoresOChoferesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicio_ListarPorAgenciasYEstatus_InputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicio_ListarPorAgenciasYEstatus" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CitaDeServicio_ListarPorAgenciasYEstatus_OutputMessage">
+    <wsdl:part name="parameters" element="CitaDeServicio_ListarPorAgenciasYEstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ConsultaCliente_InputMessage">
+    <wsdl:part name="parameters" element="ConsultaCliente" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ConsultaCliente_OutputMessage">
+    <wsdl:part name="parameters" element="ConsultaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneVehiculoCliente_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneVehiculoCliente" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneVehiculoCliente_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneVehiculoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CargaHorariosAgencia_InputMessage">
+    <wsdl:part name="parameters" element="CargaHorariosAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CargaHorariosAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="CargaHorariosAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneAsesores_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneAsesores" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneAsesores_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneAsesoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneDisponiblesAgenda_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneDisponiblesAgenda" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneDisponiblesAgenda_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneDisponiblesAgendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ActualizaCliente_InputMessage">
+    <wsdl:part name="parameters" element="ActualizaCliente" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ActualizaCliente_OutputMessage">
+    <wsdl:part name="parameters" element="ActualizaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneTipoCita_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneTipoCita" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneTipoCita_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneTipoCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneTipoPreorden_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneTipoPreorden" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneTipoPreorden_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneTipoPreordenResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneTipoPrecio_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneTipoPrecio" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneTipoPrecio_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneTipoPrecioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_BuscaTieneCita_InputMessage">
+    <wsdl:part name="parameters" element="BuscaTieneCita" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_BuscaTieneCita_OutputMessage">
+    <wsdl:part name="parameters" element="BuscaTieneCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_BuscaVehiculoCita_InputMessage">
+    <wsdl:part name="parameters" element="BuscaVehiculoCita" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_BuscaVehiculoCita_OutputMessage">
+    <wsdl:part name="parameters" element="BuscaVehiculoCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getObtenerVehiculosNoRegresoServicio_InputMessage">
+    <wsdl:part name="parameters" element="getObtenerVehiculosNoRegresoServicio" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getObtenerVehiculosNoRegresoServicio_OutputMessage">
+    <wsdl:part name="parameters" element="getObtenerVehiculosNoRegresoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getObtenerVehiculosServicioMasDosDias_InputMessage">
+    <wsdl:part name="parameters" element="getObtenerVehiculosServicioMasDosDias" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getObtenerVehiculosServicioMasDosDias_OutputMessage">
+    <wsdl:part name="parameters" element="getObtenerVehiculosServicioMasDosDiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getObtenerVehiculosServicioUnDiaFechaVenta_InputMessage">
+    <wsdl:part name="parameters" element="getObtenerVehiculosServicioUnDiaFechaVenta" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getObtenerVehiculosServicioUnDiaFechaVenta_OutputMessage">
+    <wsdl:part name="parameters" element="getObtenerVehiculosServicioUnDiaFechaVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getObtenerVehiculosServicioUnDiaSinFechaVenta_InputMessage">
+    <wsdl:part name="parameters" element="getObtenerVehiculosServicioUnDiaSinFechaVenta" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getObtenerVehiculosServicioUnDiaSinFechaVenta_OutputMessage">
+    <wsdl:part name="parameters" element="getObtenerVehiculosServicioUnDiaSinFechaVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ActualizaContacto_InputMessage">
+    <wsdl:part name="parameters" element="ActualizaContacto" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ActualizaContacto_OutputMessage">
+    <wsdl:part name="parameters" element="ActualizaContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaqueteEspecifico_InputMessage">
+    <wsdl:part name="parameters" element="ObtienePaqueteEspecifico" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaqueteEspecifico_OutputMessage">
+    <wsdl:part name="parameters" element="ObtienePaqueteEspecificoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaquetes_InputMessage">
+    <wsdl:part name="parameters" element="ObtienePaquetes" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaquetes_OutputMessage">
+    <wsdl:part name="parameters" element="ObtienePaquetesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaquetesMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="ObtienePaquetesMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaquetesMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="ObtienePaquetesMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaquetesAdicion_InputMessage">
+    <wsdl:part name="parameters" element="ObtienePaquetesAdicion" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaquetesAdicion_OutputMessage">
+    <wsdl:part name="parameters" element="ObtienePaquetesAdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaquetesPromocion_InputMessage">
+    <wsdl:part name="parameters" element="ObtienePaquetesPromocion" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtienePaquetesPromocion_OutputMessage">
+    <wsdl:part name="parameters" element="ObtienePaquetesPromocionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Operaciones_InputMessage">
+    <wsdl:part name="parameters" element="Operaciones" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Operaciones_OutputMessage">
+    <wsdl:part name="parameters" element="OperacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneRefaccionesPaquete_InputMessage">
+    <wsdl:part name="parameters" element="ObtieneRefaccionesPaquete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ObtieneRefaccionesPaquete_OutputMessage">
+    <wsdl:part name="parameters" element="ObtieneRefaccionesPaqueteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Campanias_InputMessage">
+    <wsdl:part name="parameters" element="Campanias" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Campanias_OutputMessage">
+    <wsdl:part name="parameters" element="CampaniasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_BuscarRefaccion_InputMessage">
+    <wsdl:part name="parameters" element="BuscarRefaccion" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_BuscarRefaccion_OutputMessage">
+    <wsdl:part name="parameters" element="BuscarRefaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaPaquete_InputMessage">
+    <wsdl:part name="parameters" element="GuardaPaquete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaPaquete_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaPaqueteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaOperaciones_InputMessage">
+    <wsdl:part name="parameters" element="GuardaOperaciones" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaOperaciones_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaOperacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaRefacciones_InputMessage">
+    <wsdl:part name="parameters" element="GuardaRefacciones" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_GuardaRefacciones_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaRefaccionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getTipoOrdenEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="getTipoOrdenEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getTipoOrdenEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="getTipoOrdenEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getEmpleadosEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="getEmpleadosEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getEmpleadosEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="getEmpleadosEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getOperariosEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="getOperariosEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getOperariosEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="getOperariosEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getConifgTipoOrdenesOperarios_InputMessage">
+    <wsdl:part name="parameters" element="getConifgTipoOrdenesOperarios" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getConifgTipoOrdenesOperarios_OutputMessage">
+    <wsdl:part name="parameters" element="getConifgTipoOrdenesOperariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_setupConfiguracionTOrdenTOperacion_InputMessage">
+    <wsdl:part name="parameters" element="setupConfiguracionTOrdenTOperacion" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_setupConfiguracionTOrdenTOperacion_OutputMessage">
+    <wsdl:part name="parameters" element="setupConfiguracionTOrdenTOperacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_delConfiguracionTOrdenTOperacion_InputMessage">
+    <wsdl:part name="parameters" element="delConfiguracionTOrdenTOperacion" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_delConfiguracionTOrdenTOperacion_OutputMessage">
+    <wsdl:part name="parameters" element="delConfiguracionTOrdenTOperacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getTiposOperacionesEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="getTiposOperacionesEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getTiposOperacionesEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="getTiposOperacionesEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getConifgTipoOperacionesOperarios_InputMessage">
+    <wsdl:part name="parameters" element="getConifgTipoOperacionesOperarios" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_getConifgTipoOperacionesOperarios_OutputMessage">
+    <wsdl:part name="parameters" element="getConifgTipoOperacionesOperariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CargaInicialPreorden_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="CargaInicialPreorden_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CargaInicialPreorden_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="CargaInicialPreorden_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SeRespondioControlDeCalidad_InputMessage">
+    <wsdl:part name="parameters" element="SeRespondioControlDeCalidad" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SeRespondioControlDeCalidad_OutputMessage">
+    <wsdl:part name="parameters" element="SeRespondioControlDeCalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SePuedePrefacturarSinControlDeCalidad_InputMessage">
+    <wsdl:part name="parameters" element="SePuedePrefacturarSinControlDeCalidad" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SePuedePrefacturarSinControlDeCalidad_OutputMessage">
+    <wsdl:part name="parameters" element="SePuedePrefacturarSinControlDeCalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SePuedeFacturarSinControlDeCalidad_InputMessage">
+    <wsdl:part name="parameters" element="SePuedeFacturarSinControlDeCalidad" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_SePuedeFacturarSinControlDeCalidad_OutputMessage">
+    <wsdl:part name="parameters" element="SePuedeFacturarSinControlDeCalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CargaInicialCitas_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="CargaInicialCitas_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CargaInicialCitas_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="CargaInicialCitas_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CargaInicialMagnetoplan_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="CargaInicialMagnetoplan_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_CargaInicialMagnetoplan_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="CargaInicialMagnetoplan_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TallerCompartido_BuscarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="TallerCompartido_BuscarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TallerCompartido_BuscarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="TallerCompartido_BuscarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ConfiguracionDeMagnetoplan_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="ConfiguracionDeMagnetoplan_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_ConfiguracionDeMagnetoplan_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="ConfiguracionDeMagnetoplan_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ExistenTraslapes_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ExistenTraslapes" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ExistenTraslapes_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ExistenTraslapesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_Listar_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_Listar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarPorPreorden_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarPorPreorden" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarPorPreorden_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarPorPreordenResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_BuscarPorPreorden_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_BuscarPorPreorden" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_BuscarPorPreorden_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_BuscarPorPreordenResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarPorCita_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarPorCita" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarPorCita_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarPorCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarBasicaPorPreorden_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarBasicaPorPreorden" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_ListarBasicaPorPreorden_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_ListarBasicaPorPreordenResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_LimpiarPorPreorden_InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_Set_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_Set" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_Set_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_SetResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_Set_ActualizarOperaciones_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_Set_ActualizarOperaciones" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_Set_ActualizarOperaciones_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_Set_ActualizarOperacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_Delete_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_Delete" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_DeleteByPreorden_InputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_DeleteByPreorden" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_TareaPlaneadaPorTaller_DeleteByPreorden_OutputMessage">
+    <wsdl:part name="parameters" element="TareaPlaneadaPorTaller_DeleteByPreordenResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HorarioDeOperario_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="HorarioDeOperario_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_HorarioDeOperario_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="HorarioDeOperario_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Asesor_ListarPorAgenciaParaCitas_InputMessage">
+    <wsdl:part name="parameters" element="Asesor_ListarPorAgenciaParaCitas" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Asesor_ListarPorAgenciaParaCitas_OutputMessage">
+    <wsdl:part name="parameters" element="Asesor_ListarPorAgenciaParaCitasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Asesor_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="Asesor_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_Asesor_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="Asesor_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AsesorConHorario_ListarPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="AsesorConHorario_ListarPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="wsServicio_AsesorConHorario_ListarPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="AsesorConHorario_ListarPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsServicio">
+    <wsdl:operation name="AsesorAdministrador_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/AsesorAdministrador_ListarPorAgencia" message="wsServicio_AsesorAdministrador_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/AsesorAdministrador_ListarPorAgenciaResponse" message="wsServicio_AsesorAdministrador_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HorarioDeAsesorDeCitaDisponible_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/HorarioDeAsesorDeCitaDisponible_ListarPorAgencia" message="wsServicio_HorarioDeAsesorDeCitaDisponible_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/HorarioDeAsesorDeCitaDisponible_ListarPorAgenciaResponse" message="wsServicio_HorarioDeAsesorDeCitaDisponible_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarPendientesPorPlanificar">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarPendientesPorPlanificar" message="wsServicio_TareaPlaneadaPorTaller_ListarPendientesPorPlanificar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarPendientesPorPlanificarResponse" message="wsServicio_TareaPlaneadaPorTaller_ListarPendientesPorPlanificar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PreordenDeServicio_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/PreordenDeServicio_Buscar" message="wsServicio_PreordenDeServicio_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PreordenDeServicio_BuscarResponse" message="wsServicio_PreordenDeServicio_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PreordenDeServicioSiniestro_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/PreordenDeServicioSiniestro_Buscar" message="wsServicio_PreordenDeServicioSiniestro_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PreordenDeServicioSiniestro_BuscarResponse" message="wsServicio_PreordenDeServicioSiniestro_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarTraslapes">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarTraslapes" message="wsServicio_TareaPlaneadaPorTaller_ListarTraslapes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarTraslapesResponse" message="wsServicio_TareaPlaneadaPorTaller_ListarTraslapes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisponibilidadTareaPlaneadaPorTaller_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/DisponibilidadTareaPlaneadaPorTaller_Listar" message="wsServicio_DisponibilidadTareaPlaneadaPorTaller_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/DisponibilidadTareaPlaneadaPorTaller_ListarResponse" message="wsServicio_DisponibilidadTareaPlaneadaPorTaller_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicio_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicio_Buscar" message="wsServicio_CitaDeServicio_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicio_BuscarResponse" message="wsServicio_CitaDeServicio_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicio_BuscarPorFolio">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicio_BuscarPorFolio" message="wsServicio_CitaDeServicio_BuscarPorFolio_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicio_BuscarPorFolioResponse" message="wsServicio_CitaDeServicio_BuscarPorFolio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoDeCitaDeServicio_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/TipoDeCitaDeServicio_Listar" message="wsServicio_TipoDeCitaDeServicio_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TipoDeCitaDeServicio_ListarResponse" message="wsServicio_TipoDeCitaDeServicio_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Operacion_MinutusoPromedioDeEjecucion">
+      <wsdl:input wsaw:Action="urn:wsServicio/Operacion_MinutusoPromedioDeEjecucion" message="wsServicio_Operacion_MinutusoPromedioDeEjecucion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Operacion_MinutusoPromedioDeEjecucionResponse" message="wsServicio_Operacion_MinutusoPromedioDeEjecucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Paquete_MinutusoPromedioDeEjecucion">
+      <wsdl:input wsaw:Action="urn:wsServicio/Paquete_MinutusoPromedioDeEjecucion" message="wsServicio_Paquete_MinutusoPromedioDeEjecucion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Paquete_MinutusoPromedioDeEjecucionResponse" message="wsServicio_Paquete_MinutusoPromedioDeEjecucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MagnetoplanAutomatico_PlanearOperaciones">
+      <wsdl:input wsaw:Action="urn:wsServicio/MagnetoplanAutomatico_PlanearOperaciones" message="wsServicio_MagnetoplanAutomatico_PlanearOperaciones_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/MagnetoplanAutomatico_PlanearOperacionesResponse" message="wsServicio_MagnetoplanAutomatico_PlanearOperaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Empleado_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Empleado_Listar" message="wsServicio_Empleado_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Empleado_ListarResponse" message="wsServicio_Empleado_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmpleadoAgencia_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/EmpleadoAgencia_Buscar" message="wsServicio_EmpleadoAgencia_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/EmpleadoAgencia_BuscarResponse" message="wsServicio_EmpleadoAgencia_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChoferConHorario_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/ChoferConHorario_Listar" message="wsServicio_ChoferConHorario_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ChoferConHorario_ListarResponse" message="wsServicio_ChoferConHorario_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Chofer_BuscarPorEmpleado">
+      <wsdl:input wsaw:Action="urn:wsServicio/Chofer_BuscarPorEmpleado" message="wsServicio_Chofer_BuscarPorEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Chofer_BuscarPorEmpleadoResponse" message="wsServicio_Chofer_BuscarPorEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChoferConHorario_Set">
+      <wsdl:input wsaw:Action="urn:wsServicio/ChoferConHorario_Set" message="wsServicio_ChoferConHorario_Set_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ChoferConHorario_SetResponse" message="wsServicio_ChoferConHorario_Set_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChoferConHorario_Delete">
+      <wsdl:input wsaw:Action="urn:wsServicio/ChoferConHorario_Delete" message="wsServicio_ChoferConHorario_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ChoferConHorario_DeleteResponse" message="wsServicio_ChoferConHorario_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Estado_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Estado_Listar" message="wsServicio_Estado_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Estado_ListarResponse" message="wsServicio_Estado_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CodigoPostal_ListarPorEstadoYMunicipio">
+      <wsdl:input wsaw:Action="urn:wsServicio/CodigoPostal_ListarPorEstadoYMunicipio" message="wsServicio_CodigoPostal_ListarPorEstadoYMunicipio_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CodigoPostal_ListarPorEstadoYMunicipioResponse" message="wsServicio_CodigoPostal_ListarPorEstadoYMunicipio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CodigoPostal_ListarPorCP">
+      <wsdl:input wsaw:Action="urn:wsServicio/CodigoPostal_ListarPorCP" message="wsServicio_CodigoPostal_ListarPorCP_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CodigoPostal_ListarPorCPResponse" message="wsServicio_CodigoPostal_ListarPorCP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonaDomicilio_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/PersonaDomicilio_Listar" message="wsServicio_PersonaDomicilio_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PersonaDomicilio_ListarResponse" message="wsServicio_PersonaDomicilio_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="csArea_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/csArea_Listar" message="wsServicio_csArea_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/csArea_ListarResponse" message="wsServicio_csArea_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="csArea_Set">
+      <wsdl:input wsaw:Action="urn:wsServicio/csArea_Set" message="wsServicio_csArea_Set_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/csArea_SetResponse" message="wsServicio_csArea_Set_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="csPlano_BuscarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/csPlano_BuscarPorAgencia" message="wsServicio_csPlano_BuscarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/csPlano_BuscarPorAgenciaResponse" message="wsServicio_csPlano_BuscarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="csPlano_Set">
+      <wsdl:input wsaw:Action="urn:wsServicio/csPlano_Set" message="wsServicio_csPlano_Set_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/csPlano_SetResponse" message="wsServicio_csPlano_Set_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImagenDePlano">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetImagenDePlano" message="wsServicio_GetImagenDePlano_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetImagenDePlanoResponse" message="wsServicio_GetImagenDePlano_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="csPlanoArea_Alineacion_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/csPlanoArea_Alineacion_Listar" message="wsServicio_csPlanoArea_Alineacion_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/csPlanoArea_Alineacion_ListarResponse" message="wsServicio_csPlanoArea_Alineacion_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="csAparienciaDeMagnetoplan_BuscarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/csAparienciaDeMagnetoplan_BuscarPorAgencia" message="wsServicio_csAparienciaDeMagnetoplan_BuscarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/csAparienciaDeMagnetoplan_BuscarPorAgenciaResponse" message="wsServicio_csAparienciaDeMagnetoplan_BuscarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="csAparienciaDeMagnetoplan_Set">
+      <wsdl:input wsaw:Action="urn:wsServicio/csAparienciaDeMagnetoplan_Set" message="wsServicio_csAparienciaDeMagnetoplan_Set_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/csAparienciaDeMagnetoplan_SetResponse" message="wsServicio_csAparienciaDeMagnetoplan_Set_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RazonDeInhabil_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/RazonDeInhabil_Listar" message="wsServicio_RazonDeInhabil_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/RazonDeInhabil_ListarResponse" message="wsServicio_RazonDeInhabil_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RazonDeInhabil_Set">
+      <wsdl:input wsaw:Action="urn:wsServicio/RazonDeInhabil_Set" message="wsServicio_RazonDeInhabil_Set_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/RazonDeInhabil_SetResponse" message="wsServicio_RazonDeInhabil_Set_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RazonDeInhabil_Delete">
+      <wsdl:input wsaw:Action="urn:wsServicio/RazonDeInhabil_Delete" message="wsServicio_RazonDeInhabil_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/RazonDeInhabil_DeleteResponse" message="wsServicio_RazonDeInhabil_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Privilegio_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Privilegio_Listar" message="wsServicio_Privilegio_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Privilegio_ListarResponse" message="wsServicio_Privilegio_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Privilegio_Set">
+      <wsdl:input wsaw:Action="urn:wsServicio/Privilegio_Set" message="wsServicio_Privilegio_Set_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Privilegio_SetResponse" message="wsServicio_Privilegio_Set_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Privilegio_Delete">
+      <wsdl:input wsaw:Action="urn:wsServicio/Privilegio_Delete" message="wsServicio_Privilegio_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Privilegio_DeleteResponse" message="wsServicio_Privilegio_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtieneColumnas">
+      <wsdl:input wsaw:Action="urn:wsServicio/obtieneColumnas" message="wsServicio_obtieneColumnas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/obtieneColumnasResponse" message="wsServicio_obtieneColumnas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPlantilla">
+      <wsdl:input wsaw:Action="urn:wsServicio/GuardarPlantilla" message="wsServicio_GuardarPlantilla_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GuardarPlantillaResponse" message="wsServicio_GuardarPlantilla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPlantilla">
+      <wsdl:input wsaw:Action="urn:wsServicio/EliminarPlantilla" message="wsServicio_EliminarPlantilla_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/EliminarPlantillaResponse" message="wsServicio_EliminarPlantilla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePlantillas">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtienePlantillas" message="wsServicio_ObtienePlantillas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtienePlantillasResponse" message="wsServicio_ObtienePlantillas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneDetalleColumnas">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneDetalleColumnas" message="wsServicio_ObtieneDetalleColumnas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneDetalleColumnasResponse" message="wsServicio_ObtieneDetalleColumnas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneReportePorColumnas">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneReportePorColumnas" message="wsServicio_ObtieneReportePorColumnas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneReportePorColumnasResponse" message="wsServicio_ObtieneReportePorColumnas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUTVersion_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/AUTVersion_Buscar" message="wsServicio_AUTVersion_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/AUTVersion_BuscarResponse" message="wsServicio_AUTVersion_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Marca_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Marca_Listar" message="wsServicio_Marca_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Marca_ListarResponse" message="wsServicio_Marca_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Modelo_ListarPorMarca">
+      <wsdl:input wsaw:Action="urn:wsServicio/Modelo_ListarPorMarca" message="wsServicio_Modelo_ListarPorMarca_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Modelo_ListarPorMarcaResponse" message="wsServicio_Modelo_ListarPorMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUTVersion_ListarPorModelo">
+      <wsdl:input wsaw:Action="urn:wsServicio/AUTVersion_ListarPorModelo" message="wsServicio_AUTVersion_ListarPorModelo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/AUTVersion_ListarPorModeloResponse" message="wsServicio_AUTVersion_ListarPorModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Transmision_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Transmision_Listar" message="wsServicio_Transmision_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Transmision_ListarResponse" message="wsServicio_Transmision_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Traccion_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Traccion_Listar" message="wsServicio_Traccion_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Traccion_ListarResponse" message="wsServicio_Traccion_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUTDireccion_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/AUTDireccion_Listar" message="wsServicio_AUTDireccion_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/AUTDireccion_ListarResponse" message="wsServicio_AUTDireccion_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Vestidura_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Vestidura_Listar" message="wsServicio_Vestidura_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Vestidura_ListarResponse" message="wsServicio_Vestidura_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUTColor_ListarPorMarca">
+      <wsdl:input wsaw:Action="urn:wsServicio/AUTColor_ListarPorMarca" message="wsServicio_AUTColor_ListarPorMarca_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/AUTColor_ListarPorMarcaResponse" message="wsServicio_AUTColor_ListarPorMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoDeCombustible_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/TipoDeCombustible_Listar" message="wsServicio_TipoDeCombustible_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TipoDeCombustible_ListarResponse" message="wsServicio_TipoDeCombustible_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Transmision_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Transmision_Buscar" message="wsServicio_Transmision_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Transmision_BuscarResponse" message="wsServicio_Transmision_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Traccion_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Traccion_Buscar" message="wsServicio_Traccion_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Traccion_BuscarResponse" message="wsServicio_Traccion_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarProveedor">
+      <wsdl:input wsaw:Action="urn:wsServicio/ValidarProveedor" message="wsServicio_ValidarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ValidarProveedorResponse" message="wsServicio_ValidarProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarProveedores">
+      <wsdl:input wsaw:Action="urn:wsServicio/ValidarProveedores" message="wsServicio_ValidarProveedores_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ValidarProveedoresResponse" message="wsServicio_ValidarProveedores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="REFA_ListarParametrosPorAgencias">
+      <wsdl:input wsaw:Action="urn:wsServicio/REFA_ListarParametrosPorAgencias" message="wsServicio_REFA_ListarParametrosPorAgencias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/REFA_ListarParametrosPorAgenciasResponse" message="wsServicio_REFA_ListarParametrosPorAgencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GRAL_ListarParametrosPorAgencias">
+      <wsdl:input wsaw:Action="urn:wsServicio/GRAL_ListarParametrosPorAgencias" message="wsServicio_GRAL_ListarParametrosPorAgencias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GRAL_ListarParametrosPorAgenciasResponse" message="wsServicio_GRAL_ListarParametrosPorAgencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SERV_ListarParametrosPorAgencias">
+      <wsdl:input wsaw:Action="urn:wsServicio/SERV_ListarParametrosPorAgencias" message="wsServicio_SERV_ListarParametrosPorAgencias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/SERV_ListarParametrosPorAgenciasResponse" message="wsServicio_SERV_ListarParametrosPorAgencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AUTConfiguracion_BuscarValor">
+      <wsdl:input wsaw:Action="urn:wsServicio/AUTConfiguracion_BuscarValor" message="wsServicio_AUTConfiguracion_BuscarValor_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/AUTConfiguracion_BuscarValorResponse" message="wsServicio_AUTConfiguracion_BuscarValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="REFAConfiguracion_BuscarValor">
+      <wsdl:input wsaw:Action="urn:wsServicio/REFAConfiguracion_BuscarValor" message="wsServicio_REFAConfiguracion_BuscarValor_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/REFAConfiguracion_BuscarValorResponse" message="wsServicio_REFAConfiguracion_BuscarValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GRALConfiguracion_BuscarValor">
+      <wsdl:input wsaw:Action="urn:wsServicio/GRALConfiguracion_BuscarValor" message="wsServicio_GRALConfiguracion_BuscarValor_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GRALConfiguracion_BuscarValorResponse" message="wsServicio_GRALConfiguracion_BuscarValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SERVConfiguracion_BuscarValor">
+      <wsdl:input wsaw:Action="urn:wsServicio/SERVConfiguracion_BuscarValor" message="wsServicio_SERVConfiguracion_BuscarValor_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/SERVConfiguracion_BuscarValorResponse" message="wsServicio_SERVConfiguracion_BuscarValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Marca_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Marca_Buscar" message="wsServicio_Marca_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Marca_BuscarResponse" message="wsServicio_Marca_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Usuario_Buscar" message="wsServicio_Usuario_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Usuario_BuscarResponse" message="wsServicio_Usuario_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_BuscarPorEmpleado">
+      <wsdl:input wsaw:Action="urn:wsServicio/Usuario_BuscarPorEmpleado" message="wsServicio_Usuario_BuscarPorEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Usuario_BuscarPorEmpleadoResponse" message="wsServicio_Usuario_BuscarPorEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agencia_ListarPorMarca">
+      <wsdl:input wsaw:Action="urn:wsServicio/Agencia_ListarPorMarca" message="wsServicio_Agencia_ListarPorMarca_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Agencia_ListarPorMarcaResponse" message="wsServicio_Agencia_ListarPorMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agencia_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/Agencia_Listar" message="wsServicio_Agencia_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Agencia_ListarResponse" message="wsServicio_Agencia_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SERVUbicacion_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/SERVUbicacion_ListarPorAgencia" message="wsServicio_SERVUbicacion_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/SERVUbicacion_ListarPorAgenciaResponse" message="wsServicio_SERVUbicacion_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoDeHerramientaEspecializada_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/TipoDeHerramientaEspecializada_Listar" message="wsServicio_TipoDeHerramientaEspecializada_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TipoDeHerramientaEspecializada_ListarResponse" message="wsServicio_TipoDeHerramientaEspecializada_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DescripcionDeHerramientaEspecializada_ListarPorMarca">
+      <wsdl:input wsaw:Action="urn:wsServicio/DescripcionDeHerramientaEspecializada_ListarPorMarca" message="wsServicio_DescripcionDeHerramientaEspecializada_ListarPorMarca_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/DescripcionDeHerramientaEspecializada_ListarPorMarcaResponse" message="wsServicio_DescripcionDeHerramientaEspecializada_ListarPorMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DescripcionDeHerramientaEspecializada_InsertOrUpdate">
+      <wsdl:input wsaw:Action="urn:wsServicio/DescripcionDeHerramientaEspecializada_InsertOrUpdate" message="wsServicio_DescripcionDeHerramientaEspecializada_InsertOrUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/DescripcionDeHerramientaEspecializada_InsertOrUpdateResponse" message="wsServicio_DescripcionDeHerramientaEspecializada_InsertOrUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RampaEx_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/RampaEx_ListarPorAgencia" message="wsServicio_RampaEx_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/RampaEx_ListarPorAgenciaResponse" message="wsServicio_RampaEx_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Operario_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/Operario_ListarPorAgencia" message="wsServicio_Operario_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Operario_ListarPorAgenciaResponse" message="wsServicio_Operario_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ListarPorPerfilesYAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/Usuario_ListarPorPerfilesYAgencia" message="wsServicio_Usuario_ListarPorPerfilesYAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Usuario_ListarPorPerfilesYAgenciaResponse" message="wsServicio_Usuario_ListarPorPerfilesYAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoDeReceptor_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/TipoDeReceptor_Listar" message="wsServicio_TipoDeReceptor_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TipoDeReceptor_ListarResponse" message="wsServicio_TipoDeReceptor_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RFCUtilerias_Validar">
+      <wsdl:input wsaw:Action="urn:wsServicio/RFCUtilerias_Validar" message="wsServicio_RFCUtilerias_Validar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/RFCUtilerias_ValidarResponse" message="wsServicio_RFCUtilerias_Validar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CURPUtilerias_Validar">
+      <wsdl:input wsaw:Action="urn:wsServicio/CURPUtilerias_Validar" message="wsServicio_CURPUtilerias_Validar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CURPUtilerias_ValidarResponse" message="wsServicio_CURPUtilerias_Validar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonaBasica_ListarPorNombre">
+      <wsdl:input wsaw:Action="urn:wsServicio/PersonaBasica_ListarPorNombre" message="wsServicio_PersonaBasica_ListarPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PersonaBasica_ListarPorNombreResponse" message="wsServicio_PersonaBasica_ListarPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonaEx_ListarPorNombre">
+      <wsdl:input wsaw:Action="urn:wsServicio/PersonaEx_ListarPorNombre" message="wsServicio_PersonaEx_ListarPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PersonaEx_ListarPorNombreResponse" message="wsServicio_PersonaEx_ListarPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VehiculoBase_ListarPorIdsClientes">
+      <wsdl:input wsaw:Action="urn:wsServicio/VehiculoBase_ListarPorIdsClientes" message="wsServicio_VehiculoBase_ListarPorIdsClientes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/VehiculoBase_ListarPorIdsClientesResponse" message="wsServicio_VehiculoBase_ListarPorIdsClientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HerramientaEspecializada_InsertOrUpdate">
+      <wsdl:input wsaw:Action="urn:wsServicio/HerramientaEspecializada_InsertOrUpdate" message="wsServicio_HerramientaEspecializada_InsertOrUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/HerramientaEspecializada_InsertOrUpdateResponse" message="wsServicio_HerramientaEspecializada_InsertOrUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HerramientaEspecializada_Delete">
+      <wsdl:input wsaw:Action="urn:wsServicio/HerramientaEspecializada_Delete" message="wsServicio_HerramientaEspecializada_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/HerramientaEspecializada_DeleteResponse" message="wsServicio_HerramientaEspecializada_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HerramientaEspecializada_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/HerramientaEspecializada_Listar" message="wsServicio_HerramientaEspecializada_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/HerramientaEspecializada_ListarResponse" message="wsServicio_HerramientaEspecializada_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_InsertOrUpdate">
+      <wsdl:input wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_InsertOrUpdate" message="wsServicio_PrestamoDeHerramientaEspecializada_InsertOrUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_InsertOrUpdateResponse" message="wsServicio_PrestamoDeHerramientaEspecializada_InsertOrUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_Delete">
+      <wsdl:input wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_Delete" message="wsServicio_PrestamoDeHerramientaEspecializada_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_DeleteResponse" message="wsServicio_PrestamoDeHerramientaEspecializada_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate">
+      <wsdl:input wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate" message="wsServicio_PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdateResponse" message="wsServicio_PrestamoDeHerramientaEspecializadaDetalle_InsertOrUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_ListarActivos">
+      <wsdl:input wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_ListarActivos" message="wsServicio_PrestamoDeHerramientaEspecializada_ListarActivos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_ListarActivosResponse" message="wsServicio_PrestamoDeHerramientaEspecializada_ListarActivos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_Listar" message="wsServicio_PrestamoDeHerramientaEspecializada_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_ListarResponse" message="wsServicio_PrestamoDeHerramientaEspecializada_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrestamoDeHerramientaEspecializada_Autorizar">
+      <wsdl:input wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_Autorizar" message="wsServicio_PrestamoDeHerramientaEspecializada_Autorizar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/PrestamoDeHerramientaEspecializada_AutorizarResponse" message="wsServicio_PrestamoDeHerramientaEspecializada_Autorizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HerramientaEspecializadaHelper_Importar">
+      <wsdl:input wsaw:Action="urn:wsServicio/HerramientaEspecializadaHelper_Importar" message="wsServicio_HerramientaEspecializadaHelper_Importar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/HerramientaEspecializadaHelper_ImportarResponse" message="wsServicio_HerramientaEspecializadaHelper_Importar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrdenDeServicio_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/OrdenDeServicio_Buscar" message="wsServicio_OrdenDeServicio_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/OrdenDeServicio_BuscarResponse" message="wsServicio_OrdenDeServicio_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrdenDeServicio_BuscarPorFolio">
+      <wsdl:input wsaw:Action="urn:wsServicio/OrdenDeServicio_BuscarPorFolio" message="wsServicio_OrdenDeServicio_BuscarPorFolio_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/OrdenDeServicio_BuscarPorFolioResponse" message="wsServicio_OrdenDeServicio_BuscarPorFolio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReporteSEAT">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetReporteSEAT" message="wsServicio_GetReporteSEAT_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetReporteSEATResponse" message="wsServicio_GetReporteSEAT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCatalogoPeriodo">
+      <wsdl:input wsaw:Action="urn:wsServicio/ConsultaCatalogoPeriodo" message="wsServicio_ConsultaCatalogoPeriodo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ConsultaCatalogoPeriodoResponse" message="wsServicio_ConsultaCatalogoPeriodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaOrdenesenProceso">
+      <wsdl:input wsaw:Action="urn:wsServicio/ConsultaOrdenesenProceso" message="wsServicio_ConsultaOrdenesenProceso_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ConsultaOrdenesenProcesoResponse" message="wsServicio_ConsultaOrdenesenProceso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRetornoaTaller">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetRetornoaTaller" message="wsServicio_GetRetornoaTaller_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetRetornoaTallerResponse" message="wsServicio_GetRetornoaTaller_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdenesCanceladas">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetOrdenesCanceladas" message="wsServicio_GetOrdenesCanceladas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetOrdenesCanceladasResponse" message="wsServicio_GetOrdenesCanceladas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdenesTiempos">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetOrdenesTiempos" message="wsServicio_GetOrdenesTiempos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetOrdenesTiemposResponse" message="wsServicio_GetOrdenesTiempos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResumenTiempos">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetResumenTiempos" message="wsServicio_GetResumenTiempos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetResumenTiemposResponse" message="wsServicio_GetResumenTiempos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTiposOrden">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetTiposOrden" message="wsServicio_GetTiposOrden_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetTiposOrdenResponse" message="wsServicio_GetTiposOrden_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExistencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetExistencia" message="wsServicio_GetExistencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetExistenciaResponse" message="wsServicio_GetExistencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setCancelaAcondicionamientoUnidadesNuevas">
+      <wsdl:input wsaw:Action="urn:wsServicio/setCancelaAcondicionamientoUnidadesNuevas" message="wsServicio_setCancelaAcondicionamientoUnidadesNuevas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/setCancelaAcondicionamientoUnidadesNuevasResponse" message="wsServicio_setCancelaAcondicionamientoUnidadesNuevas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaCitaSimple">
+      <wsdl:input wsaw:Action="urn:wsServicio/GuardaCitaSimple" message="wsServicio_GuardaCitaSimple_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GuardaCitaSimpleResponse" message="wsServicio_GuardaCitaSimple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaCitaConPreorden">
+      <wsdl:input wsaw:Action="urn:wsServicio/GuardaCitaConPreorden" message="wsServicio_GuardaCitaConPreorden_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GuardaCitaConPreordenResponse" message="wsServicio_GuardaCitaConPreorden_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCita">
+      <wsdl:input wsaw:Action="urn:wsServicio/ActualizaCita" message="wsServicio_ActualizaCita_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ActualizaCitaResponse" message="wsServicio_ActualizaCita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaPreordenCotizacion">
+      <wsdl:input wsaw:Action="urn:wsServicio/ActualizaPreordenCotizacion" message="wsServicio_ActualizaPreordenCotizacion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ActualizaPreordenCotizacionResponse" message="wsServicio_ActualizaPreordenCotizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneCita">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneCita" message="wsServicio_ObtieneCita_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneCitaResponse" message="wsServicio_ObtieneCita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstadisticosDeCitas">
+      <wsdl:input wsaw:Action="urn:wsServicio/GetEstadisticosDeCitas" message="wsServicio_GetEstadisticosDeCitas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GetEstadisticosDeCitasResponse" message="wsServicio_GetEstadisticosDeCitas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneOpcionesCita">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneOpcionesCita" message="wsServicio_ObtieneOpcionesCita_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneOpcionesCitaResponse" message="wsServicio_ObtieneOpcionesCita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_ListarOpciones">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicioApartada_ListarOpciones" message="wsServicio_CitaDeServicioApartada_ListarOpciones_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicioApartada_ListarOpcionesResponse" message="wsServicio_CitaDeServicioApartada_ListarOpciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_Set">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicioApartada_Set" message="wsServicio_CitaDeServicioApartada_Set_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicioApartada_SetResponse" message="wsServicio_CitaDeServicioApartada_Set_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_Delete">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicioApartada_Delete" message="wsServicio_CitaDeServicioApartada_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicioApartada_DeleteResponse" message="wsServicio_CitaDeServicioApartada_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_ExistenTraslapes">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicioApartada_ExistenTraslapes" message="wsServicio_CitaDeServicioApartada_ExistenTraslapes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicioApartada_ExistenTraslapesResponse" message="wsServicio_CitaDeServicioApartada_ExistenTraslapes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioApartada_ListarPorAsesoresOChoferes">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicioApartada_ListarPorAsesoresOChoferes" message="wsServicio_CitaDeServicioApartada_ListarPorAsesoresOChoferes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicioApartada_ListarPorAsesoresOChoferesResponse" message="wsServicio_CitaDeServicioApartada_ListarPorAsesoresOChoferes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicioEx_ListarExPorAsesoresOChoferes">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicioEx_ListarExPorAsesoresOChoferes" message="wsServicio_CitaDeServicioEx_ListarExPorAsesoresOChoferes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicioEx_ListarExPorAsesoresOChoferesResponse" message="wsServicio_CitaDeServicioEx_ListarExPorAsesoresOChoferes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CitaDeServicio_ListarPorAgenciasYEstatus">
+      <wsdl:input wsaw:Action="urn:wsServicio/CitaDeServicio_ListarPorAgenciasYEstatus" message="wsServicio_CitaDeServicio_ListarPorAgenciasYEstatus_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CitaDeServicio_ListarPorAgenciasYEstatusResponse" message="wsServicio_CitaDeServicio_ListarPorAgenciasYEstatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaCliente">
+      <wsdl:input wsaw:Action="urn:wsServicio/ConsultaCliente" message="wsServicio_ConsultaCliente_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ConsultaClienteResponse" message="wsServicio_ConsultaCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneVehiculoCliente">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneVehiculoCliente" message="wsServicio_ObtieneVehiculoCliente_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneVehiculoClienteResponse" message="wsServicio_ObtieneVehiculoCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaHorariosAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/CargaHorariosAgencia" message="wsServicio_CargaHorariosAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CargaHorariosAgenciaResponse" message="wsServicio_CargaHorariosAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneAsesores">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneAsesores" message="wsServicio_ObtieneAsesores_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneAsesoresResponse" message="wsServicio_ObtieneAsesores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneDisponiblesAgenda">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneDisponiblesAgenda" message="wsServicio_ObtieneDisponiblesAgenda_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneDisponiblesAgendaResponse" message="wsServicio_ObtieneDisponiblesAgenda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCliente">
+      <wsdl:input wsaw:Action="urn:wsServicio/ActualizaCliente" message="wsServicio_ActualizaCliente_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ActualizaClienteResponse" message="wsServicio_ActualizaCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoCita">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneTipoCita" message="wsServicio_ObtieneTipoCita_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneTipoCitaResponse" message="wsServicio_ObtieneTipoCita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoPreorden">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneTipoPreorden" message="wsServicio_ObtieneTipoPreorden_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneTipoPreordenResponse" message="wsServicio_ObtieneTipoPreorden_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTipoPrecio">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneTipoPrecio" message="wsServicio_ObtieneTipoPrecio_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneTipoPrecioResponse" message="wsServicio_ObtieneTipoPrecio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaTieneCita">
+      <wsdl:input wsaw:Action="urn:wsServicio/BuscaTieneCita" message="wsServicio_BuscaTieneCita_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/BuscaTieneCitaResponse" message="wsServicio_BuscaTieneCita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaVehiculoCita">
+      <wsdl:input wsaw:Action="urn:wsServicio/BuscaVehiculoCita" message="wsServicio_BuscaVehiculoCita_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/BuscaVehiculoCitaResponse" message="wsServicio_BuscaVehiculoCita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getObtenerVehiculosNoRegresoServicio">
+      <wsdl:input wsaw:Action="urn:wsServicio/getObtenerVehiculosNoRegresoServicio" message="wsServicio_getObtenerVehiculosNoRegresoServicio_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getObtenerVehiculosNoRegresoServicioResponse" message="wsServicio_getObtenerVehiculosNoRegresoServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getObtenerVehiculosServicioMasDosDias">
+      <wsdl:input wsaw:Action="urn:wsServicio/getObtenerVehiculosServicioMasDosDias" message="wsServicio_getObtenerVehiculosServicioMasDosDias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getObtenerVehiculosServicioMasDosDiasResponse" message="wsServicio_getObtenerVehiculosServicioMasDosDias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getObtenerVehiculosServicioUnDiaFechaVenta">
+      <wsdl:input wsaw:Action="urn:wsServicio/getObtenerVehiculosServicioUnDiaFechaVenta" message="wsServicio_getObtenerVehiculosServicioUnDiaFechaVenta_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getObtenerVehiculosServicioUnDiaFechaVentaResponse" message="wsServicio_getObtenerVehiculosServicioUnDiaFechaVenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getObtenerVehiculosServicioUnDiaSinFechaVenta">
+      <wsdl:input wsaw:Action="urn:wsServicio/getObtenerVehiculosServicioUnDiaSinFechaVenta" message="wsServicio_getObtenerVehiculosServicioUnDiaSinFechaVenta_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getObtenerVehiculosServicioUnDiaSinFechaVentaResponse" message="wsServicio_getObtenerVehiculosServicioUnDiaSinFechaVenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaContacto">
+      <wsdl:input wsaw:Action="urn:wsServicio/ActualizaContacto" message="wsServicio_ActualizaContacto_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ActualizaContactoResponse" message="wsServicio_ActualizaContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaqueteEspecifico">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtienePaqueteEspecifico" message="wsServicio_ObtienePaqueteEspecifico_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtienePaqueteEspecificoResponse" message="wsServicio_ObtienePaqueteEspecifico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaquetes">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtienePaquetes" message="wsServicio_ObtienePaquetes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtienePaquetesResponse" message="wsServicio_ObtienePaquetes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaquetesMantenimiento">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtienePaquetesMantenimiento" message="wsServicio_ObtienePaquetesMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtienePaquetesMantenimientoResponse" message="wsServicio_ObtienePaquetesMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaquetesAdicion">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtienePaquetesAdicion" message="wsServicio_ObtienePaquetesAdicion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtienePaquetesAdicionResponse" message="wsServicio_ObtienePaquetesAdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePaquetesPromocion">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtienePaquetesPromocion" message="wsServicio_ObtienePaquetesPromocion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtienePaquetesPromocionResponse" message="wsServicio_ObtienePaquetesPromocion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Operaciones">
+      <wsdl:input wsaw:Action="urn:wsServicio/Operaciones" message="wsServicio_Operaciones_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/OperacionesResponse" message="wsServicio_Operaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRefaccionesPaquete">
+      <wsdl:input wsaw:Action="urn:wsServicio/ObtieneRefaccionesPaquete" message="wsServicio_ObtieneRefaccionesPaquete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ObtieneRefaccionesPaqueteResponse" message="wsServicio_ObtieneRefaccionesPaquete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Campanias">
+      <wsdl:input wsaw:Action="urn:wsServicio/Campanias" message="wsServicio_Campanias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CampaniasResponse" message="wsServicio_Campanias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarRefaccion">
+      <wsdl:input wsaw:Action="urn:wsServicio/BuscarRefaccion" message="wsServicio_BuscarRefaccion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/BuscarRefaccionResponse" message="wsServicio_BuscarRefaccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaPaquete">
+      <wsdl:input wsaw:Action="urn:wsServicio/GuardaPaquete" message="wsServicio_GuardaPaquete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GuardaPaqueteResponse" message="wsServicio_GuardaPaquete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaOperaciones">
+      <wsdl:input wsaw:Action="urn:wsServicio/GuardaOperaciones" message="wsServicio_GuardaOperaciones_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GuardaOperacionesResponse" message="wsServicio_GuardaOperaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaRefacciones">
+      <wsdl:input wsaw:Action="urn:wsServicio/GuardaRefacciones" message="wsServicio_GuardaRefacciones_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/GuardaRefaccionesResponse" message="wsServicio_GuardaRefacciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTipoOrdenEmpresa">
+      <wsdl:input wsaw:Action="urn:wsServicio/getTipoOrdenEmpresa" message="wsServicio_getTipoOrdenEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getTipoOrdenEmpresaResponse" message="wsServicio_getTipoOrdenEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmpleadosEmpresa">
+      <wsdl:input wsaw:Action="urn:wsServicio/getEmpleadosEmpresa" message="wsServicio_getEmpleadosEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getEmpleadosEmpresaResponse" message="wsServicio_getEmpleadosEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOperariosEmpresa">
+      <wsdl:input wsaw:Action="urn:wsServicio/getOperariosEmpresa" message="wsServicio_getOperariosEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getOperariosEmpresaResponse" message="wsServicio_getOperariosEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getConifgTipoOrdenesOperarios">
+      <wsdl:input wsaw:Action="urn:wsServicio/getConifgTipoOrdenesOperarios" message="wsServicio_getConifgTipoOrdenesOperarios_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getConifgTipoOrdenesOperariosResponse" message="wsServicio_getConifgTipoOrdenesOperarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setupConfiguracionTOrdenTOperacion">
+      <wsdl:input wsaw:Action="urn:wsServicio/setupConfiguracionTOrdenTOperacion" message="wsServicio_setupConfiguracionTOrdenTOperacion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/setupConfiguracionTOrdenTOperacionResponse" message="wsServicio_setupConfiguracionTOrdenTOperacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delConfiguracionTOrdenTOperacion">
+      <wsdl:input wsaw:Action="urn:wsServicio/delConfiguracionTOrdenTOperacion" message="wsServicio_delConfiguracionTOrdenTOperacion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/delConfiguracionTOrdenTOperacionResponse" message="wsServicio_delConfiguracionTOrdenTOperacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTiposOperacionesEmpresa">
+      <wsdl:input wsaw:Action="urn:wsServicio/getTiposOperacionesEmpresa" message="wsServicio_getTiposOperacionesEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getTiposOperacionesEmpresaResponse" message="wsServicio_getTiposOperacionesEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getConifgTipoOperacionesOperarios">
+      <wsdl:input wsaw:Action="urn:wsServicio/getConifgTipoOperacionesOperarios" message="wsServicio_getConifgTipoOperacionesOperarios_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/getConifgTipoOperacionesOperariosResponse" message="wsServicio_getConifgTipoOperacionesOperarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaInicialPreorden_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/CargaInicialPreorden_Buscar" message="wsServicio_CargaInicialPreorden_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CargaInicialPreorden_BuscarResponse" message="wsServicio_CargaInicialPreorden_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeRespondioControlDeCalidad">
+      <wsdl:input wsaw:Action="urn:wsServicio/SeRespondioControlDeCalidad" message="wsServicio_SeRespondioControlDeCalidad_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/SeRespondioControlDeCalidadResponse" message="wsServicio_SeRespondioControlDeCalidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SePuedePrefacturarSinControlDeCalidad">
+      <wsdl:input wsaw:Action="urn:wsServicio/SePuedePrefacturarSinControlDeCalidad" message="wsServicio_SePuedePrefacturarSinControlDeCalidad_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/SePuedePrefacturarSinControlDeCalidadResponse" message="wsServicio_SePuedePrefacturarSinControlDeCalidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SePuedeFacturarSinControlDeCalidad">
+      <wsdl:input wsaw:Action="urn:wsServicio/SePuedeFacturarSinControlDeCalidad" message="wsServicio_SePuedeFacturarSinControlDeCalidad_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/SePuedeFacturarSinControlDeCalidadResponse" message="wsServicio_SePuedeFacturarSinControlDeCalidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaInicialCitas_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/CargaInicialCitas_Buscar" message="wsServicio_CargaInicialCitas_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CargaInicialCitas_BuscarResponse" message="wsServicio_CargaInicialCitas_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaInicialMagnetoplan_Buscar">
+      <wsdl:input wsaw:Action="urn:wsServicio/CargaInicialMagnetoplan_Buscar" message="wsServicio_CargaInicialMagnetoplan_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/CargaInicialMagnetoplan_BuscarResponse" message="wsServicio_CargaInicialMagnetoplan_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TallerCompartido_BuscarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/TallerCompartido_BuscarPorAgencia" message="wsServicio_TallerCompartido_BuscarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TallerCompartido_BuscarPorAgenciaResponse" message="wsServicio_TallerCompartido_BuscarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfiguracionDeMagnetoplan_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/ConfiguracionDeMagnetoplan_ListarPorAgencia" message="wsServicio_ConfiguracionDeMagnetoplan_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/ConfiguracionDeMagnetoplan_ListarPorAgenciaResponse" message="wsServicio_ConfiguracionDeMagnetoplan_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ExistenTraslapes">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ExistenTraslapes" message="wsServicio_TareaPlaneadaPorTaller_ExistenTraslapes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ExistenTraslapesResponse" message="wsServicio_TareaPlaneadaPorTaller_ExistenTraslapes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_Listar">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_Listar" message="wsServicio_TareaPlaneadaPorTaller_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarResponse" message="wsServicio_TareaPlaneadaPorTaller_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarPorPreorden">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarPorPreorden" message="wsServicio_TareaPlaneadaPorTaller_ListarPorPreorden_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarPorPreordenResponse" message="wsServicio_TareaPlaneadaPorTaller_ListarPorPreorden_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_BuscarPorPreorden">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_BuscarPorPreorden" message="wsServicio_TareaPlaneadaPorTaller_BuscarPorPreorden_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_BuscarPorPreordenResponse" message="wsServicio_TareaPlaneadaPorTaller_BuscarPorPreorden_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarPorCita">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarPorCita" message="wsServicio_TareaPlaneadaPorTaller_ListarPorCita_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarPorCitaResponse" message="wsServicio_TareaPlaneadaPorTaller_ListarPorCita_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_ListarBasicaPorPreorden">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarBasicaPorPreorden" message="wsServicio_TareaPlaneadaPorTaller_ListarBasicaPorPreorden_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_ListarBasicaPorPreordenResponse" message="wsServicio_TareaPlaneadaPorTaller_ListarBasicaPorPreorden_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar" message="wsServicio_TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_LimpiarPorPreorden_InsertarResponse" message="wsServicio_TareaPlaneadaPorTaller_LimpiarPorPreorden_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_Set">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_Set" message="wsServicio_TareaPlaneadaPorTaller_Set_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_SetResponse" message="wsServicio_TareaPlaneadaPorTaller_Set_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_Set_ActualizarOperaciones">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_Set_ActualizarOperaciones" message="wsServicio_TareaPlaneadaPorTaller_Set_ActualizarOperaciones_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_Set_ActualizarOperacionesResponse" message="wsServicio_TareaPlaneadaPorTaller_Set_ActualizarOperaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_Delete">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_Delete" message="wsServicio_TareaPlaneadaPorTaller_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_DeleteResponse" message="wsServicio_TareaPlaneadaPorTaller_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TareaPlaneadaPorTaller_DeleteByPreorden">
+      <wsdl:input wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_DeleteByPreorden" message="wsServicio_TareaPlaneadaPorTaller_DeleteByPreorden_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/TareaPlaneadaPorTaller_DeleteByPreordenResponse" message="wsServicio_TareaPlaneadaPorTaller_DeleteByPreorden_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HorarioDeOperario_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/HorarioDeOperario_ListarPorAgencia" message="wsServicio_HorarioDeOperario_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/HorarioDeOperario_ListarPorAgenciaResponse" message="wsServicio_HorarioDeOperario_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Asesor_ListarPorAgenciaParaCitas">
+      <wsdl:input wsaw:Action="urn:wsServicio/Asesor_ListarPorAgenciaParaCitas" message="wsServicio_Asesor_ListarPorAgenciaParaCitas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Asesor_ListarPorAgenciaParaCitasResponse" message="wsServicio_Asesor_ListarPorAgenciaParaCitas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Asesor_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/Asesor_ListarPorAgencia" message="wsServicio_Asesor_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/Asesor_ListarPorAgenciaResponse" message="wsServicio_Asesor_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsesorConHorario_ListarPorAgencia">
+      <wsdl:input wsaw:Action="urn:wsServicio/AsesorConHorario_ListarPorAgencia" message="wsServicio_AsesorConHorario_ListarPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:wsServicio/AsesorConHorario_ListarPorAgenciaResponse" message="wsServicio_AsesorConHorario_ListarPorAgencia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

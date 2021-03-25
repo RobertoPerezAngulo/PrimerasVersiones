@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wsServicio.Models.SERV" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfcsArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="csArea" nillable="true" type="tns:csArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcsArea" nillable="true" type="tns:ArrayOfcsArea" />
+  <xs:complexType name="csArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ColorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="csArea" nillable="true" type="tns:csArea" />
+  <xs:complexType name="csPlano">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Areas" nillable="true" type="tns:ArrayOfcsPlanoArea" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTaller" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ruta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="csPlano" nillable="true" type="tns:csPlano" />
+  <xs:complexType name="ArrayOfcsPlanoArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="csPlanoArea" nillable="true" type="tns:csPlanoArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcsPlanoArea" nillable="true" type="tns:ArrayOfcsPlanoArea" />
+  <xs:complexType name="csPlanoArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alineacion" type="tns:csPlanoArea.EAlineaciones" />
+      <xs:element minOccurs="0" name="Capacidad" type="xs:int" />
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Columnas" type="xs:int" />
+      <xs:element minOccurs="0" name="Filas" type="xs:int" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPlano" type="xs:int" />
+      <xs:element minOccurs="0" name="Left" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosDeTolerancia" type="xs:int" />
+      <xs:element minOccurs="0" name="OrientationDeVehiculo" type="tns:csPlanoArea.EOrientationes" />
+      <xs:element minOccurs="0" name="Piso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prioridad" type="xs:int" />
+      <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Tipo" type="tns:csPlanoArea.ETipos" />
+      <xs:element minOccurs="0" name="Top" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="strTipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="csPlanoArea" nillable="true" type="tns:csPlanoArea" />
+  <xs:simpleType name="csPlanoArea.EAlineaciones">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="Vertical_superior_Horizontal_izquierda" />
+      <xs:enumeration value="Vertical_superior_Horizontal_derecha" />
+      <xs:enumeration value="Vertical_superior_Horizontal_centrado" />
+      <xs:enumeration value="Vertical_inferior_Horizontal_izquierda" />
+      <xs:enumeration value="Vertical_inferior_Horizontal_derecha" />
+      <xs:enumeration value="Vertical_inferior_Horizontal_centrado" />
+      <xs:enumeration value="Vertical_centrado_Horizontal_izquierda" />
+      <xs:enumeration value="Vertical_centrado_Horizontal_derecha" />
+      <xs:enumeration value="Vertical_centrado_Horizontal_centrado" />
+      <xs:enumeration value="Horizontal_izquierda_Vertical_superior" />
+      <xs:enumeration value="Horizontal_izquierda_Vertical_inferior" />
+      <xs:enumeration value="Horizontal_izquierda_Vertical_centrado" />
+      <xs:enumeration value="Horizontal_derecha_Vertical_superior" />
+      <xs:enumeration value="Horizontal_derecha_Vertical_inferior" />
+      <xs:enumeration value="Horizontal_derecha_Vertical_centrado" />
+      <xs:enumeration value="Horizontal_centrado_Vertical_superior" />
+      <xs:enumeration value="Horizontal_centrado_Vertical_inferior" />
+      <xs:enumeration value="Horizontal_centrado_Vertical_centrado" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="csPlanoArea.EAlineaciones" nillable="true" type="tns:csPlanoArea.EAlineaciones" />
+  <xs:simpleType name="csPlanoArea.EOrientationes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Vertical" />
+      <xs:enumeration value="Horizontal" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="csPlanoArea.EOrientationes" nillable="true" type="tns:csPlanoArea.EOrientationes" />
+  <xs:simpleType name="csPlanoArea.ETipos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEspecificado" />
+      <xs:enumeration value="EnRecepcionAsesores" />
+      <xs:enumeration value="EnEsperaDeServicioNoGarantias" />
+      <xs:enumeration value="Rampa" />
+      <xs:enumeration value="EnEsperaDeLavado" />
+      <xs:enumeration value="Lavado" />
+      <xs:enumeration value="Terminado" />
+      <xs:enumeration value="PendientesPorTOT" />
+      <xs:enumeration value="PendientesPorAutorizacion" />
+      <xs:enumeration value="PendientesPorRefacciones" />
+      <xs:enumeration value="PendientesPorCarryOver" />
+      <xs:enumeration value="PendientesPorPruebaDeRuta" />
+      <xs:enumeration value="EnEsperaDeServicioGarantias" />
+      <xs:enumeration value="CitasPorArribar" />
+      <xs:enumeration value="EnEsperaDeControlDeCalidad" />
+      <xs:enumeration value="ControlDeCalidad" />
+      <xs:enumeration value="Retrabajo" />
+      <xs:enumeration value="PendientesPorRefacciones_CarroParado" />
+      <xs:enumeration value="PendientesPorRefacciones_BackOrder" />
+      <xs:enumeration value="PendientesPorTransito_PzTransito" />
+      <xs:enumeration value="PendientesPorTransito_PzAlmacen" />
+      <xs:enumeration value="PendientesPorTransito_PzBackOrder" />
+      <xs:enumeration value="CasoCritico" />
+      <xs:enumeration value="RepacionDeEntrega" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="csPlanoArea.ETipos" nillable="true" type="tns:csPlanoArea.ETipos" />
+  <xs:complexType name="ArrayOfcsPlanoArea_Alineacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="csPlanoArea_Alineacion" nillable="true" type="tns:csPlanoArea_Alineacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcsPlanoArea_Alineacion" nillable="true" type="tns:ArrayOfcsPlanoArea_Alineacion" />
+  <xs:complexType name="csPlanoArea_Alineacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="csPlanoArea_Alineacion" nillable="true" type="tns:csPlanoArea_Alineacion" />
+  <xs:complexType name="csAparienciaDeMagnetoplan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Boton_ColorDeFondo" type="xs:int" />
+      <xs:element minOccurs="0" name="Boton_ColorDeFuente" type="xs:int" />
+      <xs:element minOccurs="0" name="Encabezado_ColorDeFondo" type="xs:int" />
+      <xs:element minOccurs="0" name="Encabezado_ColorDeFuente" type="xs:int" />
+      <xs:element minOccurs="0" name="Grids_ColorDeFondoEncabezado" type="xs:int" />
+      <xs:element minOccurs="0" name="Grids_ColorDeFuenteEncabezado" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTaller" type="xs:int" />
+      <xs:element minOccurs="0" name="Leyenda_Magnetoplan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Pullsystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaletaDeColores_ColorDeFondoDePaleta" type="xs:int" />
+      <xs:element minOccurs="0" name="PaletaDeColores_ColorDeFondoMarco" type="xs:int" />
+      <xs:element minOccurs="0" name="PaletaDeColores_ColorDeFuenteDePaleta" type="xs:int" />
+      <xs:element minOccurs="0" name="PaletaDeColores_ColorDeFuenteMarco" type="xs:int" />
+      <xs:element minOccurs="0" name="Planeacion_ColorDeHoraActual" type="xs:int" />
+      <xs:element minOccurs="0" name="Planeacion_TrasparenciaDeHoraActual" type="xs:decimal" />
+      <xs:element minOccurs="0" name="STATUS" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="csAparienciaDeMagnetoplan" nillable="true" type="tns:csAparienciaDeMagnetoplan" />
+</xs:schema>

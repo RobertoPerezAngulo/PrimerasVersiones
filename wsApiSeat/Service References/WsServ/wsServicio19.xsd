@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.REFA" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.REFA" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" />
+  <xs:simpleType name="REFA_EParametros">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Desconocido" />
+      <xs:enumeration value="IdAlmacenPredeterminadoParaRefacciones" />
+      <xs:enumeration value="PermitirMultiplesOperariosEnRequisicion" />
+      <xs:enumeration value="SePuedeVisualizarInventarioRefaccionesOtraAgenciaMarca" />
+      <xs:enumeration value="AlmacenPredeterminadoParaArriboMaterial" />
+      <xs:enumeration value="UbicacionPredeterminadaArriboMaterial" />
+      <xs:enumeration value="TipoMovimientoParaArriboAlmacen" />
+      <xs:enumeration value="SePuedenVenderRefaccionesAbajoCosto" />
+      <xs:enumeration value="RutaArchivoLocalizadorPartes" />
+      <xs:enumeration value="FiltroParaLocalizadorPartes" />
+      <xs:enumeration value="SeCuentanPiezasFueraUbicacionEnInventarioFisico" />
+      <xs:enumeration value="IdListaPreciosPredeterminadaParaVentaRefacciones" />
+      <xs:enumeration value="IdCanalVentaPredeterminadoParaVentaRefacciones" />
+      <xs:enumeration value="PermitirModificarPreciosUnitariosEnElCatalogoRefaccionesAlmacen" />
+      <xs:enumeration value="DiasAnitguedadParaValorizadoRefacciones" />
+      <xs:enumeration value="DiasAntiguedadParaExpiracionPedido" />
+      <xs:enumeration value="IdClasificacionPredeterminadaParaClasificacionInventario" />
+      <xs:enumeration value="ClasificarPorGruposReemplazo" />
+      <xs:enumeration value="AgenciaManejaSurtidoPiezas" />
+      <xs:enumeration value="IdClasificacionParaObsoleto" />
+      <xs:enumeration value="TipoTransporteEnOrderfile" />
+      <xs:enumeration value="ClaveRequerimientoOrdenPendienteEnOrderfile" />
+      <xs:enumeration value="TipoPedidoEnOrderfile" />
+      <xs:enumeration value="ClaveSeguridadOrderfile" />
+      <xs:enumeration value="RutaArchivoOrderFile" />
+      <xs:enumeration value="RutaArchivoStockProfile" />
+      <xs:enumeration value="MuestraReporteMensualComprasConGastosVarios" />
+      <xs:enumeration value="GuardaElPedidoSugeridoEnAutomatico" />
+      <xs:enumeration value="SurtidoPiezaPorPieza" />
+      <xs:enumeration value="GuardaElDetallePedidoSugeridoAlTerminarCelda" />
+      <xs:enumeration value="TiempoEnMilisegundosEnQueGuardaraElPedidoSugerido" />
+      <xs:enumeration value="EntregaVentanillaReplicaAVersion1" />
+      <xs:enumeration value="PermitirCapturarDescuentos" />
+      <xs:enumeration value="MostrarCoincidencias" />
+      <xs:enumeration value="RutaArchivoVip" />
+      <xs:enumeration value="PuestoPersonaQueRevisaElInventarioSelectivo1" />
+      <xs:enumeration value="PuestoPersonaQueRevisaElInventarioSelectivo2" />
+      <xs:enumeration value="PuestoPersonaQueAutorizaElInventarioSelectivo" />
+      <xs:enumeration value="FacturacionElectronica" />
+      <xs:enumeration value="TipoArchivoIngreso" />
+      <xs:enumeration value="TipoArchivoEgreso" />
+      <xs:enumeration value="NombreHojaXsl" />
+      <xs:enumeration value="RefaccionesNotaCreditoElectronicoSiNo" />
+      <xs:enumeration value="NombreHojaXslNotaCredito" />
+      <xs:enumeration value="EnviaPagoRefaccionesACalendarioPagos" />
+      <xs:enumeration value="IdClasificacionParaFacil" />
+      <xs:enumeration value="PermiteFacturaElectronicaEdix" />
+      <xs:enumeration value="PermiteNotaCreditoElectronicaEdix" />
+      <xs:enumeration value="IdClasificacionLenta" />
+      <xs:enumeration value="IdClasificacionCorporativa" />
+      <xs:enumeration value="RutaImagenRefaccion" />
+      <xs:enumeration value="GeneraGastosExtra" />
+      <xs:enumeration value="PuenteoFinancieraEnContabilidad" />
+      <xs:enumeration value="ManejaHistoricoVentas" />
+      <xs:enumeration value="AplicaOrigen" />
+      <xs:enumeration value="IdAlmacenVirtual" />
+      <xs:enumeration value="FactorCalculoMinimoStock" />
+      <xs:enumeration value="FactorCalculoMaximoStock" />
+      <xs:enumeration value="ManejaRecepcionesParciales" />
+      <xs:enumeration value="TomaFechaCompraMatriz" />
+      <xs:enumeration value="AutorizaBajoCostoPromedio" />
+      <xs:enumeration value="AutorizaSobreElCostoPromedio" />
+      <xs:enumeration value="IdPerfilAutorizadoPedidoPorWeb" />
+      <xs:enumeration value="EmailsParaPedidoRefacciones" />
+      <xs:enumeration value="IdAgentePredeterminadoAgencia" />
+      <xs:enumeration value="IdUbicacionPredeterminada" />
+      <xs:enumeration value="MuestraReporteConsolidado" />
+      <xs:enumeration value="DelimitadorCodigoBarrasEnPedido" />
+      <xs:enumeration value="EmailNotificacionPedido" />
+      <xs:enumeration value="RequiereDatoImportacionEnPedido" />
+      <xs:enumeration value="PermiteGuardarMismoFolioFacturaEnRecepcionAInventario" />
+      <xs:enumeration value="PermiteRegistrarControlSalidaRefacciones" />
+      <xs:enumeration value="PagaRefaccionesDirectoAPlanta" />
+      <xs:enumeration value="ClaveDistribuidorEnSAP" />
+      <xs:enumeration value="PersonaCoordinacionAutorizaRetornoCiclico" />
+      <xs:enumeration value="ListaPreciosConvenioAseguradora" />
+      <xs:enumeration value="RequiereAutorizacionIntercompania" />
+      <xs:enumeration value="NombreResponsableAlmacen" />
+      <xs:enumeration value="ReporteGeneradoTraspasoEntreAlmacenes" />
+      <xs:enumeration value="IdAlmacenRepresentanteEnAgenciaMatriz" />
+      <xs:enumeration value="UtilidadBrutaConCostoPromedio" />
+      <xs:enumeration value="IdAgenteSolicitudesIntercompanias" />
+      <xs:enumeration value="FormaAdicionAlCostoEnSolicitudesIntercompaniasPorcentajeMonto" />
+      <xs:enumeration value="CantidadAgregarAlCostoEnSolicitudesIntercompania" />
+      <xs:enumeration value="IdsUsuariosAutorizanSolicitudesIntercompanias" />
+      <xs:enumeration value="IdsUsuariosAutorizanSolicitudesTraspasoRefacciones" />
+      <xs:enumeration value="EMailsEnviaCorreoPiezasDaniadas" />
+      <xs:enumeration value="ManejaTraspasoExistencias" />
+      <xs:enumeration value="IdsUsuariosAutorizanTraspasoExistencias" />
+      <xs:enumeration value="EMailsEnviaCorreoSolicitudesIntercompaniaPorAutorizar" />
+      <xs:enumeration value="IdUsuarioSeImprimeEnAutorizacionSalidaMercanciaIntercompania" />
+      <xs:enumeration value="RequiereAutorizacionEnSolicitudesIntercompaniaPedidosEspecial" />
+      <xs:enumeration value="ManejaSolicitudesIntercompania" />
+      <xs:enumeration value="EmailGerenteRefacciones" />
+      <xs:enumeration value="EmailGerenteGeneral" />
+      <xs:enumeration value="IdsUsuariosEliminanTraspasoRefaccionesEntreEmpresas" />
+      <xs:enumeration value="AgenciaModificaPedido" />
+      <xs:enumeration value="UsuarioModificaPedido" />
+      <xs:enumeration value="EMailsEnviaCorreoSolicitudesIntercompaniaPorConfirmar" />
+      <xs:enumeration value="EMailsEnviaCorreoSolicitudesIntercompaniaPorRecepcionar" />
+      <xs:enumeration value="UtilizaProcesoSolicitudTraspasoEntreEmpresas" />
+      <xs:enumeration value="IdUsuarioIngresaOrdenCompraEnProcesoIntercompania" />
+      <xs:enumeration value="RutaGeneraArchivoAutopart" />
+      <xs:enumeration value="IdUsuarioPuedeElimiarSolicitudesIntercompaniasRealizadas" />
+      <xs:enumeration value="NumeroAlmacenRegistradoAntePlanta" />
+      <xs:enumeration value="UsuariosLiberanPiezasDaniadas" />
+      <xs:enumeration value="IdClasificacionPredeterminadaParaClasificacionInventarioCorporativo" />
+      <xs:enumeration value="AceptaVentasEspeciales" />
+      <xs:enumeration value="IdsUsuariosPermiteDesautorizarOrdenesCompra" />
+      <xs:enumeration value="MostrarAgenciasHermanasEnControlSolicitudes" />
+      <xs:enumeration value="IdUsuarioGerenteRefacciones" />
+      <xs:enumeration value="NoRequiereCotizacion" />
+      <xs:enumeration value="PermitirTraspasosEnControlSolicitudes" />
+      <xs:enumeration value="HabilitaValeQualitas" />
+      <xs:enumeration value="IdsPersonasValeQualitas" />
+      <xs:enumeration value="AceptaDatosComplementariosPiezasNegadas" />
+      <xs:enumeration value="DiasEnvioRefaccionesProcesoIntercompanias" />
+      <xs:enumeration value="IdsUsuariosPermiteModificarTodoEnCatalogoPartes" />
+      <xs:enumeration value="IdsUsuariosPermiteModificacionBasicaEnCatalogoPartes" />
+      <xs:enumeration value="AgregaPiezasWinner" />
+      <xs:enumeration value="PorcentajeRefaccionesVehiculosComerciales" />
+      <xs:enumeration value="PorcentajeRefaccionesCamiones" />
+      <xs:enumeration value="PorcentajeLlantasVehiculosComerciales" />
+      <xs:enumeration value="PorcentajeLlantasCamiones" />
+      <xs:enumeration value="IdUsuarioSolicitarFraccionamientos" />
+      <xs:enumeration value="IdUsuarioAutorizarFraccionamientos" />
+      <xs:enumeration value="IdUsuarioCancelaAutorizados" />
+      <xs:enumeration value="IdUsuarioGerenteRefaccionesduplicado" />
+      <xs:enumeration value="MostrarOrigenYDestinoTraspasosEnKardex" />
+      <xs:enumeration value="IdsPerfilesMarcarNotasCreditoRealizadasManualmente" />
+      <xs:enumeration value="IdCajaIngresaOrdenCompraEnProcesoIntercompania" />
+      <xs:enumeration value="IdCajeroIngresaOrdenCompraEnProcesoIntercompania" />
+      <xs:enumeration value="IdAgenteGerenteRefacciones" />
+      <xs:enumeration value="IdsUsariosPuedenEliminarPedidosIntercompania" />
+      <xs:enumeration value="ManejaProgramacionEnCatalogoStock" />
+      <xs:enumeration value="ExpresionParaValidarUbicaciones" />
+      <xs:enumeration value="UbicacionAduana" />
+      <xs:enumeration value="UbicacionATaller" />
+      <xs:enumeration value="UbicacionAHyp" />
+      <xs:enumeration value="UbicacionAMostrador" />
+      <xs:enumeration value="UbicacionAMayoreo" />
+      <xs:enumeration value="UbicacionPiezasDaniadas" />
+      <xs:enumeration value="UbicacionDevolucionReclamacion" />
+      <xs:enumeration value="MuestraMoEnReporteComisiones" />
+      <xs:enumeration value="ConfiguracionParaNombreUbicaciones" />
+      <xs:enumeration value="UbicacionPredeterminadaArriboLubricantes" />
+      <xs:enumeration value="IdUsuarioAlertaProcesoUbicacionParaGruposReemplazo" />
+      <xs:enumeration value="UsuariosGerenciaRefacciones" />
+      <xs:enumeration value="HabilitaSurtidoReemplazoPorAntiguedad" />
+      <xs:enumeration value="ReportaInformacionPartsEyeKia" />
+      <xs:enumeration value="UrlEnviarReportePartsEyeKia" />
+      <xs:enumeration value="CambioAutoSolicitadoAAutomatico" />
+      <xs:enumeration value="TipoPreordenParaValidarAutorizacion" />
+      <xs:enumeration value="UsuarioQueAutorizaCotizacionesTipoDefinidoPrimerNivel" />
+      <xs:enumeration value="MontoMaximoParaAutorizarEnPrimerNivel" />
+      <xs:enumeration value="UsuarioQueAutorizaCotizacionesTipoDefinidoSegundoNivel" />
+      <xs:enumeration value="AlmacenesOrigenParaTraspasoEntreEmpresasConApartado" />
+      <xs:enumeration value="AlmacenesDestinoParaTraspasoEntreEmpresasConApartado" />
+      <xs:enumeration value="MuestraOrigenApartadosEnConsultaPrecios" />
+      <xs:enumeration value="MuestraInformacionParaExistenciaEnOtrasAgenciasEnConsultaPrecios" />
+      <xs:enumeration value="MuestraBotonParaGrupoReemplazoEnConsultaPrecios" />
+      <xs:enumeration value="AlmacenesExcluidosParaPedidosSugeridos" />
+      <xs:enumeration value="IdClasificacionInventarioPlanta" />
+      <xs:enumeration value="MuestraOpcionVentaExternaEnVentasMostrador" />
+      <xs:enumeration value="IdAgenteVentaDistribuidorBajaj" />
+      <xs:enumeration value="IdCanalVentaParaDistribuidoresBajaj" />
+      <xs:enumeration value="AlmacenParaTraspasoAseguradoras" />
+      <xs:enumeration value="UbicacionParaAlmacenTraspasoAseguradoras" />
+      <xs:enumeration value="HabilitaProcesoParaUbicacionesPermanentes" />
+      <xs:enumeration value="PorcentajeMaximoDescuentoEnVentasMostrador" />
+      <xs:enumeration value="ManejaProcesoAlmacenCentralEnSolicitudes" />
+      <xs:enumeration value="DepartamentosParaCobroPiezasDaniadas" />
+      <xs:enumeration value="ControlSolicitudesIdsTiposPedidoPermitidos" />
+      <xs:enumeration value="ControlSolicitudesIdsUsuariosCambianTipoPedido" />
+      <xs:enumeration value="ControlSolicitudesIdsAlmacenesAExcluir" />
+      <xs:enumeration value="PermiteMarcarPiezasDaniadasEnTraspaso" />
+      <xs:enumeration value="PermiteNegarPiezasEnControlDeSolicitudesIntercompania" />
+      <xs:enumeration value="EmailsEnviaCorreoDeDiaInhabil" />
+      <xs:enumeration value="EmailsEnviaCorreoDeSolicitudesAutomaticas" />
+      <xs:enumeration value="NumeroFacturasAEnviarPorCorreo" />
+      <xs:enumeration value="IdUsuarioRealizaElProcesoAutomaticoDeAlmacenCentral" />
+      <xs:enumeration value="RutaXmlPedidoSugeridoMazda">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">188</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TipoPedidoEmergente">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">189</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UsuariosPuedenEditarMonitorPartesHyp">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">192</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="REFA_EParametros" nillable="true" type="tns:REFA_EParametros" />
+  <xs:complexType name="ArrayOfREFA_AgenciaParametro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="REFA_AgenciaParametro" nillable="true" type="tns:REFA_AgenciaParametro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfREFA_AgenciaParametro" nillable="true" type="tns:ArrayOfREFA_AgenciaParametro" />
+  <xs:complexType name="REFA_AgenciaParametro">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models" base="q1:AgenciaParametro">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Parametro" type="tns:REFA_EParametros" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="REFA_AgenciaParametro" nillable="true" type="tns:REFA_AgenciaParametro" />
+</xs:schema>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wsPSI_APP" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wsPSI_APP" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Encuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdArea" type="xs:short" />
+      <xs:element minOccurs="0" name="IdCompania" type="xs:short" />
+      <xs:element minOccurs="0" name="IdEncuesta" type="xs:int" />
+      <xs:element minOccurs="0" name="MensajeControl" nillable="true" type="tns:Mensaje" />
+      <xs:element minOccurs="0" name="PlantillaEncuesta" nillable="true" type="tns:Plantilla" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Encuesta" nillable="true" type="tns:Encuesta" />
+  <xs:complexType name="Mensaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TextoError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TextoMensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mensaje" nillable="true" type="tns:Mensaje" />
+  <xs:complexType name="Plantilla">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comentarios" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPlantilla" type="xs:int" />
+      <xs:element minOccurs="0" name="NombrePlantilla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Preguntas" nillable="true" type="tns:ArrayOfPregunta" />
+      <xs:element minOccurs="0" name="TextoDePrimerContacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TextoEntrada" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Plantilla" nillable="true" type="tns:Plantilla" />
+  <xs:complexType name="ArrayOfPregunta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pregunta" nillable="true" type="tns:Pregunta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPregunta" nillable="true" type="tns:ArrayOfPregunta" />
+  <xs:complexType name="Pregunta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdPregunta" type="xs:short" />
+      <xs:element minOccurs="0" name="Orden" type="xs:short" />
+      <xs:element minOccurs="0" name="Prioridad" type="xs:short" />
+      <xs:element minOccurs="0" name="Respuestas" nillable="true" type="tns:ArrayOfRespuesta" />
+      <xs:element minOccurs="0" name="TextoEscala" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TextoPregunta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pregunta" nillable="true" type="tns:Pregunta" />
+  <xs:complexType name="ArrayOfRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Respuesta" nillable="true" type="tns:Respuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuesta" nillable="true" type="tns:ArrayOfRespuesta" />
+  <xs:complexType name="Respuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdRespuesta" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipoRespuesta" type="xs:short" />
+      <xs:element minOccurs="0" name="Orden" type="xs:short" />
+      <xs:element minOccurs="0" name="TextoRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoRespuesta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Respuesta" nillable="true" type="tns:Respuesta" />
+  <xs:complexType name="MensajeAgradecimiento">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Mensaje">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PreguntaContactar" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TextoAgradecimiento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TextoAgradecimientoGenerico" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MensajeAgradecimiento" nillable="true" type="tns:MensajeAgradecimiento" />
+</xs:schema>

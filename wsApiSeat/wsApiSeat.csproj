@@ -1,0 +1,1165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F461387A-9C10-4196-A559-60B60C8D2ADB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wsApiSeat</RootNamespace>
+    <AssemblyName>wsApiSeat</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44371</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\eromerom\Desktop\dlls crystal\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\eromerom\Desktop\dlls crystal\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\eromerom\Desktop\dlls crystal\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\eromerom\Desktop\dlls crystal\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAAdministrativo">
+      <HintPath>bin\dlls\DVAAdministrativo.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAAutosystServerClasses">
+      <HintPath>bin\dlls\DVAAutosystServerClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAConfiguraciones">
+      <HintPath>bin\dlls\DVAConfiguraciones.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAConstants">
+      <HintPath>..\..\..\Downloads\bin\bin\DVAConstants.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAControls, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DVAControls.dll</HintPath>
+    </Reference>
+    <Reference Include="DVADataProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DVADataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="DVADB, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\eromerom\Desktop\BATs - copiar\DVADB para .2 PROD\DVADB.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAEncrypt">
+      <HintPath>bin\dlls\DVAEncrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAFacturacion">
+      <HintPath>..\wsAppMiAuto\Publicar\bin\DVAFacturacion.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAIDB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DVAIDB.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAModelsReflection">
+      <HintPath>..\wsAppMiAuto\Publicar\bin\DVAModelsReflection.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAReferenciaBancaria">
+      <HintPath>..\..\..\..\..\Downloads\DVAReferenciaBancaria.dll</HintPath>
+    </Reference>
+    <Reference Include="DVARegistraPersona, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DVARegistraPersona.dll</HintPath>
+    </Reference>
+    <Reference Include="DVAWebServiceFacturacionElectronica, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DVAWebServiceFacturacionElectronica.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\wsAppMiAuto\Publicar\bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Sistemas DVA\Reutilizables\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Bussiness\BAutos.cs" />
+    <Compile Include="Bussiness\BAutosNuevosNissan.cs" />
+    <Compile Include="Bussiness\BAutosSeminuevosNissan.cs" />
+    <Compile Include="Bussiness\BPedido.cs" />
+    <Compile Include="Bussiness\BUsuario.cs" />
+    <Compile Include="Bussiness\EEnumerables.cs" />
+    <Compile Include="Controllers\AlertasPushController.cs" />
+    <Compile Include="Controllers\FacturacionController.cs" />
+    <Compile Include="Controllers\MedioPagoController.cs" />
+    <Compile Include="Controllers\OrdenCompraController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
+    <Compile Include="Controllers\AutosController.cs" />
+    <Compile Include="Controllers\CotizadorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\URLsController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\HttpHelper.cs" />
+    <Compile Include="Models\Accesorios.cs" />
+    <Compile Include="Models\AccesoriosUOtros.cs" />
+    <Compile Include="Models\ActualizarDatosSeguroVehiculo.cs" />
+    <Compile Include="Models\ActualizarDatosVehiculo.cs" />
+    <Compile Include="Models\ActualizarOtrosDatosVehiculo.cs" />
+    <Compile Include="Models\AgenciaCitaServicio.cs" />
+    <Compile Include="Models\AnioVehiculo.cs" />
+    <Compile Include="Models\AsesorServicio.cs" />
+    <Compile Include="Models\AutoNuevo\AutoNuevo.cs" />
+    <Compile Include="Models\AutoUsado.cs" />
+    <Compile Include="Models\CatalogoSexo.cs" />
+    <Compile Include="Models\CitaServicioAgendada.cs" />
+    <Compile Include="Models\CompraAutoNuevo.cs" />
+    <Compile Include="Models\ConceptosCotizacion.cs" />
+    <Compile Include="Models\ConceptosCotizacionSeguimiento.cs" />
+    <Compile Include="Models\ContactoAgencia\ActualizaCheckAgencia.cs" />
+    <Compile Include="Models\ContactoAgencia\CheckAgencia.cs" />
+    <Compile Include="Models\ContactoAgencia\DatoCheckAgencia.cs" />
+    <Compile Include="Models\ContactoAgencia\DocumentoComunicacion.cs" />
+    <Compile Include="Models\ContactoAgencia\HistorialMovimientosContactoAgencia.cs" />
+    <Compile Include="Models\ContactoAgencia\HistoricoComunicacionAgencia.cs" />
+    <Compile Include="Models\CotizacionPreorden.cs" />
+    <Compile Include="Models\CotizacionSeguimiento.cs" />
+    <Compile Include="Models\CotizadorPlacasTenencia.cs" />
+    <Compile Include="Models\Cotizador\CotizadorModel.cs" />
+    <Compile Include="Models\Cotizador\TokenCotizador.cs" />
+    <Compile Include="Models\Cuenta.cs" />
+    <Compile Include="Models\CuentaBancaria.cs" />
+    <Compile Include="Models\CuentasBancariasPorAgencia.cs" />
+    <Compile Include="Models\DatosAsesor.cs" />
+    <Compile Include="Models\DatosFiscales.cs" />
+    <Compile Include="Models\DatosUnidad.cs" />
+    <Compile Include="Models\DetalleCotizacion.cs" />
+    <Compile Include="Models\DetalleCotizacionSeguimiento.cs" />
+    <Compile Include="Models\DetalleCotizacionTotales.cs" />
+    <Compile Include="Models\Devuelve.cs" />
+    <Compile Include="Models\DisplayAutosNuevosNissan.cs" />
+    <Compile Include="Models\DocumentoIdentificacion.cs" />
+    <Compile Include="Models\EncuestaGuardar.cs" />
+    <Compile Include="Models\EnviarCorreoAreaContacto.cs" />
+    <Compile Include="Models\EnviarCorreoContactoCliente.cs" />
+    <Compile Include="Models\EstatusSeguimiento.cs" />
+    <Compile Include="Models\GiroComercial.cs" />
+    <Compile Include="Models\IdsAsesor.cs" />
+    <Compile Include="Models\Jato\Anio.cs" />
+    <Compile Include="Models\Jato\Atributo.cs" />
+    <Compile Include="Models\Jato\Caracteristica.cs" />
+    <Compile Include="Models\Jato\Equipo.cs" />
+    <Compile Include="Models\Jato\Estilo.cs" />
+    <Compile Include="Models\Jato\FotoExterior.cs" />
+    <Compile Include="Models\Jato\FotoInterior.cs" />
+    <Compile Include="Models\Jato\FotosJato.cs" />
+    <Compile Include="Models\Jato\General.cs" />
+    <Compile Include="Models\Jato\MarcaJato.cs" />
+    <Compile Include="Models\Jato\ModeloJato.cs" />
+    <Compile Include="Models\Jato\RutaFoto.cs" />
+    <Compile Include="Models\Jato\Version.cs" />
+    <Compile Include="Models\Media.cs" />
+    <Compile Include="Models\MediaProc2.cs" />
+    <Compile Include="Models\Nacionalidad.cs" />
+    <Compile Include="Models\Nissan\Auto.cs" />
+    <Compile Include="Models\Nissan\DatosGeneralesCliente.cs" />
+    <Compile Include="Models\Nissan\MeIntersa.cs" />
+    <Compile Include="Models\NotificacionEncuesta.cs" />
+    <Compile Include="Models\Notificaciones\Asunto.cs" />
+    <Compile Include="Models\Notificaciones\AsuntoNotificaciones.cs" />
+    <Compile Include="Models\Notificaciones\EstadoNotificaciones.cs" />
+    <Compile Include="Models\Notificaciones\MensajeNotificacion.cs" />
+    <Compile Include="Models\Notificaciones\MensajeNotificaciones.cs" />
+    <Compile Include="Models\Ocupacion.cs" />
+    <Compile Include="Models\OpcionesPago.cs" />
+    <Compile Include="Models\OrdenCompra\Accesorio.cs" />
+    <Compile Include="Models\OrdenCompra\Banco.cs" />
+    <Compile Include="Models\OrdenCompra\CatalogoCitas.cs" />
+    <Compile Include="Models\OrdenCompra\Checklist.cs" />
+    <Compile Include="Models\OrdenCompra\CitaApp.cs" />
+    <Compile Include="Models\OrdenCompra\ClasificacionDocumento.cs" />
+    <Compile Include="Models\OrdenCompra\Compra.cs" />
+    <Compile Include="Models\OrdenCompra\CompraNotificacion.cs" />
+    <Compile Include="Models\OrdenCompra\ConceptoPago.cs" />
+    <Compile Include="Models\OrdenCompra\DatosGestoria.cs" />
+    <Compile Include="Models\OrdenCompra\Documento.cs" />
+    <Compile Include="Models\OrdenCompra\Encuesta.cs" />
+    <Compile Include="Models\OrdenCompra\EstadoOrdenCompra.cs" />
+    <Compile Include="Models\OrdenCompra\HorariosCitas.cs" />
+    <Compile Include="Models\OrdenCompra\NotificacionAutoLlego.cs" />
+    <Compile Include="Models\OrdenCompra\NotificacionCompra.cs" />
+    <Compile Include="Models\OrdenCompra\PedidoVehiculo.cs" />
+    <Compile Include="Models\OrdenCompra\ProcesoCompra.cs" />
+    <Compile Include="Models\OrdenCompra\ReferenciaBancaria.cs" />
+    <Compile Include="Models\OrdenCompra\SeguimientoCompra.cs" />
+    <Compile Include="Models\OrdenCompra\Seguro.cs" />
+    <Compile Include="Models\OrdenCompra\TipoDocumento.cs" />
+    <Compile Include="Models\OrdenCompra\Ubicacion.cs" />
+    <Compile Include="Models\PedidoAutoNuevo.cs" />
+    <Compile Include="Models\Pedido\DatosFiscales.cs" />
+    <Compile Include="Models\Pedido\DatosFiscalesProc2.cs" />
+    <Compile Include="Models\Pedido\InventarioModel.cs" />
+    <Compile Include="Models\Pedido\InventarioZona.cs" />
+    <Compile Include="Models\Pedido\PedidoModel.cs" />
+    <Compile Include="Models\PERSControlDeFolio.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\PersonaCliente.cs" />
+    <Compile Include="Models\PersonaMoral.cs" />
+    <Compile Include="Models\PersonaTelefono.cs" />
+    <Compile Include="Models\Promocion.cs" />
+    <Compile Include="Models\PromocionNissan.cs" />
+    <Compile Include="Models\Publicidad.cs" />
+    <Compile Include="Models\PublicidadNissan.cs" />
+    <Compile Include="Models\RefaccionOrdenServicio.cs" />
+    <Compile Include="Models\RegistroPersonaFisica.cs" />
+    <Compile Include="Models\Respuesta.cs" />
+    <Compile Include="Models\RespuestaClienteDeseaSerContactado.cs" />
+    <Compile Include="Models\RespuestaEncuestaPSI.cs" />
+    <Compile Include="Models\RespuestaGuardarEncuestaPSI.cs" />
+    <Compile Include="Models\RespuestaPedido.cs" />
+    <Compile Include="Models\RespuestaServidorGenerica.cs" />
+    <Compile Include="Models\RespuestaServidorImagenVideo.cs" />
+    <Compile Include="Models\ResumenOrdenServicio.cs" />
+    <Compile Include="Models\Rutas360.cs" />
+    <Compile Include="Models\RutaTamanioImagen.cs" />
+    <Compile Include="Models\SeguimientoOrden.cs" />
+    <Compile Include="Models\Sociedad.cs" />
+    <Compile Include="Models\SolicitudPedido.cs" />
+    <Compile Include="Models\SubirArchivo.cs" />
+    <Compile Include="Models\TipoCitaServicio.cs" />
+    <Compile Include="Models\UsoCfdi.cs" />
+    <Compile Include="Models\Vehiculo.cs" />
+    <Compile Include="Models\VersionesComplete.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WsEncuestasPSI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WsServ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WS_Security\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CorreoService.cs" />
+    <Compile Include="Services\CuentaService.cs" />
+    <Compile Include="Models\RespuestaServidor.cs" />
+    <Compile Include="Models\EncuestaPSI.cs" />
+    <Compile Include="Models\OrdenServicio.cs" />
+    <Compile Include="Models\OrdenServicioFacturada.cs" />
+    <Compile Include="Models\OperacionOrdenServicio.cs" />
+    <Compile Include="Models\Notificacion.cs" />
+    <Compile Include="Models\MultimediaSeguimientoOrden.cs" />
+    <Compile Include="Models\ImagenSeguimientoOrden.cs" />
+    <Compile Include="Models\VideoSeguimientoOrden.cs" />
+    <Compile Include="Models\Modelo.cs" />
+    <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Aseguradora.cs" />
+    <Compile Include="Models\AreaContacto.cs" />
+    <Compile Include="Models\HorarioServicio.cs" />
+    <Compile Include="Models\Foto.cs" />
+    <Compile Include="Models\CotizacionSeguro.cs" />
+    <Compile Include="Models\CheckInspeccion.cs" />
+    <Compile Include="Models\PuntoInspeccion.cs" />
+    <Compile Include="Models\ImagenesMultimedia.cs" />
+    <Compile Include="Models\VideosMultimedia.cs" />
+    <Compile Include="Services\NotificacionesApp.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\AutosNuevosController.cs" />
+    <Compile Include="Controllers\CitasController.cs" />
+    <Compile Include="Controllers\ServicioController.cs" />
+    <Compile Include="Controllers\PromocionesYPublicidadController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_AMTN.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_BNTG.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_BNTN.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_BNTO.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_GMTN.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_GMTO.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_NETG.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_NMTG.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_PUTN.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_RDTG.png" />
+    <Content Include="Resources\Autos\ARONA\Arona_X_RDTN.png" />
+    <Content Include="Resources\Autos\ARONA\AzulMisterio_ARONA.png" />
+    <Content Include="Resources\Autos\ARONA\BlancoNevada_ARONA.png" />
+    <Content Include="Resources\Autos\ARONA\GrisMagnetico_ARONA.png" />
+    <Content Include="Resources\Autos\ARONA\NaranjaEclipse_ARONA.png" />
+    <Content Include="Resources\Autos\ARONA\NMedianoche_ARONA.png" />
+    <Content Include="Resources\Autos\ARONA\PlataUrbano_ARONA.png" />
+    <Content Include="Resources\Autos\ARONA\REFERENCE\Arona-Reference-Azul-Misterio.png" />
+    <Content Include="Resources\Autos\ARONA\REFERENCE\Arona-Reference-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\ARONA\REFERENCE\Arona-Reference-Gris-Magnetico.png" />
+    <Content Include="Resources\Autos\ARONA\REFERENCE\Arona-Reference-Naranja-Eclipse.png" />
+    <Content Include="Resources\Autos\ARONA\REFERENCE\Arona-Reference-Negro-Medianoche.png" />
+    <Content Include="Resources\Autos\ARONA\REFERENCE\Arona-Reference-Plata-urbano.png" />
+    <Content Include="Resources\Autos\ARONA\REFERENCE\Arona-Reference-Rojo-Deseo.png" />
+    <Content Include="Resources\Autos\ARONA\RojoDeseo_ARONA.png" />
+    <Content Include="Resources\Autos\ARONA\STYLE\Arona-Style-Azul-Misterio.png" />
+    <Content Include="Resources\Autos\ARONA\STYLE\Arona-Style-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\ARONA\STYLE\Arona-Style-Gris-Magnetico.png" />
+    <Content Include="Resources\Autos\ARONA\STYLE\Arona-Style-Naranja-Eclipse.png" />
+    <Content Include="Resources\Autos\ARONA\STYLE\Arona-Style-Negro-Medianoche.png" />
+    <Content Include="Resources\Autos\ARONA\STYLE\Arona-Style-Plata-Urbano.png" />
+    <Content Include="Resources\Autos\ARONA\STYLE\Arona-Style-Rojo-Deseo.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Azul-Misterio-con-Techo-Negro.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Blanco-Nevada-con-Techo-Gris.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Blanco-Nevada-con-Techo-Naranja.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Blanco-Nevada-con-Techo-Negro.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Gris-Magnetico-con-Techo-Naranja.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Gris-Magnetico-con-Techo-Negro.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Naranja-Eclipse-con-Techo-Gris.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Negro-Medianoche-con-Techo-Gris.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Plata-Urbano-con-Techo-Negro.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Rojo-Deseo-con-Techo-Gris.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona-Xcellence-Rojo-Deseo-con-Techo-Negro.png" />
+    <Content Include="Resources\Autos\ARONA\XCELLENCE\Arona_Xcellence.mp4" />
+    <Content Include="Resources\Autos\ATECA\AE_ATECA.png" />
+    <Content Include="Resources\Autos\ATECA\AL_ATECA.png" />
+    <Content Include="Resources\Autos\ATECA\BN_ATECA.png" />
+    <Content Include="Resources\Autos\ATECA\C_ATECA.png" />
+    <Content Include="Resources\Autos\ATECA\FR\Ateca-FR-Azul-Energia.png" />
+    <Content Include="Resources\Autos\ATECA\FR\Ateca-FR-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\ATECA\FR\Ateca-FR-Gris-Rodio.png" />
+    <Content Include="Resources\Autos\ATECA\FR\Ateca-FR-Negro-Cristal.png" />
+    <Content Include="Resources\Autos\ATECA\FR\Ateca-FR-Rojo-Velvet.png" />
+    <Content Include="Resources\Autos\ATECA\FR\Ateca_FR.mp4" />
+    <Content Include="Resources\Autos\ATECA\GR_ATECA.png" />
+    <Content Include="Resources\Autos\ATECA\NC_ATECA.png" />
+    <Content Include="Resources\Autos\ATECA\PB_ATECA.png" />
+    <Content Include="Resources\Autos\ATECA\RV_ATECA.png" />
+    <Content Include="Resources\Autos\ATECA\STYLE\Ateca-Style-Azul-Lava.png" />
+    <Content Include="Resources\Autos\ATECA\STYLE\Ateca-Style-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\ATECA\STYLE\Ateca-Style-Gris-Rodio.png" />
+    <Content Include="Resources\Autos\ATECA\STYLE\Ateca-Style-Negro-Cristal.png" />
+    <Content Include="Resources\Autos\ATECA\STYLE\Ateca-Style-Plata-Brillante.png" />
+    <Content Include="Resources\Autos\ATECA\STYLE\Ateca-Style-Rojo-Velvet.png" />
+    <Content Include="Resources\Autos\ATECA\STYLE\Ateca_Style.mp4" />
+    <Content Include="Resources\Autos\ATECA\XPERIENCE\Ateca-Xperience-Azul-Lava.png" />
+    <Content Include="Resources\Autos\ATECA\XPERIENCE\Ateca-Xperience-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\ATECA\XPERIENCE\Ateca-Xperience-Camuflaje.png" />
+    <Content Include="Resources\Autos\ATECA\XPERIENCE\Ateca-Xperience-Gris-Rodio.png" />
+    <Content Include="Resources\Autos\ATECA\XPERIENCE\Ateca-Xperience-Negro-Cristal.png" />
+    <Content Include="Resources\Autos\ATECA\XPERIENCE\Ateca-Xperience-Plata-Brillante.png" />
+    <Content Include="Resources\Autos\ATECA\XPERIENCE\Ateca-Xperience-Rojo-Velvet.png" />
+    <Content Include="Resources\Autos\ATECA\XPERIENCE\Ateca_Xperience.mp4" />
+    <Content Include="Resources\Autos\IBIZA\AzulMisterio_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\BlancoCandy_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\BlancoNevada_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\FR\Ibiza-FR-Azul-Misterio.png" />
+    <Content Include="Resources\Autos\IBIZA\FR\Ibiza-FR-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\IBIZA\FR\Ibiza-FR-Gris-Magnetico.png" />
+    <Content Include="Resources\Autos\IBIZA\FR\Ibiza-FR-Naranja-Eclipse.png" />
+    <Content Include="Resources\Autos\IBIZA\FR\Ibiza-FR-Negro-Medianoche.png" />
+    <Content Include="Resources\Autos\IBIZA\FR\Ibiza-FR-Rojo-Emocion.png" />
+    <Content Include="Resources\Autos\IBIZA\FR\Ibiza_FR.mp4" />
+    <Content Include="Resources\Autos\IBIZA\GrisMagnetico_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\NaranjaEclipse_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\NMedianoche_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\PlataUrbano_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\REFERENCE\Ibiza-Reference-Azul-Misterio.png" />
+    <Content Include="Resources\Autos\IBIZA\REFERENCE\Ibiza-Reference-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\IBIZA\REFERENCE\Ibiza-Reference-Gris-Magnetico.png" />
+    <Content Include="Resources\Autos\IBIZA\REFERENCE\Ibiza-Reference-Naranja-Eclipse.png" />
+    <Content Include="Resources\Autos\IBIZA\REFERENCE\Ibiza-Reference-Negro-Medianoche.png" />
+    <Content Include="Resources\Autos\IBIZA\REFERENCE\Ibiza-Reference-Plata-Urbano.png" />
+    <Content Include="Resources\Autos\IBIZA\REFERENCE\Ibiza-Reference-Rojo-Deseo.png" />
+    <Content Include="Resources\Autos\IBIZA\REFERENCE\Ibiza_Reference.mp4" />
+    <Content Include="Resources\Autos\IBIZA\RojoDeseo_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\RojoEmocion_IBIZA.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza-Style-Azul-Misterio.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza-Style-Blanco-Candy.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza-Style-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza-Style-Gris-Magnetico.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza-Style-naranja-Eclipse.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza-Style-Negro-Medianoche.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza-Style-Plata-Urbano.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza-Style-Rojo-Deseo.png" />
+    <Content Include="Resources\Autos\IBIZA\STYLE\Ibiza_Style.mp4" />
+    <Content Include="Resources\Autos\IBIZA\XCELLENCE\Ibiza-Xcellence-Blanco-Nevada.png" />
+    <Content Include="Resources\Autos\IBIZA\XCELLENCE\Ibiza-Xcellence-Gris-Magnetico.png" />
+    <Content Include="Resources\Autos\IBIZA\XCELLENCE\Ibiza-Xcellence-Negro-Medianoche.png" />
+    <Content Include="Resources\Autos\IBIZA\XCELLENCE\Ibiza-Xcellence-Plata-Urbano.png" />
+    <Content Include="Resources\Autos\IBIZA\XCELLENCE\Ibiza-Xcellence-Rojo-Emocion.png" />
+    <Content Include="Resources\Autos\IBIZA\XCELLENCE\Ibiza_Xcellence.mp4" />
+    <Content Include="Resources\Autos\TARRACO\FR\Tarraco-FR-Blanco-Onyx.png" />
+    <Content Include="Resources\Autos\TARRACO\FR\Tarraco-FR-Camuflaje.png" />
+    <Content Include="Resources\Autos\TARRACO\FR\Tarraco-FR-Gris-Urano.png" />
+    <Content Include="Resources\Autos\TARRACO\FR\Tarraco-FR-Negro-Profundo.png" />
+    <Content Include="Resources\Autos\TARRACO\FR\Tarraco_FR.mp4" />
+    <Content Include="Resources\Autos\TARRACO\STYLE\Tarraco-Style--Blanco-Onyx.png" />
+    <Content Include="Resources\Autos\TARRACO\STYLE\Tarraco-Style-Azul-Atlantico.png" />
+    <Content Include="Resources\Autos\TARRACO\STYLE\Tarraco-Style-Gris-Indio.png" />
+    <Content Include="Resources\Autos\TARRACO\STYLE\Tarraco-Style-Gris-Urano.png" />
+    <Content Include="Resources\Autos\TARRACO\STYLE\Tarraco-Style-Negro-Profundo.png" />
+    <Content Include="Resources\Autos\TARRACO\STYLE\Tarraco-Style-Plata-Brillante.png" />
+    <Content Include="Resources\Autos\TARRACO\TARRACO_AA.png" />
+    <Content Include="Resources\Autos\TARRACO\TARRACO_BO.png" />
+    <Content Include="Resources\Autos\TARRACO\TARRACO_BT.png" />
+    <Content Include="Resources\Autos\TARRACO\TARRACO_C.png" />
+    <Content Include="Resources\Autos\TARRACO\TARRACO_GI.png" />
+    <Content Include="Resources\Autos\TARRACO\TARRACO_GU.png" />
+    <Content Include="Resources\Autos\TARRACO\TARRACO_NP.png" />
+    <Content Include="Resources\Autos\TARRACO\TARRACO_PB.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco-Xcellence-Azul-Atlantico.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco-Xcellence-Beige-Titanio.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco-Xcellence-Blanco-Onyx.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco-Xcellence-Camuflaje.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco-Xcellence-Gris-Indio.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco-Xcellence-Gris-Urano.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco-Xcellence-Negro-Profundo.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco-Xcellence-Plata-Brillante.png" />
+    <Content Include="Resources\Autos\TARRACO\XCELLENCE\Tarraco_Xcellence.mp4" />
+    <Content Include="Resources\Emailing\EntregaAuto\index.html" />
+    <Content Include="Resources\Emailing\EntregaFactura\index.html" />
+    <Content Include="Resources\Emailing\TestDrive\index.html" />
+    <Content Include="Resources\Email\0_Logo_SEAT.svg" />
+    <Content Include="Resources\Email\claveActivacionSEAT.html" />
+    <Content Include="Resources\Email\Compra.html" />
+    <Content Include="Resources\Email\header.jpg" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_01.jpg" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_02.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_03.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_04.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_05.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_06.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_07.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_08.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_09.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_10.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_11.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_12.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_13.png" />
+    <Content Include="Resources\Media\ARONA\Fotos\Arona_14.png" />
+    <Content Include="Resources\Media\ARONA\Videos\SEAT_Arona_1.mp4" />
+    <Content Include="Resources\Media\ARONA\Videos\SEAT_Arona_2.mp4" />
+    <Content Include="Resources\Media\ARONA\Videos\SEAT_Arona_3.mp4" />
+    <Content Include="Resources\Media\ARONA\Videos\SEAT_Arona_4.mp4" />
+    <Content Include="Resources\Media\ARONA\Videos\SEAT_Arona_5.mp4" />
+    <Content Include="Resources\Media\ARONA\Videos\SEAT_Arona_6.mp4" />
+    <Content Include="Resources\Media\ARONA\Videos\SEAT_Arona_7.mp4" />
+    <Content Include="Resources\Media\ARONA\Videos\SEAT_Arona_8.mp4" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_01.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_02.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_03.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_04.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_05.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_06.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_07.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_08.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_09.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_10.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_11.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_12.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_13.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_14.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_15.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_16.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_17.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_18.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_19.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_20.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_21.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_22.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_23.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_24.png" />
+    <Content Include="Resources\Media\ATECA\Fotos\Ateca_25.png" />
+    <Content Include="Resources\Media\ATECA\Videos\SEAT_Ateca_1.mp4" />
+    <Content Include="Resources\Media\ATECA\Videos\SEAT_Ateca_2.mp4" />
+    <Content Include="Resources\Media\ATECA\Videos\SEAT_Ateca_3.mp4" />
+    <Content Include="Resources\Media\ATECA\Videos\SEAT_Ateca_4.mp4" />
+    <Content Include="Resources\Media\ATECA\Videos\SEAT_Ateca_5.mp4" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_01.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_02.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_03.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_04.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_05.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_06.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_07.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_08.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_09.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_10.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_11.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_12.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_13.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_14.jpg" />
+    <Content Include="Resources\Media\IBIZA\Fotos\Ibiza_15.jpg" />
+    <Content Include="Resources\Media\IBIZA\Videos\SEAT_Ibiza_1.mp4" />
+    <Content Include="Resources\Media\IBIZA\Videos\SEAT_Ibiza_2.mp4" />
+    <Content Include="Resources\Media\IBIZA\Videos\SEAT_Ibiza_3.mp4" />
+    <Content Include="Resources\Media\SEAT\Fotos\CASA_SEAT_01.jpg" />
+    <Content Include="Resources\Media\SEAT\Fotos\CASA_SEAT_02.jpg" />
+    <Content Include="Resources\Media\SEAT\Fotos\CASA_SEAT_03.jpg" />
+    <Content Include="Resources\Media\SEAT\Fotos\CASA_SEAT_04.jpg" />
+    <Content Include="Resources\Media\SEAT\Fotos\SEAT_MARTORELL_01.jpg" />
+    <Content Include="Resources\Media\SEAT\Fotos\SEAT_MARTORELL_02.jpg" />
+    <Content Include="Resources\Media\SEAT\Fotos\SEAT_MARTORELL_03.jpg" />
+    <Content Include="Resources\Media\SEAT\Fotos\SEAT_MARTORELL_04.jpg" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Asi_se_reta_un_coche.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Collection.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Como_disena_sus_coches.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Como_se_disena_un_SUV.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Como_se_elige_el_nombre_de_un_modelo.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Cuatro_generaciones_rugiendo_a_la_vez.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Diseno_de_coches.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Diseno_tapicerias.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_El_viaje_de_un_color.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_es_Musica.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Escuela_de_aprendices.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Evolucion_de_lineas_de_produccion.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Fabrica_Martorell.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Festival_Sonar_Mexico.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Full_Link.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Future_es_today.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_La_ciudad_de_los_coches_a_vista_de_pajaro.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_La_musica_lo_cambia_todo,_incluso_el_Arte_Urbano_del_Primavera_Sound_2019.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_My_APP_2.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_My_App.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Nos_mueve_la_musica.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Patentes.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Proceso_creativo.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Reduce_consumo_de_energia.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Somos_musica.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Somos_SEAT_%28vertical%29.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_strengthens_its_commitment_to_diversity.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Tu_familia_SUV.mp4" />
+    <Content Include="Resources\Media\SEAT\Videos\SEAT_Tu_lugar_secreto.mp4" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_01.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_02.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_03.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_04.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_05.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_06.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_07.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_08.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_09.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_10.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_11.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_12.png" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_13.jpg" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_14.jpeg" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_15.jpg" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_16.jpeg" />
+    <Content Include="Resources\Media\TARRACO\Fotos\Tarraco_17.jpg" />
+    <Content Include="Resources\Media\TARRACO\Videos\SEAT_Tarraco_1.mp4" />
+    <Content Include="Resources\Media\TARRACO\Videos\SEAT_Tarraco_2.mp4" />
+    <Content Include="Resources\Media\TARRACO\Videos\SEAT_Tarraco_3.mp4" />
+    <Content Include="Resources\Media\TARRACO\Videos\SEAT_Tarraco_4.mp4" />
+    <Content Include="Resources\Media\TARRACO\Videos\SEAT_Tarraco_5.mp4" />
+    <Content Include="Resources\Media\TARRACO\Videos\SEAT_Tarraco_6.mp4" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="ResourcesJson\Media.json" />
+    <None Include="Properties\PublishProfiles\Pcc.pubxml" />
+    <Content Include="ResourcesJson\Versiones_Pruebas.json" />
+    <Content Include="Resources\Fichas_Tecnicas\SEAT-Arona-2021.pdf" />
+    <Content Include="Resources\Fichas_Tecnicas\SEAT-Arona-2020.pdf" />
+    <Content Include="Resources\Fichas_Tecnicas\SEAT-Ateca-2020.pdf" />
+    <Content Include="Resources\Fichas_Tecnicas\SEAT-Ateca-2021.pdf" />
+    <Content Include="Resources\Fichas_Tecnicas\SEAT-Ibiza-2020.pdf" />
+    <Content Include="Resources\Fichas_Tecnicas\SEAT-Ibiza-2021.pdf" />
+    <Content Include="Resources\Fichas_Tecnicas\SEAT-Tarraco-2020.pdf" />
+    <Content Include="Resources\Fichas_Tecnicas\SEAT-Tarraco-2021.pdf" />
+    <Content Include="ResourcesJson\InventarioPorZona.json" />
+    <Content Include="Resources\CuentasBancariasAcapulco.json" />
+    <Content Include="Resources\CuentasBancariasCdmx.json" />
+    <Content Include="Resources\CuentasBancariasMonterrey.json" />
+    <Content Include="ResourcesJson\CatalogoSexo.json" />
+    <Content Include="ResourcesJson\CatalogoSociedad.json" />
+    <Content Include="ResourcesJson\IdentificacionOficial.json" />
+    <Content Include="ResourcesJson\Nacionalidad.json" />
+    <Content Include="ResourcesJson\Ocupacion.json" />
+    <Content Include="ResourcesJson\UsosCfdi.json" />
+    <Content Include="ResourcesJson\Ubicacion.json" />
+    <Content Include="ResourcesJson\Mensaje.json" />
+    <Content Include="ResourcesJson\Asunto.json" />
+    <Content Include="Resources\Emailing\fonts\Cupra-Bold.woff" />
+    <Content Include="Resources\Emailing\fonts\Cupra-Book.woff" />
+    <Content Include="Resources\Emailing\fonts\Cupra-Light.woff" />
+    <Content Include="Resources\Emailing\fonts\Cupra-Medium.woff" />
+    <Content Include="Resources\Emailing\fonts\Cupra-Regular.woff" />
+    <Content Include="ResourcesJson\Versiones.json" />
+    <Content Include="Resources\Politicas\Acapulco\politicaApartadoAcapulco.pdf" />
+    <Content Include="Resources\Politicas\Acapulco\politicaDevolucionAcapulco.pdf" />
+    <Content Include="Resources\Politicas\Acapulco\politicaEntregaAcapulco.pdf" />
+    <Content Include="Resources\Politicas\Acapulco\politicaFacturacionAcapulco.pdf" />
+    <Content Include="Resources\Politicas\Acapulco\politicaTestDriveAcapulco.pdf" />
+    <Content Include="Resources\Politicas\CDMX\politicaApartadoCDMX.pdf" />
+    <Content Include="Resources\Politicas\CDMX\politicaDevolucionCDMX.pdf" />
+    <Content Include="Resources\Politicas\CDMX\politicaEntregaCDMX.pdf" />
+    <Content Include="Resources\Politicas\CDMX\politicaFacturacionCDMX.pdf" />
+    <Content Include="Resources\Politicas\CDMX\politicaTestDriveCDMX.pdf" />
+    <Content Include="Resources\Politicas\Monterrey\politicaApartadoMonterrey.pdf" />
+    <Content Include="Resources\Politicas\Monterrey\politicaDevolucionMonterrey.pdf" />
+    <Content Include="Resources\Politicas\Monterrey\politicaEntregaMonterrey.pdf" />
+    <Content Include="Resources\Politicas\Monterrey\politicaFacturacionMonterrey.pdf" />
+    <Content Include="Resources\Politicas\Monterrey\politicaTestDriveMonterrey.pdf" />
+    <Content Include="Resources\Politicas\Acapulco\politicasAcapulco.pdf" />
+    <Content Include="Resources\Politicas\CDMX\politicasCDMX.pdf" />
+    <Content Include="Resources\Politicas\Monterrey\politicasMonterrey.pdf" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <None Include="Service References\WsEncuestasPSI\ServicioPSI_APP.disco" />
+    <None Include="Service References\WsEncuestasPSI\configuration91.svcinfo" />
+    <None Include="Service References\WsEncuestasPSI\configuration.svcinfo" />
+    <None Include="Service References\WsEncuestasPSI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\WsEncuestasPSI\wsApiSeat.WsEncuestasPSI.Encuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsEncuestasPSI\wsApiSeat.WsEncuestasPSI.Mensaje.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WsEncuestasPSI\wsApiSeat.WsEncuestasPSI.MensajeAgradecimiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\WsServ\wsServicio.disco" />
+    <None Include="Service References\WsServ\configuration91.svcinfo" />
+    <None Include="Service References\WsServ\configuration.svcinfo" />
+    <None Include="Service References\WsServ\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.ChangeOrderAuthorizationUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.ChangePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.Commissions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.CommissionsToPayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.DeleteAuthorizationOrderUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.Department.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetAgentsReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetAgentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetAgentTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetAllCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetAllUserbySystemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetAllUserProfilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetCategoryAgentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetCompaniesByUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetCompanyByUserIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetCompanyByUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetDepartmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetMailAgentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetModulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetMoneyAgentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetUserByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetUserByLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetUserByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetUserbyProfileNamesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetUserbyProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetUserProfilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.GetUserUnprofiledResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.InsertAuthorizationOrderUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.InsertProfileUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.InsertUpdateUserProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.Message.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.Module.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.Profile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.TermsAndConditionsRegisterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.TestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.UpdateAuthorizationOrderUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.UpdateMailAgentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.UpdateProgramHitsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WS_Security\wsApiSeat.WS_Security.UserPortalVendedores.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\WsServ\wsServicio.wsdl" />
+    <None Include="Service References\WsServ\wsServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio1.wsdl" />
+    <None Include="Service References\WsServ\wsServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsServ\wsServicio9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WS_Security\WS_Security.disco" />
+    <None Include="Service References\WS_Security\configuration91.svcinfo" />
+    <None Include="Service References\WS_Security\configuration.svcinfo" />
+    <None Include="Service References\WS_Security\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Service References\WsEncuestasPSI\ServicioPSI_APP.wsdl" />
+    <None Include="Service References\WsEncuestasPSI\ServicioPSI_APP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsEncuestasPSI\ServicioPSI_APP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsEncuestasPSI\ServicioPSI_APP2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WS_Security\WS_Security.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Compras\ComprobantePagos\" />
+    <Folder Include="Compras\ComunicacionAgencia\" />
+    <Folder Include="Compras\Documentacion\" />
+    <Folder Include="Cuentas\FotoPerfil\" />
+    <Folder Include="Resources\Facturas\" />
+    <Folder Include="Resources\Polizas\" />
+    <Folder Include="Views\AutosNuevosNissan\" />
+    <Folder Include="Views\MedioPago\" />
+    <Folder Include="Views\PromocionesNissan\" />
+    <Folder Include="Views\PublicidadNissan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WsEncuestasPSI\" />
+    <WCFMetadataStorage Include="Service References\WsServ\" />
+    <WCFMetadataStorage Include="Service References\WS_Security\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50441</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/wsApiSeat</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

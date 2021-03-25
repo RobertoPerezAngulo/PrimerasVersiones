@@ -1,0 +1,38 @@
+[
+
+   {   
+      "IdZona": "1",
+	  "NombreZona": "ACAPULCO",
+      "Agencias":[         
+         {
+            "IdAgencia":"35",
+            "Nombre":"CRESTA FURIA ACAPULCO, S.A. DE C.V."
+         }
+      ]
+   },  
+   
+   {
+	"IdZona": "2",
+	 "NombreZona": "CDMX",
+      "Agencias":[
+         {
+            "IdAgencia":"36",
+            "Nombre":"FURIA MOTORS MEXICO, S.A. DE C.V."
+         }
+      ]
+   },
+   {
+   "IdZona": "3",
+    "NombreZona": "MONTERREY",
+      "Agencias":[
+         {
+            "IdAgencia":"12",
+            "Nombre":"FURIA MOTORS MONTERREY, S.A. DE C.V."
+         }
+      ]
+   }   
+]
+
+	                                                                   	
+	                                                                	
+

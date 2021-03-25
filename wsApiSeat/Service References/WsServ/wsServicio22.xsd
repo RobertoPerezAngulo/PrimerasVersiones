@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wsServicio.Clases" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wsServicio.Clases" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" />
+  <xs:import schemaLocation="http://10.5.2.21/ws_adminServicio/wsServicio.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" />
+  <xs:complexType name="CargaInicialPreorden">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="ConfiguracionesDeMagnetoplan" nillable="true" type="q1:ArrayOfConfiguracionDeMagnetoplan" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="Error" nillable="true" type="q2:Error" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Operarios" nillable="true" type="q3:ArrayOfOperario" />
+      <xs:element minOccurs="0" name="PlanearPorRampas" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Rampas" nillable="true" type="q4:ArrayOfRampaEx" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="SERVParametros" nillable="true" type="q5:ArrayOfSERV_AgenciaParametro" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TallerCompartido" nillable="true" type="q6:TallerCompartido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CargaInicialPreorden" nillable="true" type="tns:CargaInicialPreorden" />
+  <xs:complexType name="CargaInicialCitas">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Amenidades" nillable="true" type="q7:ArrayOfAmenidad" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Asesores" nillable="true" type="q8:ArrayOfAsesorConHorario" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="AsesoresAdministradores" nillable="true" type="q9:ArrayOfAsesorAdministrador" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Choferes" nillable="true" type="q10:ArrayOfChoferConHorario" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="ConfiguracionesDeMagnetoplan" nillable="true" type="q11:ArrayOfConfiguracionDeMagnetoplan" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="Error" nillable="true" type="q12:Error" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="HorarioPreferenteParaCitas" nillable="true" type="q13:ArrayOfHorarioPreferenteParaCitas" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Operarios" nillable="true" type="q14:ArrayOfOperario" />
+      <xs:element minOccurs="0" name="PlanearPorRampas" type="xs:boolean" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Rampas" nillable="true" type="q15:ArrayOfRampaEx" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="RazonesDeSuspension" nillable="true" type="q16:ArrayOfRazonDeSuspension" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="SERVParametros" nillable="true" type="q17:ArrayOfSERV_AgenciaParametro" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TallerCompartido" nillable="true" type="q18:TallerCompartido" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TiposDeCita" nillable="true" type="q19:ArrayOfTipoDeCitaDeServicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CargaInicialCitas" nillable="true" type="tns:CargaInicialCitas" />
+  <xs:complexType name="CargaInicialMagnetoplan">
+    <xs:sequence>
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="ConfiguracionesDeMagnetoplan" nillable="true" type="q20:ArrayOfConfiguracionDeMagnetoplan" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SEGU" minOccurs="0" name="Error" nillable="true" type="q21:Error" />
+      <xs:element minOccurs="0" name="PlanearPorRampas" type="xs:boolean" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="Rampas" nillable="true" type="q22:ArrayOfRampaEx" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="RazonesDeSuspension" nillable="true" type="q23:ArrayOfRazonDeSuspension" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="SERVParametros" nillable="true" type="q24:ArrayOfSERV_AgenciaParametro" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/DVAModelsReflection.Models.SERV" minOccurs="0" name="TallerCompartido" nillable="true" type="q25:TallerCompartido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CargaInicialMagnetoplan" nillable="true" type="tns:CargaInicialMagnetoplan" />
+</xs:schema>

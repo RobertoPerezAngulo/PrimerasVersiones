@@ -1,0 +1,42 @@
+﻿{
+"RazonSocial":"FURIA MOTORS MEXICO, S.A. DE C.V.",
+"Ubicacion":"AV. DIVISIÓN DEL NORTE 1917, RESIDENCIAL EMPERADORES, D.F., C.P. 03320",
+"CuentasBancarias" :[
+      {
+        "Banco": "BBVA",
+        "NombreLogo": "bbva.png",
+        "NumeroCuenta": "0453809714",
+        "ClabeInterbancaria": "012180004538097143"
+      },
+      {
+        "Banco": "CitiBanamex",
+        "NombreLogo": "citibanamex.png",
+        "NumeroCuenta": "3957680576",
+        "ClabeInterbancaria": "002180039576805767"
+      },
+      {
+        "Banco": "Santander",
+        "NombreLogo": "santander.png",
+        "NumeroCuenta": "65501622090",
+        "ClabeInterbancaria": "014180655016220902"
+      },
+      {
+        "Banco": "Scotiabank",
+        "NombreLogo": "scotiabank.png",
+        "NumeroCuenta": "00106903649",
+        "ClabeInterbancaria": "044180001069036495"
+      },
+      {
+        "Banco": "Banorte",
+        "NombreLogo": "banorte.png",
+        "NumeroCuenta": "0650203321",
+        "ClabeInterbancaria": "072180006502033210"
+      },
+      {
+        "Banco": "BAM",
+        "NombreLogo": "bam.png",
+        "NumeroCuenta": "1805",
+        "ClabeInterbancaria": "128180000000018056"
+      }
+]
+}

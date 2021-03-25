@@ -1,0 +1,43 @@
+﻿{
+"RazonSocial":"CRESTA FURIA ACAPULCO, S.A. DE C.V.",
+"Ubicacion":"RUBEN FIGUEROA No. 714, COL. FARALLON, C.P. 39690",
+"CuentasBancarias" :
+[
+      {
+        "Banco": "BBVA",
+        "NombreLogo": "bbva.png",
+        "NumeroCuenta": "0136884385",
+        "ClabeInterbancaria": "012180001368843858"
+      },
+      {
+        "Banco": "CitiBanamex",
+        "NombreLogo": "citibanamex.png",
+        "NumeroCuenta": "456 / 6433",
+        "ClabeInterbancaria": "002180045600064332"
+      },
+      {
+        "Banco": "Santander",
+        "NombreLogo": "santander.png",
+        "NumeroCuenta": "65501622440",
+        "ClabeInterbancaria": "014261655016224403"
+      },
+      {
+        "Banco": "Scotiabank",
+        "NombreLogo": "scotiabank.png",
+        "NumeroCuenta": "00101090673",
+        "ClabeInterbancaria": "044180001010906736"
+      },
+      {
+        "Banco": "Banorte",
+        "NombreLogo": "banorte.png",
+        "NumeroCuenta": "0672080177",
+        "ClabeInterbancaria": "072180006720801774"
+      },
+      {
+        "Banco": "BAM",
+        "NombreLogo": "bam.png",
+        "NumeroCuenta": "32457",
+        "ClabeInterbancaria": "128180000000324575"
+      }
+    ]
+	}
